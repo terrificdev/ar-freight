@@ -19,6 +19,7 @@ a {
     &:visited {
         text-decoration: none;
         cursor: pointer;
+        outline:none;
     }
 }
 //remove the default style of button
@@ -26,6 +27,7 @@ button {
     background-color: none;
     border: none;
     cursor: pointer;
+    outline:none;
 }
 //container for blocks
 .block-container {
