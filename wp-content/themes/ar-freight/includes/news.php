@@ -63,6 +63,7 @@ function save_ar_freight_news_fields_meta( $post_id ) {
     global $post;
     update_post_meta($post->ID, "newsbanner", $_POST["newsbanner"]);
 }
+add_action( 'save_post', 'save_ar_freight_news_fields_meta' );
 
 add_action( 'init', 'create_tag_taxonomies', 0 );
 
