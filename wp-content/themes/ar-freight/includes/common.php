@@ -2,12 +2,12 @@
 
 function add_theme_scripts() {
     // Css file for modal pop up
-    // wp_enqueue_style( 'bootstrap',
-    //    get_stylesheet_directory_uri() . '/css/bootstrap.min.css',
-    //   array(),
-    //    '1.1',
-    //    'all'
-    // );
+    wp_enqueue_style( 'bootstrap',
+       get_stylesheet_directory_uri() . '/css/bootstrap.min.css',
+      array(),
+       '1.1',
+       'all'
+    );
     // End Css file for modal pop up
     wp_enqueue_style( 'custom',
        get_stylesheet_directory_uri() . '/css/custom.css',

@@ -1,0 +1,17 @@
+ 
+@mixin font-face($font-family, $url) {
+	@font-face {
+		font-family: '#{$font-family}';
+		src: url('#{$url}.eot');
+		src: url('#{$url}.eot?#iefix') format('embedded-opentype'),
+             url('#{$url}.woff') format('woff'),
+             url('#{$url}.woff2') format('woff2'),
+		     url('#{$url}.ttf') format('truetype'),
+		     url('#{$url}.svg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+@include font-face('Roboto-Md','../fonts/Roboto-Medium');
+@include font-face('Roboto-Lt','../fonts/Roboto-Light');
+@include font-face('Roboto-Rg','../fonts/Roboto-Regular');
