@@ -60,7 +60,7 @@
 					</div><!-- .site-header-menu -->
 				<?php endif; ?>
 				<div class= "qoute-button">
-                    <a href=""><button>Get A Qoute</button></a>
+                    <a href="<?php echo get_page_link(get_theme_mod('get_a_qoute'))?>"><button>Get A Qoute</button></a>
                 </div>
 			</div><!-- .site-header-main -->
 
