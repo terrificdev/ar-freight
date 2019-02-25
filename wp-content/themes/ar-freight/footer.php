@@ -11,7 +11,7 @@
 ?>
 	</div><!-- .site-content -->
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<div class = "footer-container">
+			<div class = "footer-container block-container">
 				<div class = "footer-map">
 					<iframe src="<?php echo get_theme_mod('footer-map'); ?>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
@@ -35,7 +35,7 @@
 					</div>
 					<div class = "footer-column-3">
 						<div class = "address"><?php echo get_theme_mod('address-block') ;?></div>
-						<div class = "tel"><span>Tel:</span><?php echo get_theme_mod('telephone-block') ;?></div>				
+						<div class = "tel"><span>Tel:</span><?php echo get_theme_mod('telephone-block') ;?></div>
 					</div>
 				</div>
 				<div class = "footer-bottom">
@@ -52,12 +52,12 @@
 								) );
 							?>
 						</nav><!-- .social-navigation -->
-					<?php endif; ?> 
-					</div> 								
+					<?php endif; ?>
+					</div>
 					<div class = "visitors-count">
 						<?php echo do_shortcode('[ads-wpsitecount image=itseg7blue.jpg imgmaxw="100" width=100 whunit="px" height=0 count=0 ]');?>
-						<span>Visitors till date</span>
-					</div>					
+						<span class="visitor-date">Visitors till date</span>
+					</div>
 				</div>
 			</div>
 		</footer><!-- .site-footer -->

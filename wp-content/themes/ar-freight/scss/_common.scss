@@ -11,7 +11,7 @@ body:not(.custom-background-image):after {
 *{
     font-weight: normal;
 }
-//remove the underline style for a tag 
+//remove the underline style for a tag
 a {
     &:hover,
     &:active,
@@ -39,4 +39,11 @@ button {
 .block-title{
 
 }
-
+//common style for removing the margin from webiste page
+body {
+  #page {
+    .site-inner {
+      max-width: 100%;
+    }
+  }
+}
