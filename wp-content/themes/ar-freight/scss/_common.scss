@@ -4,6 +4,9 @@ body:not(.custom-background-image):before,
 body:not(.custom-background-image):after {
     height: 0px !important;
 }
+#page{
+    margin: 0 !important;
+}
 //to avoid the font issues in firefox and safari browsers
 *{
     font-weight: normal;
