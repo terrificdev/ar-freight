@@ -8,7 +8,7 @@
         $news = new WP_Query(array(
             'post_type' => 'news',
             'post_status' => 'publish',
-            'posts_per_page' => -1,
+            'posts_per_page' => 7,
             'tax_query' => array(
                 array (
                     'taxonomy' => 'news_category',
@@ -50,7 +50,7 @@
         $events = new WP_Query(array(
             'post_type' => 'news',
             'post_status' => 'publish',
-            'posts_per_page' => -1,
+            'posts_per_page' => 7,
             'tax_query' => array(
                 array (
                     'taxonomy' => 'news_category',

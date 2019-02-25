@@ -42,7 +42,8 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
         endif;
-        get_template_part( 'template-parts/content', 'news' );
+		get_template_part( 'template-parts/content', 'news' );
+		get_template_part( 'template-parts/content', 'testimonial' );
 		?>
 
 		</main><!-- .site-main -->
