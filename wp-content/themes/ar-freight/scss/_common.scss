@@ -1,0 +1,39 @@
+
+//to overide the black border of the theme
+body:not(.custom-background-image):before,
+body:not(.custom-background-image):after {
+    height: 0px !important;
+}
+//to avoid the font issues in firefox and safari browsers
+*{
+    font-weight: normal;
+}
+//remove the underline style for a tag 
+a {
+    &:hover,
+    &:active,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+//remove the default style of button
+button {
+    background-color: none;
+    border: none;
+    cursor: pointer;
+}
+//container for blocks
+.block-container {
+    max-width: 1290px;
+    margin: 0 auto;
+    @media all and (max-width: 1330px) {
+        padding: 0 20px;
+    }
+}
+//common heading style
+.block-title{
+
+}
+
