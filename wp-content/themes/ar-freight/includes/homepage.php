@@ -88,4 +88,38 @@ $wp_customize->add_control('associate_3_link',array(
     'section'=>'homepage_associate_section',
     'settings'=>'associate_3_link',
 ));
+
+//homepage service section
+$wp_customize->add_section('homepage_service_section',array(
+    'title'=>'Services',
+    'priority'=>9,
+    'panel'=>'home_page',
+));
+
+//service title field
+$wp_customize->add_setting('service_title');
+$wp_customize->add_control('service_title',array(
+    'label'=>'Service Title',
+    'type'=>'text',
+    'section'=>'homepage_service_section',
+    'settings'=>'service_title',
+));
+
+//service description field
+$wp_customize->add_setting('service_description');
+$wp_customize->add_control('service_description',array(
+    'label'=>'Service Description',
+    'type'=>'textarea',
+    'section'=>'homepage_service_section',
+    'settings'=>'service_description',
+));
+
+//service page link field
+$wp_customize->add_setting('service_page_link');
+$wp_customize->add_control('service_page_link',array(
+    'label'=>'Service Page link',
+    'type'=>'dropdown-pages',
+    'section'=>'homepage_service_section',
+    'settings'=>'service_page_link',
+));
 } add_action('customize_register','panel');
