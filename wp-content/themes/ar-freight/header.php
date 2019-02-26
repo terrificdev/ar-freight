@@ -57,10 +57,13 @@
 								?>
 							</nav><!-- .main-navigation -->
 						<?php endif; ?>
+						<div class= "qoute-button resp">
+                    		<a href="<?php echo get_page_link(get_theme_mod('get_a_qoute'))?>"><button>Get A Quote</button></a>
+                		</div>
 					</div><!-- .site-header-menu -->
 				<?php endif; ?>
-				<div class= "qoute-button">
-                    <a href="<?php echo get_page_link(get_theme_mod('get_a_qoute'))?>"><button>Get A Qoute</button></a>
+				<div class= "qoute-button desktop">
+                    <a href="<?php echo get_page_link(get_theme_mod('get_a_qoute'))?>"><button>Get A Quote</button></a>
                 </div>
 			</div><!-- .site-header-main -->
 
