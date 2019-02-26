@@ -1,4 +1,4 @@
-$primary-color: #fff;
+$primary-white: #fff;
 
 footer {
   padding: 0 !important;
@@ -19,7 +19,7 @@ footer {
       display: flex;
       justify-content: space-between;
       div[class^="footer-column-"] {
-        color: $primary-color;
+        color: $primary-white;
         font-size: 14px;
         .footer-navigation {
           ul {
@@ -29,7 +29,7 @@ footer {
               width: 50%;
               float: left;
               a {
-                color: $primary-color;
+                color: $primary-white;
                 font-size: 14px;
               }
             }
@@ -60,7 +60,7 @@ footer {
                   border: none;
                   &:before {
                     font-size: 24px;
-                    color: $primary-color;
+                    color: $primary-white;
                   }
                 }
               }
@@ -74,7 +74,7 @@ footer {
         display: grid;
         text-align: right;
         .visitor-date {
-          color: $primary-color;
+          color: $primary-white;
           font-size: 12px;
         }
       }
