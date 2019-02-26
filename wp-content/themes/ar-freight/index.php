@@ -41,7 +41,8 @@ get_header(); ?>
 		else :
 			get_template_part( 'template-parts/content', 'none' );
 
-        endif;
+		endif;
+		get_template_part( 'template-parts/content', 'associates' );
 		get_template_part( 'template-parts/content', 'news' );
 		get_template_part( 'template-parts/content', 'testimonial' );
 		?>
