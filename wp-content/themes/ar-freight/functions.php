@@ -14,5 +14,6 @@ add_action( 'admin_enqueue_scripts', 'ar_freight_custom_scripts');
 include_once( get_stylesheet_directory() .'/includes/header.php');
 include_once( get_stylesheet_directory() .'/includes/footer.php');
 include_once( get_stylesheet_directory() .'/includes/common.php');
+include_once( get_stylesheet_directory() .'/includes/homepage.php');
 include_once( get_stylesheet_directory() .'/includes/news.php');
 include_once( get_stylesheet_directory() .'/includes/testimonials.php');
