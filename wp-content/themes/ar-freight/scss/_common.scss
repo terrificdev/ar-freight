@@ -46,6 +46,13 @@ body {
   #page {
     .site-inner {
       max-width: 100%;
+      .site-content {
+        padding: 0;
+        .content-area {
+          width: 100%;
+          margin: 0;
+        }
+      }
     }
   }
 }

@@ -36,6 +36,11 @@ function add_theme_scripts() {
     // End JS file for modal pop up //
     wp_enqueue_script(
         'my-script',
+        get_stylesheet_directory_uri() . '/js/custom.js',
+        array( 'jquery' )
+    );
+    wp_enqueue_script(
+        'my-script',
         get_stylesheet_directory_uri() . '/js/my-script.js',
         array( 'jquery' )
     );
