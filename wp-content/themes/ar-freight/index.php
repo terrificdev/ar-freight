@@ -42,6 +42,7 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
+		get_template_part( 'template-parts/content', 'about' );
 		get_template_part( 'template-parts/content', 'services' );
 		get_template_part( 'template-parts/content', 'associates' );
 		get_template_part( 'template-parts/content', 'news' );
