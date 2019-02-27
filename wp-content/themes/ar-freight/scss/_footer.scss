@@ -7,7 +7,11 @@ footer {
   background-size: cover;
   .footer-container {
     padding-top: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
+    @media all and (max-width: 767px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
     .footer-map {
       iframe {
         width: 100%;
@@ -18,16 +22,22 @@ footer {
     .footer-top {
       display: flex;
       justify-content: space-between;
+      @media all and (max-width: 767px) {
+        display: block;
+        margin-bottom: 30px;
+        clear: both;
+        overflow: hidden;
+      }
       div[class^="footer-column-"] {
         color: $primary-white;
         font-size: 14px;
+        font-family: Roboto-Rg !important;
         .footer-navigation {
           ul {
             list-style: none;
             margin: 0;
             li {
-              width: 50%;
-              float: left;
+              line-height: 35px;
               a {
                 color: $primary-white;
                 font-size: 14px;
@@ -35,21 +45,77 @@ footer {
             }
           }
         }
+        .address {
+          width: 200px;
+          line-height: 30px;
+        }
+        .tel {
+          span {
+            margin-right: 10px;
+          }
+        }
       }
       .footer-column-1 {
-        flex-basis: 20%;
+        flex-basis: 40%;
+        @media all and (max-width: 991px) {
+          flex-basis: 35%;
+        }
         p {
+          width: 65%;
           margin-top: 15px;
+          @media all and (max-width: 1024px) {
+            width: 75%;
+          }
+          @media all and (max-width: 991px) {
+            width: 90%;
+          }
+          @media all and (max-width: 767px) {
+            width: 100%;
+          }
         }
       }
       .footer-column-2 {
-        flex-basis: 40%;
+        flex-basis: 20%;
+        @media all and (max-width: 991px) {
+          flex-basis: 23%;
+        }
+        @media all and (max-width: 767px) {
+          width: 33.33%;
+          float: left;
+        }
+        @media all and (max-width: 599px) {
+          width: 50%;
+        }
       }
       .footer-column-3 {
+        flex-basis: 20%;
+        @media all and (max-width: 991px) {
+          flex-basis: 23%;
+        }
+        @media all and (max-width: 767px) {
+          width: 33.33%;
+          float: left;
+        }
+        @media all and (max-width: 599px) {
+          width: 50%;
+        }
+      }
+      .footer-column-4 {
         flex-basis: 300px;
+        @media all and (max-width: 767px) {
+          width: 33.33%;
+          float: left;
+        }
+        @media all and (max-width: 599px) {
+          width: 100%;
+          margin-top: 20px;
+        }
       }
     }
     .footer-bottom {
+      clear: both;
+      width: 100%;
+      overflow: hidden;
       .social-menu {
         float: left;
         .social-navigation {
@@ -73,9 +139,47 @@ footer {
         float: right;
         display: grid;
         text-align: right;
+        #adswsc_block {
+          border-radius: 3px;
+          background-color: $primary-white;
+          text-align: right;
+          padding: 2px 0 2px 7px;
+          min-width: 100px;
+          #adswsc_countertext {
+            color: black;
+            letter-spacing: 7px;
+            font-size: 16px;
+            font-family: Roboto-Lt;
+            @media all and (max-width: 767px) {
+              font-size: 14px;
+            }
+          }
+        }
         .visitor-date {
           color: $primary-white;
-          font-size: 12px;
+          font-size: 10px;
+          margin-top: 2px;
+          font-family: Roboto-Rg;
+          @media all and (max-width: 767px) {
+            font-size: 9px;
+          }
+        }
+      }
+      .copyright {
+        clear: both;
+        overflow: hidden;
+        font-family: Roboto-Rg;
+        color: $primary-white;
+        font-size: 14px;
+        margin-top: 10px;
+        background-image: url(../images/Copyright_white.png);
+        background-size: 14px;
+        background-repeat: no-repeat;
+        padding-left: 18px;
+        background-position-y: 5px;
+        @media all and (max-width: 767px) {
+          max-width: 170px;
+          margin: 0 auto;
         }
       }
     }
