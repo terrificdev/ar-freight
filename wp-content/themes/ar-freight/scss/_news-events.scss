@@ -4,19 +4,6 @@ $grey-text: #868686;
 $blue-link: #060331;
 $blue-link2: #0b045a;
 
-@mixin content-title {
-  font: {
-    family: Roboto-Bd;
-    weight: normal;
-    size: 30px;
-  }
-  @media all and (max-width: 767px) {
-    font-size: 24px;
-  }
-  letter-spacing: 0.5px;
-  color: #000;
-}
-
 .news-events-wrapper {
   background-image: linear-gradient(to bottom right, #f3f3f3, #eaeaea);
   padding: 50px 20px 30px;
@@ -39,6 +26,12 @@ $blue-link2: #0b045a;
       border-radius: 20px;
       margin-top: 10px;
     }
+    @media all and (max-width: 768px) {
+      margin-bottom: 10px;
+      &:after {
+        width: 150px;
+      }
+    }
   }
   .news-content, .events-content {
     .view-all {
@@ -48,6 +41,9 @@ $blue-link2: #0b045a;
         font-size: 18px;
         font-family: Roboto-Rg;
         color: $blue-link;
+        @media all and (max-width: 768px) {
+          font-size: 16px;
+        }
       }
     }
   }

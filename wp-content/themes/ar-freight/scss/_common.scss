@@ -56,3 +56,19 @@ body {
     }
   }
 }
+
+
+@mixin content-title {
+  font: {
+    family: Roboto-Bd;
+    weight: normal;
+    size: 30px;
+  }
+  letter-spacing: 0.5px;
+  color: #000;
+  @media all and (max-width: 768px) {
+    font: {
+      size: 25px;
+    }
+  }
+}
