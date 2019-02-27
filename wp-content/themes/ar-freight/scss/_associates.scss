@@ -1,0 +1,110 @@
+article {
+    margin-top: 200px;
+}
+
+.associates-wrapper {
+    background: url(../images/associates_bg.png) no-repeat bottom;
+    height: 600px;
+    background-size: cover;
+    @media all and (max-width: 1024px) {
+        height: auto;
+    }
+    .associates-container {
+        padding-top: 50px;
+        padding-bottom: 100px;
+        display: flex;
+        justify-content: space-between;
+        @media all and (max-width: 768px) {
+            flex-direction: column;
+        }
+        .associate-block {
+            position: relative;
+            &:nth-child(2) {
+                margin: 10px 0;
+                @media all and (min-width: 769px) {
+                    margin: 0 10px;
+                    position: relative;
+                    top: -80px;
+                }
+            }
+            .associate-image {
+                position: relative;
+                img {
+                    width: 100%;
+                    @media all and (min-width: 769px) {
+                        max-width: 364px;
+                        max-height: 399px;
+                    }
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    background-image: linear-gradient(-45deg, #003c5e, #0070b0);
+                    opacity: 0.7;
+                }
+            }
+            .details-wrapper {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 20px 20px 10px;
+                .associate-title {
+                    color: #fff;
+                    font-size: 22px;
+                    border-bottom: 1px solid #fff;
+                    font-family: Roboto-Rg;
+                    padding-right: 80px;
+                    padding-bottom: 15px;
+                    line-height: 28px;
+                    @media all and (max-width: 1120px) {
+                        padding-right: 40px;
+                    }
+                    @media all and (max-width: 1024px) {
+                        font-size: 20px;
+                        padding-right: 6%;
+                    }
+                    @media all and (max-width: 840px) {
+                        font-size: 18px;
+                        padding-right: 5%;
+                    }
+                    @media all and (max-width: 768px) {
+                        font-size: 20px;
+                        padding-right: 5%;
+                    }
+                }
+                .associate-link {
+                    margin-top: 10px;
+                    @media all and (max-width: 840px) {
+                        margin-top: 0px;
+                    }
+                    a {
+                        color: #fff;
+                        font-size: 14px;
+                        font-family: Roboto-Rg;
+                        @media all and (max-width: 840px) {
+                            font-size: 13px;
+                        }
+                        &:after {
+                            content: "\27F6";
+                            font-size: 27px;
+                            position: relative;
+                            top: 5px;
+                            left: 20px;
+                            @media all and (max-width: 840px) {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
