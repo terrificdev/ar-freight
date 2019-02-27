@@ -22,7 +22,7 @@
 					</div>
 					<div class = "footer-column-2">
 						<?php if ( has_nav_menu( 'footer-menu' ) ) : ?>
-							<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'twentysixteen' ); ?>">
+							<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu 1', 'twentysixteen' ); ?>">
 								<?php
 									wp_nav_menu( array(
 										'theme_location' => 'footer-menu',
@@ -30,10 +30,23 @@
 										'depth'          => 1,
 									) );
 								?>
-							</nav><!-- .footer-menu -->
+							</nav><!-- .footer-menu 1-->
 						<?php endif; ?>
 					</div>
 					<div class = "footer-column-3">
+						<?php if ( has_nav_menu( 'footer-menu-2' ) ) : ?>
+							<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu 2', 'twentysixteen' ); ?>">
+								<?php
+									wp_nav_menu( array(
+										'theme_location' => 'footer-menu-2',
+										'menu_class'     => 'footer-menu-2',
+										'depth'          => 1,
+									) );
+								?>
+							</nav><!-- .footer-menu 2-->
+						<?php endif; ?>
+					</div>
+					<div class = "footer-column-4">
 						<div class = "address"><?php echo get_theme_mod('address-block') ;?></div>
 						<div class = "tel"><span>Tel:</span><?php echo get_theme_mod('telephone-block') ;?></div>
 					</div>
