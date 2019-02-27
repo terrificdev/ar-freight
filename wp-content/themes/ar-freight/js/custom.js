@@ -36,6 +36,8 @@ jQuery(document).ready(function ($) {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 991,
@@ -63,16 +65,16 @@ jQuery(document).ready(function ($) {
   $(".center_slick").slick({
     dots: true,
     arrows: false,
+    centerMode: true,
+    centerPadding: '0',
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
     responsive: [
   {
     breakpoint: 1200,
     settings: {
       slidesToShow: 2,
-      slidesToScroll: 1,
       infinite: true
     }
   },
@@ -80,7 +82,6 @@ jQuery(document).ready(function ($) {
     breakpoint: 450,
     settings: {
       slidesToShow: 1,
-      slidesToScroll: 1,
       infinite: true
     }
   },
