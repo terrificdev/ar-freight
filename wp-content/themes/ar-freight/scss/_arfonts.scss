@@ -1,4 +1,4 @@
- 
+
 @mixin font-face($font-family, $url) {
 	@font-face {
 		font-family: '#{$font-family}';
@@ -15,3 +15,4 @@
 @include font-face('Roboto-Md','../fonts/Roboto-Medium');
 @include font-face('Roboto-Lt','../fonts/Roboto-Light');
 @include font-face('Roboto-Rg','../fonts/Roboto-Regular');
+@include font-face('Roboto-Bd','../fonts/Roboto-Bold');
