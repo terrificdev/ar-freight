@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /* Add new footer menu */
 function register_footer_menu() {
@@ -52,6 +52,13 @@ function aviation_customize_footer($wp_customize){
             'description' => __('Enter your contact number'),
             'section'	=> 'footer_section',
             'settings' => 'telephone-block',
+            'type'	=> 'text',
+    ));
+    $wp_customize->add_setting('copyright-block');
+    $wp_customize->add_control('copyright-block',array(
+            'label'	=> __('Copyright Block'),
+            'section'	=> 'footer_section',
+            'settings' => 'copyright-block',
             'type'	=> 'text',
     ));
 }

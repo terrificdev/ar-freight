@@ -52,7 +52,7 @@
 					</div>
 				</div>
 				<div class = "footer-bottom">
-	 	        	<div class = "social-menu">
+	 	       <div class = "social-menu">
 					 <?php if ( has_nav_menu( 'social' ) ) : ?>
 						<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'ar-freight' ); ?>">
 							<?php
@@ -68,8 +68,11 @@
 					<?php endif; ?>
 					</div>
 					<div class = "visitors-count">
-						<?php echo do_shortcode('[ads-wpsitecount image=itseg7blue.jpg imgmaxw="100" width=100 whunit="px" height=0 count=0 ]');?>
+						<?php echo do_shortcode('[ads-wpsitecount image text="on" imgmaxw="100" width=100 whunit="px" height=0 count=0 ]');?>
 						<span class="visitor-date">Visitors till date</span>
+					</div>
+					<div class = "copyright">
+						<?php echo get_theme_mod('copyright-block') ;?>
 					</div>
 				</div>
 			</div>
