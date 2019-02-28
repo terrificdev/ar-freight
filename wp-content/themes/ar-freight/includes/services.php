@@ -135,7 +135,7 @@ function service_show_custom_meta_box() {
                             $meta_array = explode(',', $meta);
                             foreach ($meta_array as $meta_gall_item) {
                                     if(null != esc_attr($meta_gall_item))
-                                    $meta_html .= '<li><div class="service_gallery_container"><img id="' . esc_attr($meta_gall_item) . '" src="' . wp_get_attachment_thumb_url($meta_gall_item) . '"><br><span class="service_gallery_close">Click here to remove this image</span></div></li>';
+                                    $meta_html .= '<li><div class="service_gallery_container"><span class="service_gallery_close"><img id="' . esc_attr($meta_gall_item) . '" src="' . wp_get_attachment_thumb_url($meta_gall_item) . '"></span><br>Click on the image to remove it</div></li>';
                             }
                             $meta_html .= '</ul>';
                     }

@@ -69,7 +69,6 @@ jQuery(document).ready(function ($) {
       var meta_gallery_frame;
       //Attachment.sizes.thumbnail.url/ Prevents the default action from occuring.
       e.preventDefault();
-
       // If the frame already exists, re-open it.
       if ( meta_gallery_frame ) {
               meta_gallery_frame.open();
@@ -128,11 +127,14 @@ jQuery(document).ready(function ($) {
               imageHTML += '<ul class="service_gallery_list">';
               images.each(function(attachment) {
                       imageIDArray.push(attachment.attributes.id);
-                      imageHTML += '<li><div class="service_gallery_container"><img id="'+attachment.attributes.id+'" src="'+attachment.attributes.sizes.thumbnail.url+'"><br><span class="service_gallery_close">remove</span></div></li>';
+                      imageHTML += '<li><div class="service_gallery_container"><span class="service_gallery_close"><img id="'+attachment.attributes.id+'" src="'+attachment.attributes.sizes.thumbnail.url+'"></span><br>Click on the image to remove it.</div></li>';
               });
               imageHTML += '</ul>';
+              console.log(jQuery('#service_gallery').val());
+              var metadataString = jQuery('#service_gallery').val();
               metadataString += imageIDArray;
               metadataString += ',';
+              console.log(metadataString);
               if (metadataString) {
                       jQuery("#service_gallery").val(metadataString);
                       jQuery("#service_gallery_src").append(imageHTML);
@@ -148,8 +150,10 @@ jQuery(document).ready(function ($) {
       if (confirm('Are you sure you want to remove this image?')) {
         var removedImage = jQuery(this).children('img').attr('id');
         var oldGallery = jQuery("#service_gallery").val();
+        console.log(removedImage);
         var newGallery = oldGallery.replace(','+removedImage,'').replace(removedImage+',','').replace(removedImage,'');
         jQuery(this).parents().eq(1).remove();
+        console.log(newGallery);
         jQuery("#service_gallery").val(newGallery);
       }
   });
