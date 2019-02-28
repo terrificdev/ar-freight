@@ -1,11 +1,8 @@
-article {
-    margin-top: 200px;
-}
-
 .associates-wrapper {
     background: url(../images/associates_bg.png) no-repeat bottom;
     height: 600px;
     background-size: cover;
+    clear: both;
     @media all and (max-width: 1024px) {
         height: auto;
     }

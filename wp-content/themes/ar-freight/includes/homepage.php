@@ -193,4 +193,30 @@ $wp_customize->add_control('block_'.$i.'_desc',array(
     'settings'=>'block_'.$i.'_desc',
 ));
 endfor;
+
+//homepage banner section
+$wp_customize->add_section('homepage_banner_section',array(
+    'title'=>'Banner Contents',
+    'priority'=>5,
+    'panel'=>'home_page',
+));
+
+for($i=1;$i<5;$i++):
+$wp_customize->add_setting('banner_key_point_'.$i.'');
+$wp_customize->add_control('banner_key_point_'.$i.'',array(
+        'label'	=> __('Key Service Point '.$i.''),
+        'section'	=> 'homepage_banner_section',
+        'settings' => 'banner_key_point_'.$i.'',
+        'type'	=> 'text',
+));
+endfor;
+
+$wp_customize->add_setting('banner_telephone');
+$wp_customize->add_control('banner_telephone',array(
+        'label'	=> __('Dial in'),
+        'description' => __('Enter website contact number'),
+        'section'	=> 'homepage_banner_section',
+        'settings' => 'banner_telephone',
+        'type'	=> 'text',
+));
 } add_action('customize_register','panel');
