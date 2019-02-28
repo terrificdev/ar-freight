@@ -87,4 +87,26 @@ jQuery(document).ready(function ($) {
   },
 ]
 });
+ //Hover interaction for news item
+ var width = $(window).width();
+ if (width > 1025) {
+   //desktop interaction
+   var toggleOn = false;
+   $(".about-us__right__block").hover(
+     function () {
+       $(this).addClass('active');
+     }, function () {
+       toggleOn || $(this).removeClass('active');
+     }
+   );
+ }
+ else {
+   // tablet and mobile interaction
+   $(".about-us__right__block").click(function () {
+     $(".about-us__right__block").removeClass('active');
+     $(this).toggleClass('active');
+
+   });
+ }
+ 
 });
