@@ -71,26 +71,47 @@ jQuery(document).ready(function ($) {
     speed: 500,
     slidesToShow: 3,
     responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-          infinite: true
-        }
-      },
-      {
-        breakpoint: 450,
-        settings: {
-          slidesToShow: 1,
-          infinite: true
-        }
-      },
-    ]
-  });
-  $("#services-home").slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
+  {
+    breakpoint: 1200,
+    settings: {
+      slidesToShow: 2,
+      infinite: true
+    }
+  },
+  {
+    breakpoint: 450,
+    settings: {
+      slidesToShow: 1,
+      infinite: true
+    }
+  },
+]
+});
+ //Hover interaction for news item
+ var width = $(window).width();
+ if (width > 1025) {
+   //desktop interaction
+   var toggleOn = false;
+   $(".about-us__right__block").hover(
+     function () {
+       $(this).addClass('active');
+     }, function () {
+       toggleOn || $(this).removeClass('active');
+     }
+   );
+ }
+ else {
+   // tablet and mobile interaction
+   $(".about-us__right__block").click(function () {
+     $(".about-us__right__block").removeClass('active');
+     $(this).toggleClass('active');
+
+   });
+ }
+ $("#services-home").slick({
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
 });

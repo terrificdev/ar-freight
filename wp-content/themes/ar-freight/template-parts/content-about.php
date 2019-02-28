@@ -1,6 +1,6 @@
-<div class = "about-wrapper">
-    <div class = "about-container">
-        <div class ="about-left">
+<div class = "about-us">
+    <div class = "block-container">
+        <div class ="about-us__left">
             <div class = "about-logo">
                 <img class="logo" src="<?php echo wp_get_attachment_url(get_theme_mod('about_us_logo')) ?>"/>
             </div>
@@ -16,27 +16,31 @@
             </div>
             <?php endif;?>
         </div>
-        <div class = "about-right">
-            <div class = 'block-container'>
+        <div class = "about-us__right">
                 <?php for($i=1;$i<7;$i++):?>
-                <div class = "block-<?php echo $i?>">
-                    <div class = "block-logo">
+                <div class = "about-us__right__block ">
+                <div class = "about-us__right__head">
+                    <div class = "about-us__right__block--logo">
                     <img class="logo" src="<?php echo wp_get_attachment_url(get_theme_mod('block_'.$i.'_logo')) ?>"/>
                     </div>
-                    <div class = "block-title">
+                    <div class = "about-us__right__block--title">
+                        <h2>  <?php echo get_theme_mod('block_'.$i.'_title')?></h2>
+                    </div>
+                    </div>
+                   
+                    <?php if(get_theme_mod('block_'.$i.'_desc') != ""):?>
+                    <div class = "about-us__right_overlay">
+                    <div class = "about-us__right_learn-more">
+                        <span>Learn more</span>
                         <h2><?php echo get_theme_mod('block_'.$i.'_title')?></h2>
                     </div>
-                    <?php if(get_theme_mod('block_'.$i.'_desc') != ""):?>
-                    <div class = "block-learn-more">
-                        <span>Learn more</span>
-                        <div class = "block-desc">
+                    <div class = "about-us__right_des">
                             <p><?php echo get_theme_mod('block_'.$i.'_desc')?></p>
                         </div>
-                    </div>
+                        </div>
                     <?php endif;?>
                 </div>
                 <?php endfor;?>
-            </div>
         </div>
     </div>
 </div>
