@@ -1,4 +1,5 @@
 jQuery(document).ready(function ($) {
+    var metadataString = "";
     // Instantiates the variable that holds the media library frame.
     // Runs when the image button is clicked.
     $('.news-banner-upload').click(function (e) {
@@ -62,4 +63,94 @@ jQuery(document).ready(function ($) {
       // Opens the media library frame.
       meta_image_frame.open();
     });
+
+
+  jQuery('#service_gallery_button').click(function(e){
+      var meta_gallery_frame;
+      //Attachment.sizes.thumbnail.url/ Prevents the default action from occuring.
+      e.preventDefault();
+
+      // If the frame already exists, re-open it.
+      if ( meta_gallery_frame ) {
+              meta_gallery_frame.open();
+              return;
+      }
+
+      // Sets up the media library frame
+      meta_gallery_frame = wp.media.frames.meta_gallery_frame = wp.media({
+              title: service_gallery.title,
+              button: { text:  service_gallery.button },
+              library: { type: 'image' },
+              multiple: true
+      });
+
+      // Create Featured Gallery state. This is essentially the Gallery state, but selection behavior is altered.
+      meta_gallery_frame.states.add([
+              new wp.media.controller.Library({
+                      id:         'service-gallery',
+                      title:      'Select Images for Gallery',
+                      priority:   20,
+                      toolbar:    'main-gallery',
+                      filterable: 'uploaded',
+                      library:    wp.media.query( meta_gallery_frame.options.library ),
+                      multiple:   meta_gallery_frame.options.multiple ? 'reset' : false,
+                      editable:   true,
+                      allowLocalEdits: true,
+                      displaySettings: true,
+                      displayUserSettings: true
+              }),
+      ]);
+
+      meta_gallery_frame.on('open', function() {
+              var selection = meta_gallery_frame.state().get('selection');
+              var library = meta_gallery_frame.state('gallery-edit').get('library');
+              var ids = jQuery('#service_gallery').val();
+              if (ids) {
+                      idsArray = ids.split(',');
+                      idsArray.forEach(function(id) {
+                              attachment = wp.media.attachment(id);
+                              attachment.fetch();
+                              selection.add( attachment ? [ attachment ] : [] );
+                      });
+            }
+      });
+
+      meta_gallery_frame.on('ready', function() {
+              jQuery( '.media-modal' ).addClass( 'no-sidebar' );
+      });
+
+      // When an image is selected, run a callback.
+      //meta_gallery_frame.on('update', function() {
+      meta_gallery_frame.on('select', function() {
+              var imageIDArray = [];
+              var imageHTML = '';
+              images = meta_gallery_frame.state().get('selection');
+              imageHTML += '<ul class="service_gallery_list">';
+              images.each(function(attachment) {
+                      imageIDArray.push(attachment.attributes.id);
+                      imageHTML += '<li><div class="service_gallery_container"><img id="'+attachment.attributes.id+'" src="'+attachment.attributes.sizes.thumbnail.url+'"><br><span class="service_gallery_close">remove</span></div></li>';
+              });
+              imageHTML += '</ul>';
+              metadataString += imageIDArray;
+              metadataString += ',';
+              if (metadataString) {
+                      jQuery("#service_gallery").val(metadataString);
+                      jQuery("#service_gallery_src").append(imageHTML);
+              }
+      });
+      // Finally, open the modal
+      meta_gallery_frame.open();
+
+  });
+
+  jQuery(document.body).on('click', '.service_gallery_close', function(event){
+      event.preventDefault();
+      if (confirm('Are you sure you want to remove this image?')) {
+        var removedImage = jQuery(this).children('img').attr('id');
+        var oldGallery = jQuery("#service_gallery").val();
+        var newGallery = oldGallery.replace(','+removedImage,'').replace(removedImage+',','').replace(removedImage,'');
+        jQuery(this).parents().eq(1).remove();
+        jQuery("#service_gallery").val(newGallery);
+      }
+  });
 });
