@@ -71,20 +71,26 @@ jQuery(document).ready(function ($) {
     speed: 500,
     slidesToShow: 3,
     responsive: [
-  {
-    breakpoint: 1200,
-    settings: {
-      slidesToShow: 2,
-      infinite: true
-    }
-  },
-  {
-    breakpoint: 450,
-    settings: {
-      slidesToShow: 1,
-      infinite: true
-    }
-  },
-]
-});
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 1,
+          infinite: true
+        }
+      },
+    ]
+  });
+  $("#services-home").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
 });
