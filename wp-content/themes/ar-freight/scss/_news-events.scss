@@ -5,7 +5,7 @@ $blue-link: #060331;
 $blue-link2: #0b045a;
 
 .news-events-wrapper {
-  background-image: linear-gradient(to bottom right, #f3f3f3, #eaeaea);
+  background-image: linear-gradient(to bottom right, #f3f3f3, #fdfdfd);
   padding: 50px 20px 30px;
   @media all and (max-width: 767px) {
     padding: 30px 0 30px;
@@ -176,32 +176,7 @@ $blue-link2: #0b045a;
       }
     }
     .slick-arrow {
-      @media all and (max-width: 767px) {
-        display: none !important;
-      }
-      &.slick-next:before, &.slick-prev:before {
-        content: none;
-      }
-      &.slick-prev, &.slick-next {
-        background-repeat: no-repeat;
-        background-position: center;
-        border: 1px solid white;
-        border-radius: 50%;
-        background-color: white;
-        background-size: 55%;
-        height: 65px;
-        width: 65px;
-        top: 40%;
-        @media all and (max-width: 1480px) {
-          height: 50px;
-          width: 50px;
-        }
-        @media all and (max-width: 767px) {
-          display: none;
-        }
-      }
       &.slick-prev {
-        background-image: url('../images/prev-trans.png');
         left: -75px;
         @media all and (max-width: 1480px) {
           left: -30px;
@@ -212,7 +187,6 @@ $blue-link2: #0b045a;
         }
       }
       &.slick-next {
-        background-image: url('../images/next-trans.png');
         right: -75px;
         @media all and (max-width: 1480px) {
           right: -30px;
@@ -243,5 +217,9 @@ $blue-link2: #0b045a;
         }
       }
     }
+    .slick-arrow {
+      @include common-slickArrow;
+    }
+
   }
 }
