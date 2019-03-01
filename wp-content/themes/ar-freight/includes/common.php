@@ -40,11 +40,6 @@ function add_theme_scripts() {
         array( 'jquery' )
     );
     wp_enqueue_script(
-        'my-script',
-        get_stylesheet_directory_uri() . '/js/my-script.js',
-        array( 'jquery' )
-    );
-    wp_enqueue_script(
         'slick-script',
         get_stylesheet_directory_uri() . '/js/slick.js',
         array( 'jquery' )
