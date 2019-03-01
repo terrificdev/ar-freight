@@ -15,6 +15,7 @@ $labels = array(
 'view_item' => __( 'View Service' ),
 'search_items' => __( 'Search news' ),
 'not_found' => __( 'No service found' ),
+'Excerpt' => __('Other services description'),
 'not_found_in_trash' => __( 'No service found in the Trash' ),
 'parent_item_colon' => '',
 'menu_name' => 'Services'
@@ -27,7 +28,7 @@ $args = array(
 'description' => 'Service post type',
 'public' => true,
 'menu_position' => 4,
-'supports' => array( 'title', 'editor', 'thumbnail'),
+'supports' => array( 'title', 'excerpt','editor', 'thumbnail'),
 'has_archive' => true,
 );
 
@@ -44,11 +45,44 @@ function add_ar_freight_services_meta_box() {
 		'side', // $context
 		'high' // $priority
     );
-    
     add_meta_box(
 		'add_ar_freight_service_gallery_meta_box', // $id
 		'Service Gallery', // $title
 		'service_show_custom_meta_box', // $callback
+		'services', // $screen
+		'normal', // $context
+		'high' // $priority
+    );
+    add_meta_box(
+		'add_ar_freight_service_overview_image_meta_box', // $id
+		'Service Overview Image', // $title
+		'service_overview_image_meta_box', // $callback
+		'services', // $screen
+		'side', // $context
+		'high' // $priority
+    );
+    
+    add_meta_box(
+		'add_ar_freight_service_key_points_meta_box', // $id
+		'Service Key Points', // $title
+		'service_key_points_meta_box', // $callback
+		'services', // $screen
+		'normal', // $context
+		'high' // $priority
+    );
+    add_meta_box(
+		'add_ar_freight_service_banner_image_meta_box', // $id
+		'Service Banner Image', // $title
+		'service_banner_image_meta_box', // $callback
+		'services', // $screen
+		'normal', // $context
+		'high' // $priority
+    );
+    
+    add_meta_box(
+		'add_ar_freight_service_subtitle_meta_box', // $id
+		'Service Subtitle', // $title
+		'service_subtitle_meta_box', // $callback
 		'services', // $screen
 		'normal', // $context
 		'high' // $priority
@@ -70,6 +104,11 @@ function save_ar_freight_services_fields_meta( $post_id ) {
     else
     update_post_meta($post->ID, "service_display", '0');
     update_post_meta($post->ID, "service_gallery", $_POST["service_gallery"]);
+    update_post_meta($post->ID, "service_overview_image", $_POST["service_overview_image"]);
+    $service_key_points = json_encode($_POST["service_key_points"]);
+    update_post_meta($post->ID, "service_key_points", $service_key_points);
+    update_post_meta($post->ID, "service_subtitle", $_POST["service_subtitle"]);
+    update_post_meta($post->ID, "service_banner_image", $_POST["service_banner_image"]);
 }
 add_action( 'save_post', 'save_ar_freight_services_fields_meta' );
 
@@ -146,5 +185,72 @@ function service_show_custom_meta_box() {
     } // end foreach
     echo '</table>'; // end table
 }
-?>
 
+function service_overview_image_meta_box(){
+    global $post;
+    $meta = get_post_meta($post->ID, 'service_overview_image', true);?>
+    <p>
+        <label for="service_overview_image">Upload service overview image</label><br>
+        <input type="text" name="service_overview_image" id="service_overview_image" class="service_overview_image regular-text" value="<?php echo $meta; ?>" required = "true">
+        <input type="button" class="button service-overview-upload" value="Browse">
+    </p>
+    <div class="service-overview-image-preview"><img class = "service-overview-image" src="<?php echo $meta; ?>" style="max-width: 250px;"></div>
+    <?php
+}
+
+function service_banner_image_meta_box(){
+    global $post;
+    $meta = get_post_meta($post->ID, 'service_banner_image', true);?>
+    <p>
+        <label for="service_banner_image">Upload service banner image</label><br>
+        <input type="text" name="service_banner_image" id="service_banner_image" class="service_banner_image regular-text" value="<?php echo $meta; ?>" required = "true">
+        <input type="button" class="button service-banner-upload" value="Browse">
+    </p>
+    <div class="service-banner-image-preview"><img class = "service-banner-image" src="<?php echo $meta; ?>"></div>
+    <?php
+}
+
+function service_key_points_meta_box(){
+    global $post;
+    $meta = get_post_meta($post->ID, 'service_key_points', true);
+    $service_key_points = json_decode($meta);
+    ?>
+    <label>
+        Company<span class="req">*</span>
+    </label>
+    <div id="dynamic_field">
+        <input type="text" required autocomplete="off" name="service_key_points[]" value="<?php echo $service_key_points[0]?>"/>                    
+        <button type="button" name="add" id="add" class="btn btn-success">Add More</button>
+        <?php for($i = 1; $i < count($service_key_points); $i++):?>
+            <div id="row<?php echo $i?>">
+                <input type="text" required autocomplete="off" name="service_key_points[]" value="<?php echo $service_key_points[$i]?>"/>
+                <button name="remove" id="<?php echo $i?>" class="btn btn-danger btn_remove">X</button>
+            </div>
+        <?php endfor; ?>
+    </div>
+    <?php
+}
+
+function service_subtitle_meta_box(){
+    global $post;
+    $meta = get_post_meta($post->ID, 'service_subtitle', true);
+    ?>
+    <label>Sub Title</label>
+    <input type="text" name="service_subtitle" value="<?php echo $meta?>"/>   
+    <?php
+}
+
+add_filter( 'gettext', 'change_post_text', 10, 2 );
+function change_post_text( $translation, $original )
+{
+    if ( 'Excerpt' == $original ) {
+        return 'Other service description';
+    }else{
+        $pos = strpos($original, 'Excerpts are optional hand-crafted summaries of your');
+        if ($pos !== false) {
+            return  'This text is shown below the services page';
+        }
+    }
+    return $translation;
+}
+?>

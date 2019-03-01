@@ -64,7 +64,68 @@ jQuery(document).ready(function ($) {
       meta_image_frame.open();
     });
 
+  $('.service-overview-upload').click(function (e) {
+    var meta_image_frame;
+    // Get preview pane
+    var meta_image_preview = $('.service-overview-image-preview .service-overview-image');
+    // Prevents the default action from occuring.
+    e.preventDefault();
+    var meta_image = $('.service_overview_image');
+    // If the frame already exists, re-open it.
+    if (meta_image_frame) {
+      meta_image_frame.open();
+      return;
+    }
+    // Sets up the media library frame
+    meta_image_frame = wp.media.frames.meta_image_frame = wp.media({
+      title: meta_image.title,
+      button: {
+        text: meta_image.button
+      }
+    });
+    // Runs when an image is selected.
+    meta_image_frame.on('select', function () {
+      // Grabs the attachment selection and creates a JSON representation of the model.
+      var media_attachment = meta_image_frame.state().get('selection').first().toJSON();
+      // Sends the attachment URL to our custom image input field.
+      meta_image.val(media_attachment.url);
+      meta_image_preview.attr('src', media_attachment.url);
+    });
+    // Opens the media library frame.
+    meta_image_frame.open();
+  });
 
+  $('.service-banner-upload').click(function (e) {
+    var meta_image_frame;
+    // Get preview pane
+    var meta_image_preview = $('.service-banner-image-preview .service-banner-image');
+    // Prevents the default action from occuring.
+    e.preventDefault();
+    var meta_image = $('.service_banner_image');
+    // If the frame already exists, re-open it.
+    if (meta_image_frame) {
+      meta_image_frame.open();
+      return;
+    }
+    // Sets up the media library frame
+    meta_image_frame = wp.media.frames.meta_image_frame = wp.media({
+      title: meta_image.title,
+      button: {
+        text: meta_image.button
+      }
+    });
+    // Runs when an image is selected.
+    meta_image_frame.on('select', function () {
+      // Grabs the attachment selection and creates a JSON representation of the model.
+      var media_attachment = meta_image_frame.state().get('selection').first().toJSON();
+      // Sends the attachment URL to our custom image input field.
+      meta_image.val(media_attachment.url);
+      meta_image_preview.attr('src', media_attachment.url);
+    });
+    // Opens the media library frame.
+    meta_image_frame.open();
+  });
+    
   jQuery('#service_gallery_button').click(function(e){
       var meta_gallery_frame;
       //Attachment.sizes.thumbnail.url/ Prevents the default action from occuring.
@@ -156,5 +217,16 @@ jQuery(document).ready(function ($) {
         console.log(newGallery);
         jQuery("#service_gallery").val(newGallery);
       }
+  });
+
+  var i = 1;
+  jQuery('#add').click(function(){
+      i++;
+      jQuery('#dynamic_field').append('<div id="row'+i+'"><input type="text" required autocomplete="off" name="service_key_points[]"/><button name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></div>');
+  });
+
+  jQuery(document).on('click','.btn_remove', function(){
+      var button_id = jQuery(this).attr("id");
+      jQuery("#row"+button_id+"").remove();
   });
 });
