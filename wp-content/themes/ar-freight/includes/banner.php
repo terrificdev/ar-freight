@@ -59,7 +59,7 @@ add_action( 'add_meta_boxes', 'add_ar_freight_banner_meta_box' );
 function ar_freight_banner_highlight_meta_box(){
     global $post;
     $highlighted_text = get_post_meta($post->ID, 'banner_highlighted_text', true);
-    $sub_text = get_post_meta($post->ID, 'banner_highlighted_text', true);?>
+    $sub_text = get_post_meta($post->ID, 'banner_sub_text', true);?>
     <label>Banner Sub Text</label><br>
     <textarea name="banner_sub_text"><?php echo $sub_text;?></textarea><br>
     <label>Banner Highlighted Text</label><br>
