@@ -31,7 +31,7 @@ get_header(); ?>
                         <img src = "<?php echo $featuredImage[0]; ?>">
                     </div>
                 </div>
-                <div class = "service-overview">
+                <div class = "service-overview block-container">
                     <div class = "service-left">
                         <div class = "service-overview-image">
                             <img src = "<?php echo get_post_meta(get_the_ID(), 'service_overview_image', true)?>">
@@ -39,6 +39,7 @@ get_header(); ?>
                     </div>
                     <div class = "service-right">
                         <div class = "service-overview-content">
+                            <h3 class="title">Overview</h3>
                             <?php the_content();?>
                         </div>
                     </div>
