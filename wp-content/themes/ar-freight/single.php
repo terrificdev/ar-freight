@@ -9,7 +9,7 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-    <div class = "service-wrapper">
+    <div class = "service">
             <div class = "service-container">
             <?php
             while ( have_posts() ) : the_post();
@@ -21,27 +21,33 @@ get_header(); ?>
                 $css_slug = $category->slug;                
             endforeach;
             ?>
-                <div class = "service-banner-block">
-                    <div class = "service-banner-image">
+                <div class = "service-banner__wrap">
+                    <div class = "service-banner__image">
                         <img src = "<?php echo get_post_meta(get_the_ID(), 'service_banner_image', true)?>">
                     </div>
-                    <div class = "service-title">
+                    
+                  
+                    <div class = "service-banner__head-block">
+                    <div class = "service-banner__title-block">
+                    
+                    <h2 class = "service-banner__title">
                         <?php echo get_the_title();?>
-                    </div>
-                    <div class = "service-subtitle">
-                        <p><?php echo get_post_meta(get_the_ID(), 'service_subtitle', true)?></p>
-                    </div>
-                    <div class = "service-banner-image">
+                    </h2>
+
+                        <p class = "sevice-banner__subtitle"><?php echo get_post_meta(get_the_ID(), 'service_subtitle', true)?></p>
+                        </div>
+                        <div class = "service-banner__content-image">
                         <img src = "<?php echo $featuredImage[0]; ?>">
                     </div>
-                </div>
-                <div class = "service-overview">
+                </div>  
+                   
+                    <div class = "service-overview block-container">
                     <div class = "service-left">
                         <div class = "service-overview-image">
                             <img src = "<?php echo get_post_meta(get_the_ID(), 'service_overview_image', true)?>">
                         </div>
                     </div>
-                    <div class = "service-right">
+                    <div class = "service__overview---right">
                         <div class = "service-overview-content">
                             <?php the_content();?>
                         </div>
