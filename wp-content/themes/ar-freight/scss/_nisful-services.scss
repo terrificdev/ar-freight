@@ -1,4 +1,4 @@
-.service-wrapper {
+.service{
     h3.title {
         text-align: left;
         font-family: Roboto-Bd;
@@ -59,7 +59,7 @@
             }
         }
     }
-    .service-right {
+    .service__overview---right {
         flex-basis: 50%;
        // border: 1px solid red;
         .service-overview-content {
