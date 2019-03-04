@@ -15,6 +15,7 @@ include_once( get_stylesheet_directory() .'/includes/header.php');
 include_once( get_stylesheet_directory() .'/includes/footer.php');
 include_once( get_stylesheet_directory() .'/includes/common.php');
 include_once( get_stylesheet_directory() .'/includes/homepage.php');
+include_once( get_stylesheet_directory() .'/includes/about-us.php');
 include_once( get_stylesheet_directory() .'/includes/banner.php');
 include_once( get_stylesheet_directory() .'/includes/services.php');
 include_once( get_stylesheet_directory() .'/includes/news.php');
