@@ -1,12 +1,21 @@
 .service{
     h3.title {
-        text-align: left;
         font-family: Roboto-Bd;
         font-size: 25px;
-        border-bottom: 1px solid black;
+        position: relative;
+        display: inline-block;
         padding-bottom: 20px;
         margin-bottom: 20px;
         color: #282828;
+        &::after{
+            content: "";
+            width: 145px;
+            height: 1px;
+            background: #6d6464;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
     }
 }
 
@@ -22,7 +31,6 @@
     }
     .service-left {
         flex-basis: 50%;
-       // border: 1px solid red;
         @media all and (max-width: 991px) {
           margin-bottom: 20px;
         }

@@ -23,7 +23,7 @@ get_header(); ?>
                     </div>
                     
                   
-                    <div class = "service-banner__head-block">
+                    <div class = "service-banner__head-block block-container">
                     <div class = "service-banner__title-block">
                     
                     <h2 class = "service-banner__title">
@@ -67,19 +67,22 @@ get_header(); ?>
                 		</div>
                     </div>
                 </div>
-                <div class = "service-gallery">
-                    <div class = "gallery-container">
+                <div class = "service-gallery__wrap">
+                <div class = "service-gallery__title">
+                    <h3 class="title">Gallery</h3>
+                    </div>
+                    <div class = "service-gallery__container">
+                    <div id="service-gallery">
                     <?php foreach ($images as $imageId): ?>
                         <?php if(null != esc_attr($imageId)): ?>
-                        <div class = 'gallery-image'>
+                        <div class = 'service-gallery__image' >
                             <img src="<?php echo wp_get_attachment_url($imageId)?>">
                         </div>
                         <?php endif;?>
                     <?php endforeach;?>
                     </div>
-                    <div class = "gallery-title">
-                    <h2>Gallery</h2>
                     </div>
+                   
                 </div>
                 <div class = "other-service-wrapper">
                     <div class = "other-service-container">
