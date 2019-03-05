@@ -11,21 +11,23 @@
         <div class = "about-us-wrapper">
             <div class = "about-us-container">
                 <div class = "about-banner">
-                    <div class = "about-banner-image">
+                    <div class = "about-banner__image">
                         <img src=<?php echo wp_get_attachment_url(get_theme_mod('about_us_banner')); ?>>
                     </div>
-                    <div class = "about-banner-content">
-                        <div class = "about-title">
-                            <?php echo get_the_title();?>
+                    <div class = "about-banner__head-block block-container">
+                        <div class = "about-banner__title-block">
+                            <div class = "about-banner__title">
+                                <?php echo get_the_title();?>
+                            </div>
+                            <div class = "about-banner__subtitle">
+                                <?php the_content()?>                          
+                            </div>
+                        </div>                            
+                        <div class = "about-banner__content-image">
+                            <img src = "<?php echo $featuredImage[0]; ?>">
                         </div>
-                        <div class = "about-subtitle">
-                         <?php the_content()?>                          
-                        </div>
-                    </div>
-                    <div class = "about-featured-image">
-                        <img src = "<?php echo $featuredImage[0]; ?>">
-                    </div>
-                </div>
+                    </div> 
+                </div>                
                 <div class = "about-content block-container">
                     <div class = "about-body-title">
                             <h3 class="title"> <?php echo get_theme_mod('about_us_body_title')?><h3>
