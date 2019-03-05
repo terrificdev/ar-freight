@@ -1,6 +1,7 @@
 .service-gallery__wrap{
     padding-right: calc((100% - 1290px)/2);
     overflow: hidden;
+    margin: 60px 0;
     @media all and (min-width: 991px) {
         display: flex;
     }
