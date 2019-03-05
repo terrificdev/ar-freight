@@ -10,7 +10,6 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
     <div class = "service">
-            <div class = "service-container">
             <?php
             while ( have_posts() ) : the_post();
             $galleryImageIds = get_post_meta(get_the_ID(), 'service_gallery', true);
@@ -21,25 +20,20 @@ get_header(); ?>
                 $css_slug = $category->slug;
             endforeach;
             ?>
-            <div class = "service-banner__wrap">
+            <div class = "service-banner">
                 <div class = "service-banner__image">
                     <img src = "<?php echo get_post_meta(get_the_ID(), 'service_banner_image', true)?>">
                 </div>
-
-            <div class = "service-banner__head-block block-container">
+                <div class = "service-banner__head-block block-container">
                     <div class = "service-banner__title-block">
-
-                    <h2 class = "service-banner__title">
-                        <?php echo get_the_title();?>
-                    </h2>
-
-                        <p class = "sevice-banner__subtitle"><?php echo get_post_meta(get_the_ID(), 'service_subtitle', true)?></p>
-                        </div>
-                        <div class = "service-banner__content-image">
+                        <h2 class = "service-banner__title"><?php echo get_the_title();?></h2>
+                        <p class = "service-banner__subtitle"><?php echo get_post_meta(get_the_ID(), 'service_subtitle', true)?></p>
+                    </div>
+                    <div class = "service-banner__content-image">
                         <img src = "<?php echo $featuredImage[0]; ?>">
                     </div>
-                    </div>
-									</div>
+                </div>
+			</div>
 
                     <div class = "service-overview block-container">
 											<h3 class="title">Overview</h3>
@@ -133,7 +127,6 @@ get_header(); ?>
                     </div>
                 </div>
             <?php endwhile; ?>
-            </div>
         </div>
 	</main><!-- .site-main -->
 </div><!-- .content-area -->
