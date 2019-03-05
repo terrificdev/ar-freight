@@ -53,17 +53,17 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class = "service-key-points">
-                    <div class = "key-points-block">
+                    <div class = "key-points-block block-container">
                         <?php $service_key_points = get_post_meta(get_the_ID(), 'service_key_points', true); 
                         $keyPoints = json_decode($service_key_points);?>
                         <?php for($i = 0; $i < count($keyPoints); $i++):?>
-                            <div class="key-points">
-                                <?php echo $keyPoints[$i];?>
+                            <div class="key-points<?php echo $i;?> key-points">
+                               <p><?php echo $keyPoints[$i];?></p>
                             </div>
                         <?php endfor; ?>
                     </div>
-                    <div class = "quote-button">
-                        <div class= "qoute-button resp">
+                    <div class = "quote-button-block block-container">
+                        <div class= "qoute-button">
                     		<a href="<?php echo get_page_link(get_theme_mod('get_a_qoute'))?>"><button>Get A Quote</button></a>
                 		</div>
                     </div>
@@ -88,9 +88,9 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class = "other-service-wrapper">
-                    <div class = "other-service-container">
+                    <div class = "other-service-container block-container">
                         <div class = "other-service-content">
-                            <h2>Other services</h2>
+                            <h3 class="title">Other services</h3>
                             <div class = "other-service-desc">
                                 <?php the_excerpt();?>
                             </div>
@@ -120,12 +120,12 @@ get_header(); ?>
                                     <img class = "service-featured-image" src="<?php echo $featuredImage[0]; ?>">
                                 </div>
                                 <div class="service-desc">
-                                <div class = 'service-title'>
-                                    <h2><?php echo get_the_title();?></h2>
-                                </div>
-                                <div class = 'service-link'>
-                                    <a href="<?php echo get_permalink(get_option('page_for_posts'));?>">View more</a>
-                                </div>
+                                    <div class = 'service-title'>
+                                        <h2><?php echo get_the_title();?></h2>
+                                    </div>
+                                    <div class = 'service-link'>
+                                        <a href="<?php echo get_permalink(get_option('page_for_posts'));?>">View more</a>
+                                    </div>
                                 </div>
                             </div>
                         <?php
