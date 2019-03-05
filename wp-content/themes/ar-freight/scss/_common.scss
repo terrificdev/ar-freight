@@ -1,0 +1,132 @@
+
+//to overide the black border of the theme
+body:not(.custom-background-image):before,
+body:not(.custom-background-image):after {
+    height: 0px !important;
+}
+#page{
+    margin: 0 !important;
+}
+//to avoid the font issues in firefox and safari browsers
+*{
+    font-weight: normal !important;
+}
+//remove the underline style for a tag
+a {
+    &:hover,
+    &:active,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        cursor: pointer;
+        outline:none;
+    }
+}
+//remove the default style of button
+button {
+    background-color: none;
+    border: none;
+    cursor: pointer;
+    outline:none;
+}
+//container for blocks
+.block-container {
+    max-width: 1290px;
+    margin: 0 auto;
+    @media all and (max-width: 1330px) {
+        padding: 0 20px;
+    }
+}
+//common heading style
+.block-title{
+
+}
+//common style for removing the margin from webiste page
+body {
+  #page {
+    .site-inner {
+      max-width: 100%;
+      .site-content {
+        padding: 0;
+        .content-area {
+          width: 100%;
+          margin: 0;
+          .site-main {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Mixin //
+//Mixin for content title//
+@mixin content-title {
+  font: {
+    family: Roboto-Bd;
+    weight: normal;
+    size: 30px;
+  }
+  letter-spacing: 0.5px;
+  color: #000;
+  @media all and (max-width: 768px) {
+    font: {
+      size: 25px;
+    }
+  }
+}
+//Mixin for description//
+@mixin content-desc {
+  font: {
+    family: Roboto-Rg;
+    weight: normal;
+    size: 14px;
+  }
+  letter-spacing: 0.5px;
+}
+//Mixin for second title//
+@mixin content-second-title {
+  font: {
+    family: Roboto-Md;
+    weight: normal;
+    size: 24px;
+  }
+  letter-spacing: 0.5px;
+}
+//Mixin for slick for news-events section and service page//
+@mixin common-slickArrow {
+  @media all and (max-width: 767px) {
+    display: none !important;
+  }
+  &.slick-next:before, &.slick-prev:before {
+    content: none;
+  }
+  &.slick-prev, &.slick-next {
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: white;
+    background-size: 55%;
+    height: 65px;
+    width: 65px;
+    top: 40%;
+    -webkit-box-shadow: 0px 2px 50px 1px rgba(199,199,199,1);
+    -moz-box-shadow: 0px 2px 50px 1px rgba(199,199,199,1);
+    box-shadow: 0px 2px 50px 1px rgba(199,199,199,1);
+    @media all and (max-width: 1480px) {
+      height: 50px;
+      width: 50px;
+    }
+    @media all and (max-width: 767px) {
+      display: none;
+    }
+  }
+  &.slick-prev {
+    background-image: url('../images/prev-trans.png');
+  }
+  &.slick-next {
+    background-image: url('../images/next-trans.png');
+  }
+}
