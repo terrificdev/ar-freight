@@ -21,11 +21,11 @@ get_header(); ?>
                     <div class = "service-banner__image">
                         <img src = "<?php echo get_post_meta(get_the_ID(), 'service_banner_image', true)?>">
                     </div>
-                    
-                  
+
+
                     <div class = "service-banner__head-block">
                     <div class = "service-banner__title-block">
-                    
+
                     <h2 class = "service-banner__title">
                         <?php echo get_the_title();?>
                     </h2>
@@ -36,24 +36,20 @@ get_header(); ?>
                         <img src = "<?php echo $featuredImage[0]; ?>">
                     </div>
                      </div>
-                    </div>  
-                   
+                    </div>
+
                     <div class = "service-overview block-container">
-                    <div class = "service-left">
-                        <div class = "service-overview-image">
-                            <img src = "<?php echo get_post_meta(get_the_ID(), 'service_overview_image', true)?>">
-                        </div>
-                    </div>
-                    <div class = "service__overview---right">
-                        <div class = "service-overview-content">
-                            <h3 class="title">Overview</h3>
-                            <?php the_content();?>
-                        </div>
-                    </div>
+											<h3 class="title">Overview</h3>
+											<div class="service-overview-content">
+												<img src = "<?php echo get_post_meta(get_the_ID(), 'service_overview_image', true)?>">
+												<p class="title">Overview</p>
+												<?php the_content();?>
+											</div>
+                  
                 </div>
                 <div class = "service-key-points">
                     <div class = "key-points-block">
-                        <?php $service_key_points = get_post_meta(get_the_ID(), 'service_key_points', true); 
+                        <?php $service_key_points = get_post_meta(get_the_ID(), 'service_key_points', true);
                         $keyPoints = json_decode($service_key_points);?>
                         <?php for($i = 0; $i < count($keyPoints); $i++):?>
                             <div class="key-points">
@@ -128,8 +124,8 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-            <?php endwhile; ?>    
-            </div> 
+            <?php endwhile; ?>
+            </div>
         </div>
 	</main><!-- .site-main -->
 </div><!-- .content-area -->
