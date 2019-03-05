@@ -21,13 +21,12 @@ get_header(); ?>
                 $css_slug = $category->slug;                
             endforeach;
             ?>
-                <div class = "service-banner__wrap">
-                    <div class = "service-banner__image">
-                        <img src = "<?php echo get_post_meta(get_the_ID(), 'service_banner_image', true)?>">
-                    </div>
+            <div class = "service-banner__wrap">
+                <div class = "service-banner__image">
+                    <img src = "<?php echo get_post_meta(get_the_ID(), 'service_banner_image', true)?>">
+                </div>
                     
-                  
-                    <div class = "service-banner__head-block block-container">
+            <div class = "service-banner__head-block block-container">
                     <div class = "service-banner__title-block">
                     
                     <h2 class = "service-banner__title">
@@ -40,7 +39,7 @@ get_header(); ?>
                         <img src = "<?php echo $featuredImage[0]; ?>">
                     </div>
                 </div>  
-                   
+        </div>  
                     <div class = "service-overview block-container">
                     <div class = "service-left">
                         <div class = "service-overview-image">
@@ -70,7 +69,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class = "service-gallery__wrap">
-                <div class = "service-gallery__title">
+                <div class = "service-gallery__title mobile-view">
                     <h3 class="title">Gallery</h3>
                     </div>
                     <div class = "service-gallery__container">
@@ -84,7 +83,9 @@ get_header(); ?>
                     <?php endforeach;?>
                     </div>
                     </div>
-                   
+                    <div class = "service-gallery__title desktop-view">
+                    <h3 class="title">Gallery</h3>
+                    </div>
                 </div>
                 <div class = "other-service-wrapper">
                     <div class = "other-service-container">

@@ -32,6 +32,7 @@ jQuery(document).ready(function ($) {
   });
   $("#service-gallery").slick({
     dots: false,
+    arrows: true,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -44,16 +45,18 @@ jQuery(document).ready(function ($) {
         }
       },
       {
-        breakpoint: 768,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
+          dots: true,
           slidesToScroll: 1
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 700,
         settings: {
           slidesToShow: 1,
+          dots: true,
           slidesToScroll: 1
         }
       }
