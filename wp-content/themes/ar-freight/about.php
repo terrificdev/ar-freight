@@ -19,7 +19,7 @@
                             <?php echo get_the_title();?>
                         </div>
                         <div class = "about-subtitle">
-                            <?php echo get_theme_mod('about_us_subtitle')?>
+                         <?php the_content()?>                          
                         </div>
                     </div>
                     <div class = "about-featured-image">
@@ -32,7 +32,7 @@
                             <?php echo get_theme_mod('about_us_body_title')?>
                         </div>
                         <div class = "about-body">
-                            <?php the_content()?>
+                          <?php echo get_theme_mod('about_us_subtitle')?>
                         </div>
                     </div>
                     <div class = "about-content-right">
