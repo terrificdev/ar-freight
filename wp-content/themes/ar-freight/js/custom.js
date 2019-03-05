@@ -30,7 +30,38 @@ jQuery(document).ready(function ($) {
       }
     ]
   });
-
+  $("#service-gallery").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
   $("#events-home").slick({
     dots: true,
     infinite: true,
@@ -101,7 +132,6 @@ jQuery(document).ready(function ($) {
     prevArrow: ".c-prev",
     nextArrow: ".c-next"
   });
-
     //Sticky Header
     $(window).scroll(function () {
       var sticky = $('.site-header'),
