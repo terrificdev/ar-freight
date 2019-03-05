@@ -9,7 +9,7 @@ body:not(.custom-background-image):after {
 }
 //to avoid the font issues in firefox and safari browsers
 *{
-    font-weight: normal;
+    font-weight: normal !important;
 }
 //remove the underline style for a tag
 a {
