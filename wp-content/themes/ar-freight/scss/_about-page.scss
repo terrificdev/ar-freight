@@ -14,7 +14,8 @@
         /*common styling for content, vision and mission*/
         .about-content,
         .about-vission-content,
-        .about-mission-content {
+        .about-mission-content,
+        .about-team {
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 60px;
@@ -27,7 +28,8 @@
                 &:after {
                     content: "";
                     position: absolute;
-                    border: 1px solid #8e8e8e;
+                    padding-bottom: 20px;
+                    border-bottom: 0.5px solid #a0a0a0;
                     width: 200px;
                     bottom: 0;
                     left: 0;
@@ -46,7 +48,7 @@
                 flex-basis: 100%;
                 h3.title {
                     padding-bottom: 30px;
-                    margin-bottom: 35px;
+                    margin-bottom: 30px;
                     &:after {
                         width: 200px;
                     }
@@ -86,9 +88,8 @@
                 margin: 0 20px 60px;
             }
             h3.title {
-                padding-bottom: 10px;
-                margin-bottom: 10px;
-                margin-bottom: 10px;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
                 &:after {
                     width: 185px;
                 }
@@ -97,7 +98,7 @@
             .about-vission-content-left,
             .about-mission-content-right {
                 flex-basis: 70%;
-                margin-top: 30px;
+                margin-top: 20px;
                 align-self: center;
                 @media all and (max-width: 768px) {
                     flex-basis: 100%;
@@ -159,6 +160,94 @@
                     text-align: right;
                 }
             }
+        }
+        /*styling for members section*/
+        .about-team {
+          .member-content {
+            width: 100%;
+            h3.title {
+              padding-bottom: 30px;
+              margin-bottom: 30px;
+            }
+            .members-wrapper{
+                width: 23.3%;
+                float: left;
+                margin: 0 10px;
+                padding-bottom: 20px;
+                @media all and (max-width: 1229px) {
+                  margin: 0 7px;
+                }
+                @media all and (max-width: 991px) {
+                  margin: 0 5px;
+                }
+                @media all and (max-width: 768px) {
+                  width: 48%;
+                }
+                @media all and (max-width: 599px) {
+                  width: 47.5%;
+                }
+                @media all and (max-width: 478px) {
+                  width: 100%;
+                }
+                .member-block {
+                  text-align: center;
+                  @media all and (max-width: 478px) {
+                    width: 80%;
+                    margin: 0 auto;
+                  }
+                  @media all and (max-width: 420px) {
+                    width: 100%;
+                    margin: 0 auto;
+                  }
+                  .member-image{
+                    img {
+                      width: 100%;
+                    }
+                  }
+                  .member-name, .member-designation {
+                    text-align: left;
+                  }
+                  .member-name {
+                    padding-top: 15px;
+                    h5 {
+                      font-family: Roboto-Rg;
+                      font-size: 18px;
+                      line-height: 1.2;
+                      overflow: hidden;
+                      text-transform: uppercase;
+                      @media all and (max-width: 1199px) {
+                        font-size: 17px;
+                        min-height: 40px;
+                      }
+                      @media all and (max-width: 991px) {
+                        font-size: 16px;
+                      }
+                      @media all and (max-width: 768px) {
+                        font-size: 16px;
+                        min-height: auto;
+                      }
+                      @media all and (max-width: 599px) {
+                        min-height: 40px;
+                      }
+                      @media all and (max-width: 478px) {
+                        min-height: auto
+                      }
+                    }
+                  }
+                  .member-designation {
+                    p {
+                      font-family: Roboto-Rg;
+                      font-size: 17px;
+                      color: #949494;
+                      margin-bottom: 0;
+                      @media all and (max-width: 768px) {
+                        font-size: 15px;
+                      }
+                    }
+                  }
+                }
+              }
+          }
         }
     }
 }

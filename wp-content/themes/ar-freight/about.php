@@ -20,22 +20,22 @@
                                 <?php echo get_the_title();?>
                             </div>
                             <div class = "about-banner__subtitle">
-                                <?php the_content()?>                          
+                                <?php the_content()?>
                             </div>
-                        </div>                            
+                        </div>
                         <div class = "about-banner__content-image">
                             <img src = "<?php echo $featuredImage[0]; ?>">
                         </div>
-                    </div> 
-                </div>                
+                    </div>
+                </div>
                 <div class = "about-content block-container">
                     <div class = "about-body-title">
                             <h3 class="title"> <?php echo get_theme_mod('about_us_body_title')?><h3>
                     </div>
-                    <div class = "about-content-left">                        
+                    <div class = "about-content-left">
                         <div class = "about-body">
                             <img src=<?php echo wp_get_attachment_url(get_theme_mod('about_us_body_image')); ?>>
-                          <p><?php echo get_theme_mod('about_us_subtitle')?></p>                         
+                          <p><?php echo get_theme_mod('about_us_subtitle')?></p>
                         </div>
                     </div>
                     <div class = "about-content-right">
@@ -66,8 +66,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-team">
-                    <h2>Our Team</h2>
+                <div class="about-team block-container">
+									<div class="member-content">
+                    <h3 class="title">Our Management Team</h3>
                     <?php $members = new WP_Query(array(
                         'post_type' => 'members',
                         'post_status' => 'publish',
@@ -96,6 +97,7 @@
                         </div>
                     </div>
                     <?php endwhile;	?>
+									</div>
                 </div>
             </div>
         </div>
