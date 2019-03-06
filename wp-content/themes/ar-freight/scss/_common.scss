@@ -12,14 +12,14 @@ body:not(.custom-background-image):after {
     font-weight: normal !important;
 }
 //remove the underline style for a tag
-a {
+a, button {
     &:hover,
     &:active,
     &:link,
     &:visited {
         text-decoration: none;
         cursor: pointer;
-        outline:none;
+        outline:none !important;
     }
 }
 //remove the default style of button
