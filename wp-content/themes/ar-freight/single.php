@@ -20,29 +20,27 @@ get_header(); ?>
                 $css_slug = $category->slug;
             endforeach;
             ?>
-            <div class = "service-banner">
-                <div class = "service-banner__image">
-                    <img src = "<?php echo get_post_meta(get_the_ID(), 'service_banner_image', true)?>">
-                </div>
-                <div class = "service-banner__head-block block-container">
-                    <div class = "service-banner__title-block">
-                        <h2 class = "service-banner__title"><?php echo get_the_title();?></h2>
-                        <p class = "service-banner__subtitle"><?php echo get_post_meta(get_the_ID(), 'service_subtitle', true)?></p>
+                <div class = "service-banner">
+                    <div class = "service-banner__image">
+                        <img src = "<?php echo get_post_meta(get_the_ID(), 'service_banner_image', true)?>">
                     </div>
-                    <div class = "service-banner__content-image">
-                        <img src = "<?php echo $featuredImage[0]; ?>">
+                    <div class = "service-banner__head-block block-container">
+                        <div class = "service-banner__title-block">
+                            <h2 class = "service-banner__title"><?php echo get_the_title();?></h2>
+                            <p class = "service-banner__subtitle"><?php echo get_post_meta(get_the_ID(), 'service_subtitle', true)?></p>
+                        </div>
+                        <div class = "service-banner__content-image">
+                            <img src = "<?php echo $featuredImage[0]; ?>">
+                        </div>
                     </div>
                 </div>
-			</div>
-
-                    <div class = "service-overview block-container">
-											<h3 class="title">Overview</h3>
-											<div class="service-overview-content">
-												<img src = "<?php echo get_post_meta(get_the_ID(), 'service_overview_image', true)?>">
-												<p class="title">Overview</p>
-												<?php the_content();?>
-											</div>
-
+                <div class = "service-overview block-container">
+                    <h3 class="title">Overview</h3>
+                    <div class="service-overview-content">
+                        <img src = "<?php echo get_post_meta(get_the_ID(), 'service_overview_image', true)?>">
+                        <p class="title">Overview</p>
+                        <?php the_content();?>						
+                    </div>
                 </div>
                 <div class = "service-key-points">
                     <div class = "key-points-block block-container">
