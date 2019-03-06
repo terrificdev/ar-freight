@@ -66,6 +66,37 @@
                         </div>
                     </div>
                 </div>
+                <div class="about-team">
+                    <h2>Our Team</h2>
+                    <?php $members = new WP_Query(array(
+                        'post_type' => 'members',
+                        'post_status' => 'publish',
+                        'posts_per_page' => -1,
+                        'order' => 'ASC',
+                    ));
+                    ?>
+                    <?php while ($members->have_posts()):
+                        $members->the_post();
+                        $post_id = get_the_ID();
+                        $memberName = get_post_meta(get_the_ID(), 'member-name', TRUE);
+                        $memberDesignation = get_post_meta(get_the_ID(), 'member-designation', TRUE);
+                        $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+                    ?>
+                    <div class = "members-wrapper">
+                        <div class = "member-block">
+                            <div class = "member-image">
+                                <img class = "member-image" src="<?php echo $featuredImage[0]; ?>">
+                            </div>
+                            <div class = "member-name">
+                                <h5><?php echo $memberName;?></h5>
+                            </div>
+                            <div class = "member-designation">
+                                <p><?php echo $memberDesignation;?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endwhile;	?>
+                </div>
             </div>
         </div>
         <?php endwhile; ?>
