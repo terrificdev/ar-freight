@@ -119,7 +119,7 @@ add_meta_box(
         'high' // $priority
 );
 }
-add_action( 'add_meta_boxes', 'ar_freight_member_meta_box' );
+add_action( 'add_meta_boxes', 'add_ar_freight_member_meta_box' );
 
 function ar_freight_member_action_meta_box(){
 global $post;
