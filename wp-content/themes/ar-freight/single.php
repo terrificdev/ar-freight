@@ -59,19 +59,19 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class = "service-gallery__wrap">
-                <div class = "service-gallery__title mobile-view">
-                    <h3 class="title">Gallery</h3>
+                    <div class = "service-gallery__title mobile-view">
+                        <h3 class="title">Gallery</h3>
                     </div>
                     <div class = "service-gallery__container">
-                    <div id="service-gallery">
-                    <?php foreach ($images as $imageId): ?>
-                        <?php if(null != esc_attr($imageId)): ?>
-                        <div class = 'service-gallery__image' >
-                            <img src="<?php echo wp_get_attachment_url($imageId)?>">
+                        <div id="service-gallery">
+                        <?php foreach ($images as $imageId): ?>
+                            <?php if(null != esc_attr($imageId)): ?>
+                            <div class = 'service-gallery__image' >
+                                <img src="<?php echo wp_get_attachment_url($imageId)?>">
+                            </div>
+                            <?php endif;?>
+                        <?php endforeach;?>
                         </div>
-                        <?php endif;?>
-                    <?php endforeach;?>
-                    </div>
                     </div>
                     <div class = "service-gallery__title desktop-view">
                     <h3 class="title">Gallery</h3>
