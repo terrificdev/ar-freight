@@ -37,7 +37,7 @@
                         <?php the_excerpt();?>
                     </div>
                     <div class = "news-readmore content-readmore">
-                    <a href="<?php echo get_permalink(get_option('page_for_posts'));?>">read more</a>
+                    <a href="<?php echo get_permalink(get_option('page_for_posts'));?>">Read More</a>
                     </div>
                 </div>
             </div>
