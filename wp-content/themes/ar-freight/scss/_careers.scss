@@ -1,0 +1,103 @@
+.careers-wrapper {
+  .title {
+      @include content-second-title;
+  }
+  .careers-container {
+    .career-mini-description {
+      position: relative;
+      bottom: -160px;
+      .content-desc {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        .career-left {
+          flex-basis: 60%;
+          padding-right: 60px;
+          .career-body-title {
+            .title {
+              padding-bottom: 20px;
+              margin-bottom: 20px;
+              position: relative;
+              @media all and (max-width: 768px) {
+                  font-size: 20px;
+              }
+              &:after {
+                content: "";
+                position: absolute;
+                padding-bottom: 20px;
+                border-bottom: 0.5px solid #a0a0a0;
+                width: 125px;
+                bottom: 0;
+                left: 0;
+              }
+            }
+          }
+          .content {
+            p {
+              @include content-desc;
+              color: #757575;
+            }
+          }
+        }
+        .career-right {
+          flex-basis: 40%;
+          .career-img-section {
+            display: flex;
+            flex-wrap: wrap;
+            .img-block {
+              flex-basis: 50%;
+              padding: 3px;
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .send-resume-block {
+      background: url(../images/service-key-points-bg.png) no-repeat center;
+      background-size: cover;
+      padding-top: 70px;
+      padding-bottom: 50px;
+      .block-container {
+        color: #fff !important;
+        h4 {
+          font-family: Roboto-Md;
+          font-weight: normal;
+          font-size: 18px;
+          letter-spacing: 0.5px;
+          position: relative;
+          padding-bottom: 15px;
+          margin-bottom: 15px;
+          &:after {
+            content: "";
+            position: absolute;
+            padding-bottom: 20px;
+            border-bottom: 0.5px solid #fff;
+            width: 240px;
+            bottom: 0;
+            left: 0;
+          }
+        }
+        .careers-mail-id {
+          .mail-id {
+            @include content-desc;
+          }
+        }
+      }
+    }
+
+    .job-description {
+      #job-desc {
+        .slick-list {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+      .slick-arrow {
+        @include common-slickArrow;
+      }
+    }
+  }
+}

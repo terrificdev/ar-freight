@@ -1,6 +1,8 @@
-//Service banner, About Us banner section
+//Common styling of inner page banner having similar style //
+//Service banner, About Us banner section, Careers Page //
 .service-banner,
-.about-banner {
+.about-banner,
+.careers-banner {
     position: relative;
     margin-bottom: 175px;
     @media all and (min-width: 991px) {

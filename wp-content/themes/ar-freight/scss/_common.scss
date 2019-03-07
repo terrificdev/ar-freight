@@ -88,10 +88,11 @@ body {
 //Mixin for second title//
 @mixin content-second-title {
   font: {
-    family: Roboto-Md;
+    family: Roboto-Bd;
     weight: normal;
-    size: 24px;
+    size: 25px;
   }
+  text-align: left;
   letter-spacing: 0.5px;
 }
 //Mixin for slick for news-events section and service page//
