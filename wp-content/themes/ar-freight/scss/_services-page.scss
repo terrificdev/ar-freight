@@ -117,7 +117,8 @@
                 }
             }
         }
-    } //service gallery section
+    } 
+    //service gallery section
     .service-gallery__wrap {
         padding-right: calc((100% - 1290px)/2);
         overflow: hidden;
@@ -176,10 +177,12 @@
             }
         }
         .service-gallery__title {
-            text-align: center;
+            //text-align: center;
             width: 100%;
+            padding: 0 20px;
             @media all and (min-width: 991px) {
                 width: 15%;
+                padding: 0;
             }
         }
         .slick-arrow {
