@@ -106,7 +106,7 @@
             /*common styling for vision and mission - text area*/
             .about-vission-content-left,
             .about-mission-content-right {
-                flex-basis: 70%;
+                flex-basis: 64%;
                 margin-top: 20px;
                 align-self: center;
                 @media all and (max-width: 768px) {
@@ -126,7 +126,7 @@
             /*common styling for vision and mission - image*/
             .about-vission-content-right,
             .about-mission-content-left {
-                flex-basis: 30%;
+                flex-basis: 36%;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
