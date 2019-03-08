@@ -103,7 +103,8 @@
             text-align: center;
         }
         img {
-            width: 375px;
+            width: 320px;
+            max-width: 320px;
             @media all and (max-width: 1330px) {
                 width: 280px;
             }

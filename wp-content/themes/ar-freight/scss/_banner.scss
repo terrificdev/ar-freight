@@ -128,9 +128,16 @@
                         width: 15px;
                         button {
                             &:before {
-                                color: white;
+                                color: #848484;
                                 font-size: 30px;
                                 opacity: 1;
+                            }
+                        }
+                        &.slick-active{
+                            button {
+                                &:before {                               
+                                    color: white;                                                                         
+                                }
                             }
                         }
                     }
