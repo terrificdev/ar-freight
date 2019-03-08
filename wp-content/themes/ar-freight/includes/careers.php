@@ -44,7 +44,7 @@ function ar_freight_customize_careers($wp_customize){
     $wp_customize->add_setting('careers_resume_mail');
     $wp_customize->add_control('careers_resume_mail',array(
             'label'	=> __('Resume mail address'),
-            'section'	=> 'about_us_section',
+            'section'	=> 'careers_section',
             'settings' => 'careers_resume_mail',
             'type'	=> 'mail',
     ));

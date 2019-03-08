@@ -84,8 +84,8 @@
                             <!-- Slider looping div -->
                             <div class = "job-block content-block">
                                 <div class="job-details">
-                                <div class = "block-image slider-image" style="background-image: url(<?php echo $featuredImage ?>)">
-                                            <img class = "job-featured-image" src="<?php echo $featuredImage?>">
+                                <div class = "block-image slider-image" style="background-image: url(<?php echo $featuredImage[0]; ?>)">
+                                            <img class = "job-featured-image" src="<?php echo $featuredImage[0];?>">
                                     </div>
                                     <div class="block-details-wrapper slider-details">
                                         <div class = "block-title content-title">
