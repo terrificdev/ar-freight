@@ -210,22 +210,22 @@ $blue-link2: #0b045a;
                                 top: 50% !important;
                             }
                             &.slick-prev {
-                                left: -125px;
+                                left: -148px;
                                 z-index: 9;
                                 @media all and (max-width: 1290px) {
-                                    left: -105px;
+                                    left: -118px;
                                 }
                                 @media all and (max-width: 991px) {
-                                    left: -85px;
+                                    left: -86px;
                                 }
                             }
                             &.slick-next {
-                                right: -125px;
+                                right: -103px;
                                 @media all and (max-width: 1290px) {
-                                    right: -105px;
+                                    right: -93px;
                                 }
                                 @media all and (max-width: 991px) {
-                                    right: -85px;
+                                    right: -64px;
                                 }
                             }
                         }
