@@ -8,11 +8,13 @@ $freight-blue: #1674ab;
 .careers-wrapper {
   .title {
       @include content-second-title;
+      text-align: left;
   }
   .careers-container {
     .career-mini-description {
       position: relative;
       bottom: -130px;
+      margin-top: -90px;
       .content-desc {
         margin-top: 50px;
         display: flex;
@@ -118,8 +120,9 @@ $freight-blue: #1674ab;
             -moz-box-shadow: 0px 2px 10px 1px rgba(184,184,184,0.3);
             box-shadow: 0px 2px 10px 1px rgba(184,184,184,0.3);
             background-color: $primary-white;
-            // position: relative;
-            // top: -30px;
+            @media all and (min-width: 992px) {
+              min-height: 430px;
+            }
             @media all and (max-width: 991px) {
               display: block;
             }
