@@ -98,7 +98,7 @@
                                                 <?php endif;?>
                                         </div>
                                         <div class = "apply-job content-readmore">
-                                            <a class="cta-link" href="mailto:<?php echo get_bloginfo('admin_email')?>" target="_top"><?php echo get_bloginfo('admin_email')?>>Apply Now</a>
+                                            <a class="cta-link" href="mailto:<?php echo get_bloginfo('admin_email')?>" target="_top">Apply Now</a>
                                         </div>
                                     </div>
                                 </div>
