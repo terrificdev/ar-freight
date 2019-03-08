@@ -122,9 +122,10 @@
     .service-gallery__wrap {
         padding-right: calc((100% - 1290px)/2);
         overflow: hidden;
-        padding-top: 150px;
+        padding-top: 50px;
         @media all and (min-width: 991px) {
             display: flex;
+            padding-top: 120px;
         }
         .mobile-view {
             display: block;
@@ -148,7 +149,7 @@
             clear: both;
             margin-bottom: 50px;
             @media all and (min-width: 991px) {
-                margin-bottom:140px;
+                margin-bottom:120px;
                 width: 80%;
             }
             .slick-slider {
@@ -242,8 +243,11 @@
         }
     } //other-service section
     .other-service-wrapper {
-        padding-top: 100px;
+       // padding-top: 100px;
         padding-bottom: 100px;
+        @media all and (max-width: 991px) {
+            padding-bottom: 70px;
+        }
         .other-service-container {
             display: flex;
             align-items: flex-start;
@@ -308,8 +312,9 @@
                         img {
                             width: 100%;
                             @media all and (min-width: 769px) {
-                                max-width: 364px;
-                                max-height: 399px;
+                                max-width: 370px;
+                                max-width: 370px;
+                                max-height: 400px;
                             }
                             @media all and (max-width: 900px) {
                                 max-width: none;
