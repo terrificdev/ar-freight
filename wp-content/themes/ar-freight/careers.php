@@ -95,7 +95,8 @@
 
 											<!-- Slider looping div -->
 											<div class = "job-block content-block">
-													<div class = "block-image slider-image">
+												<div class="job-details">
+													<div class = "block-image slider-image" style="background-image: url(<?php echo THEME_IMG_PATH; ?>/job-det.jpg)">
 															<img class = "job-featured-image" src="<?php echo THEME_IMG_PATH; ?>/job-det.jpg">
 													</div>
 													<div class="block-details-wrapper slider-details">
@@ -113,14 +114,16 @@
 																		Lorem Ipsum.</p>
 																	<p class="location">Location: Kuwait</p>
 															</div>
-															<div class = "news-readmore content-readmore">
-																<a href="<?php echo get_permalink(get_option('page_for_posts'));?>">Apply Now</a>
+															<div class = "apply-job content-readmore">
+																<a class="cta-link" href="<?php echo get_permalink(get_option('page_for_posts'));?>">Apply Now</a>
 															</div>
 													</div>
+												</div>
 											</div>
 
 											<!-- Slider looping div -->
 											<div class = "job-block content-block">
+												<div class="job-details">
 													<div class = "block-image slider-image">
 															<img class = "job-featured-image" src="<?php echo THEME_IMG_PATH; ?>/job-det.jpg">
 													</div>
@@ -143,10 +146,12 @@
 																<a href="<?php echo get_permalink(get_option('page_for_posts'));?>">Apply Now</a>
 															</div>
 													</div>
+												</div>
 											</div>
 
 											<!-- Slider looping div -->
 											<div class = "job-block content-block">
+												<div class="job-details">
 													<div class = "block-image slider-image">
 															<img class = "job-featured-image" src="<?php echo THEME_IMG_PATH; ?>/job-det.jpg">
 													</div>
@@ -169,6 +174,7 @@
 																<a href="<?php echo get_permalink(get_option('page_for_posts'));?>">Apply Now</a>
 															</div>
 													</div>
+												</div>
 											</div>
 
 										</section>
