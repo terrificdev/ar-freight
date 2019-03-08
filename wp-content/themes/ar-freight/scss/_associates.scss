@@ -12,12 +12,26 @@
         display: flex;
         justify-content: space-between;
         @media all and (max-width: 768px) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-bottom: 40px;
+        }
+        @media all and (max-width: 450px) {
             flex-direction: column;
+            flex-wrap: nowrap; 
+            justify-content:flex-start;
         }
         .associate-block {
             position: relative;
+            @media all and (max-width: 768px) {
+                flex-basis: 48%;
+                margin-bottom: 10px;
+            }
+            @media all and (max-width: 450px) {
+               flex-basis: 100%;
+            }
             &:nth-child(2) {
-                margin: 10px 0;
+               // margin: 10px 0;
                 @media all and (min-width: 769px) {
                     margin: 0 10px;
                     position: relative;
@@ -75,6 +89,10 @@
                     @media all and (max-width: 768px) {
                         font-size: 20px;
                         padding-right: 5%;
+                        line-height: 22px;
+                    }
+                    @media all and (max-width: 650px) {
+                        font-size: 18px;
                     }
                 }
                 .associate-link {
@@ -88,6 +106,9 @@
                         font-family: Roboto-Rg;
                         @media all and (max-width: 840px) {
                             font-size: 13px;
+                        }
+                        @media all and (max-width: 650px) {
+                            font-size: 12px;
                         }
                         &:after {
                             content: "\27F6";

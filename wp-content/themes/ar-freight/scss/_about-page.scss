@@ -1,0 +1,279 @@
+.about-us-wrapper {
+    /*common styling for title*/
+    .title {
+        text-align: left;
+        font-family: Roboto-Bd;
+        font-size: 25px;
+        border-bottom: 1px solid #8e8e8e;
+        color: #282828;
+        @media all and (max-width: 768px) {
+            font-size: 20px;
+        }
+    }
+    .about-us-container {
+        /*common styling for content, vision and mission*/
+        .about-content,
+        .about-vission-content,
+        .about-mission-content,
+        .about-team {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+            @media all and (max-width: 768px) {
+                margin-bottom: 30px;
+            }
+            h3.title {
+                border: none;
+                position: relative;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    padding-bottom: 20px;
+                    border-bottom: 0.5px solid #a0a0a0;
+                    width: 200px;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+            p {
+                font-family: Roboto-Rg;
+                font-size: 14px;
+                color: #757575;
+                line-height: 22px;
+            }
+        }
+        .about-content {
+            margin-top: 50px;
+            margin-bottom: 100px;
+            @media all and (max-width: 991px) {
+              margin-bottom: 60px;
+            }
+            @media all and (max-width: 768px) {
+              margin-bottom: 30px;
+            }
+            .about-body-title {
+                flex-basis: 100%;
+                h3.title {
+                    padding-bottom: 30px;
+                    margin-bottom: 30px;
+                    &:after {
+                        width: 200px;
+                    }
+                }
+            }
+            .about-content-left {
+                flex-basis: 50%;
+                padding-right: 60px;
+                @media all and (max-width: 768px) {
+                    flex-basis: 100%;
+                    padding-right: 0;
+                }
+                img {
+                    display: none;
+                    @media all and (max-width: 768px) {
+                        display: block;
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            .about-content-right {
+                flex-basis: 50%;
+                @media all and (max-width: 768px) {
+                    display: none;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        /*common styling for vision and mission*/
+        .about-vission-content,
+        .about-mission-content {
+            -webkit-box-shadow:  0px 2px 25px 5px rgba(184, 184, 184, 0.4);
+            -moz-box-shadow:  0px 2px 25px 5px rgba(184, 184, 184, 0.4);
+            box-shadow: 2px 2px 25px 5px rgba(184, 184, 184, 0.4);
+         
+            @media all and (max-width: 1330px) {
+                margin: 0 20px 60px;
+            }
+            h3.title {
+                padding-bottom: 10px;
+                margin-bottom: 5px;
+                &:after {
+                    width: 185px;
+                }
+            }
+            /*common styling for vision and mission - text area*/
+            .about-vission-content-left,
+            .about-mission-content-right {
+                flex-basis: 64%;
+                margin-top: 20px;
+                align-self: center;
+                @media all and (max-width: 768px) {
+                    flex-basis: 100%;
+                    margin-top: 20px;
+                }
+                img {
+                    display: none;
+                    @media all and (max-width: 768px) {
+                        display: block;
+                        width: 100%;
+                        margin-bottom: 20px;
+                        margin-top: 20px;
+                    }
+                }
+            }
+            /*common styling for vision and mission - image*/
+            .about-vission-content-right,
+            .about-mission-content-left {
+                flex-basis: 36%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                img {
+                    visibility: hidden;
+                }
+                @media all and (max-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+        /*styling for vision block*/
+        .about-vission-content {
+            padding: 0 0 0 30px !important;
+            @media all and (max-width: 768px) {
+                padding: 0 0 0 20px !important;
+            }
+            .about-vission-content-left {
+                padding-right: 20px;
+            }
+        }
+        /*styling for mission block*/
+        .about-mission-content {
+            padding: 0 30px 0 0 !important;
+            .about-mission-content-right {
+                padding-left: 50px;
+                @media all and (max-width: 768px) {
+                    padding-left: 20px;
+                }
+                h3 {
+                    @media all and (min-width: 769px) {
+                        text-align: right;
+                        &:after {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                }
+                p {
+                    text-align: right;
+                    @media all and (max-width: 768px) {
+                      text-align: left;
+                    }
+                }
+            }
+        }
+        /*styling for members section*/
+        .about-team {
+          margin-top: 100px;
+          margin-bottom: 100px;
+          @media all and (max-width: 991px) {
+            margin-top: 60px;
+            margin-bottom: 60px;
+          }
+          @media all and (max-width: 768px) {
+            margin-top: 30px;
+            margin-bottom: 30px;
+          }
+          .member-content {
+            width: 100%;
+            h3.title {
+              padding-bottom: 30px;
+              margin-bottom: 50px;
+              @media all and (max-width: 768px) {
+                margin-bottom: 30px;
+              }
+            }
+            .members-wrapper{
+                width: 23.3%;
+                float: left;
+                margin: 0 10px;
+                padding-bottom: 20px;
+                @media all and (max-width: 1229px) {
+                  margin: 0 7px;
+                }
+                @media all and (max-width: 991px) {
+                  margin: 0 5px;
+                }
+                @media all and (max-width: 768px) {
+                  width: 48%;
+                }
+                @media all and (max-width: 599px) {
+                  width: 47.5%;
+                }
+                @media all and (max-width: 478px) {
+                  width: 100%;
+                }
+                .member-block {
+                  text-align: center;
+                  @media all and (max-width: 478px) {
+                    width: 80%;
+                    margin: 0 auto;
+                  }
+                  @media all and (max-width: 420px) {
+                    width: 100%;
+                    margin: 0 auto;
+                  }
+                  .member-image{
+                    img {
+                      width: 100%;
+                    }
+                  }
+                  .member-name, .member-designation {
+                    text-align: left;
+                  }
+                  .member-name {
+                    padding-top: 20px;
+                    h5 {
+                      font-family: Roboto-Rg;
+                      font-size: 18px;
+                      line-height: 1.2;
+                      overflow: hidden;
+                      text-transform: uppercase;
+                      @media all and (max-width: 1199px) {
+                        font-size: 17px;
+                        min-height: 40px;
+                      }
+                      @media all and (max-width: 991px) {
+                        font-size: 16px;
+                      }
+                      @media all and (max-width: 768px) {
+                        font-size: 16px;
+                        min-height: auto;
+                      }
+                      @media all and (max-width: 599px) {
+                        min-height: 40px;
+                      }
+                      @media all and (max-width: 478px) {
+                        min-height: auto
+                      }
+                    }
+                  }
+                  .member-designation {
+                    p {
+                      font-family: Roboto-Rg;
+                      font-size: 17px;
+                      color: #949494;
+                      margin-bottom: 0;
+                      @media all and (max-width: 768px) {
+                        font-size: 15px;
+                      }
+                    }
+                  }
+                }
+              }
+          }
+        }
+    }
+}

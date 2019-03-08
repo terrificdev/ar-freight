@@ -1,5 +1,4 @@
 header.site-header {
-    //background-color: #005a8e; // Todo: remove 
     .site-title,
     .site-description {
         display: none;
@@ -165,9 +164,11 @@ header.site-header {
                         background: none;
                         font-size: 16px;
                         text-transform: none;
-                        font-family: Roboto-Lt;
-                        @media all and (max-width: 991px) {
-                            font-size: 14px;
+                        font-family: Roboto-Md;
+                        color: #fff;                    
+                        @media all and (max-width: 910px) {
+                            font-size: 18px;
+                            padding-right: 0;
                         }
                     }
                 }

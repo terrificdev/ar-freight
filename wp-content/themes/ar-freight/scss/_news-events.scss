@@ -3,6 +3,7 @@ $primary-black: #000;
 $grey-text: #868686;
 $blue-link: #060331;
 $blue-link2: #0b045a;
+$freight-blue: #1674ab;
 
 .news-events-wrapper {
   background-image: linear-gradient(to bottom right, #f3f3f3, #fdfdfd);
@@ -40,14 +41,14 @@ $blue-link2: #0b045a;
       a {
         font-size: 18px;
         font-family: Roboto-Rg;
-        color: $blue-link;
+        color: $blue-link2;
         @media all and (max-width: 768px) {
           font-size: 16px;
         }
       }
     }
   }
-  .news-slider {
+  .news-slider{
     background-image: url('../images/latest-news.png');
     section {
       padding-bottom: 110px;
@@ -69,23 +70,23 @@ $blue-link2: #0b045a;
     }
   }
   .event-slider {
-    background-image: url('../images/latest-blogs.png');
+    background-image: url('../images/latest events.png');
     section {
-      padding-bottom: 150px;
+      padding-bottom: 100px;
       @media all and (max-width: 1330px) {
-        padding-bottom: 120px;
+        padding-bottom: 80px;
       }
       @media all and (max-width: 1024px) {
-        padding-bottom: 100px;
-      }
-      @media all and (max-width: 991px) {
-        padding-bottom: 90px;
-      }
-      @media all and (max-width: 768px) {
         padding-bottom: 70px;
       }
-      @media all and (max-width: 480px) {
+      @media all and (max-width: 991px) {
+        padding-bottom: 50px;
+      }
+      @media all and (max-width: 768px) {
         padding-bottom: 45px;
+      }
+      @media all and (max-width: 480px) {
+        padding-bottom: 25px;
       }
     }
   }
@@ -153,7 +154,7 @@ $blue-link2: #0b045a;
                     color: $grey-text;
                     display: block;
                     display: -webkit-box;
-                    height: 46px;
+                    height: 43px;
                     margin: 0 auto 10px;
                     line-height: 1.5;
                     -webkit-line-clamp: 2;
@@ -221,5 +222,76 @@ $blue-link2: #0b045a;
       @include common-slickArrow;
     }
 
+  }
+}
+
+// Styling for news and events listing page
+.page-template-news_events {
+  .news-events-wrapper {
+    padding: 0;
+    // extra styling for banner other than horizontal cut banner
+    .news-events-banner {
+      &__image {
+        transform: none;
+      }
+      &__head-block {
+        top: 50%;
+        width: 60%;
+      }
+      &__title-block {
+        float: none;
+      }
+      &__title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      &__searchBox {
+        #searchform {
+          position: relative;
+          .search-text {
+            border-radius: 15px;
+            padding: 5px 20px 5px 25px;
+            height: 40px;
+            background-color: rgba(116, 162, 190, 0.6);
+            color: $primary-white;
+            border-color: rgba(116, 162, 190, 0.6);
+            font-family: Roboto-Md;
+            font-size: 16px;
+            &:-webkit-autofill {
+              background-color: #74a2be !important;
+            }
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+              color: #fff;
+              font-family: Roboto-Lt;
+            }
+            &::-moz-placeholder { /* Firefox 19+ */
+              color: #fff;
+              font-family: Roboto-Lt;
+            }
+            &:-ms-input-placeholder { /* IE 10+ */
+              color: #fff;
+              font-family: Roboto-Lt;
+            }
+            &:-moz-placeholder { /* Firefox 18- */
+              color: #fff;
+              font-family: Roboto-Lt;
+            }
+          }
+          .searchBtn {
+            background-image: url(../images/search-icon-png-29.png);
+            background-repeat: no-repeat;
+            background-size: 30px;
+            width: 55px;
+            height: 40px;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            right: 8px;
+            background-color: transparent;
+          }
+        }
+      }
+    }
   }
 }

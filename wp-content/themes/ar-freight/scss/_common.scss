@@ -12,14 +12,14 @@ body:not(.custom-background-image):after {
     font-weight: normal !important;
 }
 //remove the underline style for a tag
-a {
+a, button {
     &:hover,
     &:active,
     &:link,
     &:visited {
         text-decoration: none;
         cursor: pointer;
-        outline:none;
+        outline:none !important;
     }
 }
 //remove the default style of button
@@ -66,13 +66,13 @@ body {
   font: {
     family: Roboto-Bd;
     weight: normal;
-    size: 30px;
+    size: 35px;
   }
   letter-spacing: 0.5px;
   color: #000;
   @media all and (max-width: 768px) {
     font: {
-      size: 25px;
+      size: 30px;
     }
   }
 }
@@ -88,9 +88,9 @@ body {
 //Mixin for second title//
 @mixin content-second-title {
   font: {
-    family: Roboto-Md;
+    family: Roboto-Bd;
     weight: normal;
-    size: 24px;
+    size: 25px;
   }
   letter-spacing: 0.5px;
 }

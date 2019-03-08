@@ -136,7 +136,7 @@ jQuery(document).ready(function ($) {
     $(window).scroll(function () {
       var sticky = $('.site-header'),
         scroll = $(window).scrollTop();
-  
+
       if (scroll >= 120) {
         sticky.addClass('fixed');
       }
@@ -175,10 +175,16 @@ jQuery(document).ready(function ($) {
 
    });
  }
- $("#services-home").slick({
-  dots: true,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1
-});
+  $("#services-home").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+  $("#job-desc").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
 });
