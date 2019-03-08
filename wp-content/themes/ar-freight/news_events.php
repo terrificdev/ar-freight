@@ -40,14 +40,99 @@
 												</form>
 											</div>
 									</div>
-									<!-- <div class = "about-banner__content-image">
-											<img src = "<?php //echo $featuredImage[0]; ?>">
-									</div> -->
+									
 							</div>
 					</div>
+                    <div class="block-container">
+                        <div class = "news-content">
+                            <div class="news-slider">
+                            <section class="regular slider" id="news-home">
+                                <?php
+                                $news = new WP_Query(array(
+                                    'post_type' => 'news',
+                                    'post_status' => 'publish',
+                                    'posts_per_page' => 7,
+                                    'tax_query' => array(
+                                        array (
+                                            'taxonomy' => 'news_category',
+                                            'field' => 'slug',
+                                            'terms' => 'news',
+                                        )
+                                    ),
+                                ));
+                                while ($news->have_posts()):
+                                    $news->the_post();
+                                    $post_id = get_the_ID();
+                                    $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+                                ?>
+                                <div class = "news-block content-block">
+                                    <div class = "news-image slider-image">
+                                        <img class = "news-featured-image" src="<?php echo $featuredImage[0]; ?>">
+                                    </div>
+                                    <div class="news-details-wrapper slider-details">
+                                        <div class = "news-title content-title">
+                                        <p><?php echo get_the_title();?></p>
+                                        </div>
+                                        <div class = "news-excerpt content-excerpt">
+                                            <?php the_excerpt();?>
+                                        </div>
+                                        <div class = "news-readmore content-readmore">
+                                        <a href="<?php echo get_permalink(get_option('page_for_posts'));?>">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php
+                                endwhile;
+                                wp_reset_query(); ?>
+                            </section>
+                            </div>
+                        </div>
+                        <div class = "events-content">
+                            <div class="event-slider">
+                            <section class="regular slider" id="events-home">
+                            <?php
+                            $events = new WP_Query(array(
+                                'post_type' => 'news',
+                                'post_status' => 'publish',
+                                'posts_per_page' => 7,
+                                'tax_query' => array(
+                                    array (
+                                        'taxonomy' => 'news_category',
+                                        'field' => 'slug',
+                                        'terms' => 'events',
+                                    )
+                                ),
+                            ));
+                            while ($events->have_posts()):
+                                $events->the_post();
+                                $post_id = get_the_ID();
+                                $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+                            ?>
+                            <div class = "events-block content-block">
+                                <div class = "events-image slider-image">
+                                    <img class = "events-featured-image" src="<?php echo $featuredImage[0]; ?>">
+                                </div>
+                                <div class="events-details-wrapper slider-details">
+                                    <div class = "events-title content-title">
+                                        <p><?php echo get_the_title();?></p>
+                                    </div>
+                                    <div class = "events-excerpt content-excerpt">
+                                        <?php the_excerpt();?>
+                                    </div>
+                                    <div class = "events-readmore content-readmore">
+                                    <a href="<?php echo get_permalink(get_option('page_for_posts'));?>">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                            endwhile;
+                            wp_reset_query(); ?>
+                            </section>
+                        </div>
+                        </div>
+                    </div>
 				</div>
 			</div>
-
 			<?php endwhile;	?>
 		</main><!-- #main -->
 	</div><!-- #primary -->

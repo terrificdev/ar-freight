@@ -15,8 +15,8 @@
                 'tax_query' => array(
                     array (
                         'taxonomy' => 'news_category',
-                        'field' => 'term_taxonomy_id',
-                        'terms' => '7',
+                        'field' => 'slug',
+                        'terms' => 'news',
                     )
                 ),
             ));
@@ -61,8 +61,8 @@
               'tax_query' => array(
                   array (
                       'taxonomy' => 'news_category',
-                      'field' => 'term_taxonomy_id',
-                      'terms' => '9',
+                      'field' => 'slug',
+                      'terms' => 'events',
                   )
               ),
           ));
