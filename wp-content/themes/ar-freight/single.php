@@ -18,6 +18,7 @@ get_header(); ?>
             $categories = get_the_terms( $id, 'services_category' );
             foreach ($categories as $category):
                 $css_slug = $category->slug;
+                break;
             endforeach;
             ?>
                 <div class = "service-banner">
