@@ -275,3 +275,19 @@ $blue-link2: #0b045a;
         }
     }
 }
+
+//Service listing page styles 
+.page-template-services{
+    .service-listing-wrapper{
+        .service-listing{
+            .services{
+                &:nth-child(2){
+                    background-color:#f9f9f9; 
+                }
+                .block-container{
+
+                }
+            }
+        }
+    }
+}
