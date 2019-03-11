@@ -48,8 +48,7 @@
                                             'terms' => $slug,
                                         )
                                     ),
-                                ));
-                                if($slug != 'freight-services'): ?>
+                                ));?>
                                     <div class = "services">
                                         <div class = "block-container service-content">
                                             <div class = "service-left">
@@ -94,54 +93,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                <?php else:?>    
-                                    <div class = "services">
-                                        <div class = "block-container service-content">
-                                            <div class="service-left">
-                                                    <div class="left-content-block">
-                                                        <div class="service-slider">
-                                                        <section class="regular slider services-cat" id="<?php echo $slug;?>">
-                                                        <?php while ($services->have_posts()) :
-                                                            $services->the_post();
-                                                            $post_id = get_the_ID();
-                                                            $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
-                                                            if(isset($featuredImage[0])):?>
-                                                                <div class = "service-slider-block">
-                                                                    <div class = "service-image">
-                                                                        <img class = "service-featured-image" src="<?php echo $featuredImage[0]; ?>">
-                                                                    </div>
-                                                                    <div class="service-desc">
-                                                                    <div class = 'service-title'>
-                                                                        <h2><?php echo get_the_title();?></h2>
-                                                                    </div>
-                                                                    <div class = 'service-link'>
-                                                                        <a href="<?php echo get_permalink(get_option('page_for_posts'));?>">Learn more</a>
-                                                                    </div>
-                                                                    </div>
-                                                                </div>
-                                                            <?php
-                                                            endif;
-                                                            endwhile;
-                                                            wp_reset_query(); ?>
-                                                        </section>
-                                                    </div>
-                                                </div>
-                                                <div class = "service-right">
-                                                    <div class="service-content-block">
-                                                        <div class = "block-title">
-                                                            <h2><?php echo $categoryName;?></h2>
-                                                        </div>
-                                                        <div class = "block-desc">
-                                                            <?php echo $categoryDesc;?>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> 
-                                    </div>                       
-                                <?php endif;
-                            endforeach;
-                        ?>
+                            <?php endforeach;?>
                         </div>
                     </div>
                 </div>
