@@ -40,12 +40,16 @@
 												</form>
 											</div>
 									</div>
-									
+
 							</div>
 					</div>
+
+
+
+
                     <div class="block-container">
                         <div class = "news-content">
-                            <div class="news-slider">
+                            <div class="news-slider news-list-slider">
                             <section class="regular slider loadMore">
                                 <?php
                                 $news = new WP_Query(array(
@@ -90,7 +94,7 @@
                             </div>
                         </div>
                         <div class = "events-content">
-                            <div class="event-slider">
+                            <div class="event-slider events-list-slider">
                             <section class="regular slider loadMore">
                             <?php
                             $events = new WP_Query(array(
