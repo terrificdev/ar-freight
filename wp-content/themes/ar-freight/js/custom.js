@@ -187,4 +187,12 @@ jQuery(document).ready(function ($) {
     slidesToShow: 1,
     slidesToScroll: 1
   });
+   //news page lazy loading plugin
+   $('.loadMore').loadMoreResults({
+    tag: {      
+          'name': 'div',     
+          'class': 'news-list'      
+        },      
+    displayedItems: 8
+});
 });
