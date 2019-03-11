@@ -36,6 +36,9 @@ button {
     @media all and (max-width: 1330px) {
         padding: 0 20px;
     }
+    @media all and (max-width: 767px) {
+      padding: 0 15px;
+    }
 }
 //common heading style
 .block-title{
