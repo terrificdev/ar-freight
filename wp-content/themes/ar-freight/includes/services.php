@@ -253,4 +253,25 @@ function change_post_text( $translation, $original )
     }
     return $translation;
 }
+
+function ar_freight_customize_service($wp_customize){
+    $wp_customize->add_section(
+        'service_section',
+        array(
+            'title' => __('Service Listing Page'),
+            'priority' => null,
+            'description'	=> __('Change service page contents'),
+        )
+    );
+    $wp_customize->add_setting('service_banner');
+    $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'service_banner',array(
+            'label'	=> __('Service Banner'),
+            'section'	=> 'service_section',
+            'settings' => 'service_banner',
+            'height' => '1000',
+            'width' => '2500'
+    )));
+}
+
+add_action( 'customize_register', 'ar_freight_customize_service' );
 ?>
