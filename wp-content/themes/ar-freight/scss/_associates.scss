@@ -98,12 +98,13 @@
                 .associate-link {
                     margin-top: 10px;
                     @media all and (max-width: 840px) {
-                        margin-top: 0px;
+                        margin-top: 5px;
                     }
                     a {
                         color: #fff;
                         font-size: 14px;
                         font-family: Roboto-Rg;
+                        position: relative;
                         @media all and (max-width: 840px) {
                             font-size: 13px;
                         }
@@ -111,13 +112,19 @@
                             font-size: 12px;
                         }
                         &:after {
-                            content: "\27F6";
-                            font-size: 27px;
-                            position: relative;
-                            top: 5px;
-                            left: 20px;
-                            @media all and (max-width: 840px) {
-                                font-size: 25px;
+                            //content: "\27F6";
+                            content:"";
+                            display: block;
+                            background: url(../images/arrow.png) no-repeat 81% 45%;
+                            background-size: 80%;
+                            position: absolute;
+                            top: -1px;
+                            left: 90px;
+                            width: 40px;
+                            height: 19px;                                   
+                            @media all and (max-width: 600px) {
+                                background-size: 60%; 
+                                left: 70px;
                             }
                         }
                     }
