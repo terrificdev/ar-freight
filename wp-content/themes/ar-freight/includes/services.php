@@ -243,14 +243,18 @@ function service_subtitle_meta_box(){
 add_filter( 'gettext', 'change_post_text', 10, 2 );
 function change_post_text( $translation, $original )
 {
-    if ( 'Excerpt' == $original ) {
-        return 'Other service description';
-    }else{
-        $pos = strpos($original, 'Excerpts are optional hand-crafted summaries of your');
-        if ($pos !== false) {
-            return  'This text is shown below the services page';
+    global $wp_query;   
+    $post_type = get_query_var('post_type');
+    if($post_type == 'services'):
+        if ( 'Excerpt' == $original ) {
+            return 'Other service description';
+        }else{
+            $pos = strpos($original, 'Excerpts are optional hand-crafted summaries of your');
+            if ($pos !== false) {
+                return  'This text is shown below the services page';
+            }
         }
-    }
+    endif;
     return $translation;
 }
 
