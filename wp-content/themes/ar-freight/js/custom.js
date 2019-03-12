@@ -216,5 +216,23 @@ jQuery(document).ready(function ($) {
           'class': 'news-list'      
         },      
     displayedItems: 8
-});
+  });
+  $("#relocation-services").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+  $("#freight-services").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+  $("#other-logistics-services").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
 });
