@@ -20,7 +20,7 @@
                                     <?php echo get_the_title();?>
                                 </div>
                                 <div class = "service-banner__subtitle">
-                                    <p><?php the_content();?></p>
+                                    <?php the_content();?>
                                 </div>
                             </div>
                             <div class = "service-banner__content-image">
@@ -90,7 +90,9 @@
                                                     </section>
                                                 </div>
                                             </div>
+                                            
                                             </div>
+                                            <div style="clear:both;"></div>
                                         </div>
                                     </div>
                             <?php endforeach;?>
