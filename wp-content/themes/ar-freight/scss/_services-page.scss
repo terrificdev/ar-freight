@@ -155,7 +155,7 @@
             .slick-slider {
                 top: 44px;
                 @media all and (min-width: 991px) {
-                    top: 170px;
+                    top: 160px;
                 }
                 @media all and (min-width: 768px) {
                     left: -100px;
@@ -243,7 +243,7 @@
         }
     } //other-service section
     .other-service-wrapper {
-       // padding-top: 100px;
+        padding-top: 100px;
         padding-bottom: 100px;
         @media all and (max-width: 991px) {
             padding-bottom: 70px;

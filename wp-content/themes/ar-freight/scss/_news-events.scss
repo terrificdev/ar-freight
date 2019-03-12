@@ -299,10 +299,11 @@ $freight-blue: #1674ab;
       @include content-desc;
       width: auto;
       float: left;
-      color: #272727;
-      border: 1px solid #e0e0e0;
-      background-color: #e0e0e0;
-      padding: 3px 8px;
+      color: #282828;
+      border: 1px solid #eaeaea;
+      background-color: #eaeaea;
+      border-radius: 5px;
+      padding: 7px 15px;
       margin: 0 10px;
       &:nth-child(1) {
         margin-left: 0;
@@ -434,10 +435,11 @@ $freight-blue: #1674ab;
         flex-wrap: wrap;
         margin-bottom: 0;
         padding-bottom: 0;
+        @media all and (max-width: 530px) {
+          justify-content: center;
+        }
         .list-title {
-          clear: both;
-          overflow: hidden;
-          width: 100%;
+          flex-basis: 100%;
           margin-bottom: 30px;
           h3.title {
             @include content-second-title;
@@ -501,6 +503,9 @@ $freight-blue: #1674ab;
   .news-events-wrapper {
     .news-events-banner {
       margin-bottom: 50px;
+    }
+    .event-slider{
+      background-image: none !important;
     }
   }
 }

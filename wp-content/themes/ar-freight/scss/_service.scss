@@ -186,8 +186,7 @@ $blue-link2: #0b045a;
                                                     position: relative;
                                                     @media all and (max-width: 768px) {
                                                         font-size: 13px;
-                                                    }
-                                                    // &:after {
+                                                    } // &:after {
                                                     //     content: "\27F6";
                                                     //     font-size: 27px;
                                                     //     position: absolute;
@@ -199,7 +198,7 @@ $blue-link2: #0b045a;
                                                     // }
                                                     &:after {
                                                         //content: "\27F6";
-                                                        content:"";
+                                                        content: "";
                                                         display: block;
                                                         background: url(../images/arrow.png) no-repeat 81% 45%;
                                                         background-size: 100%;
@@ -207,13 +206,13 @@ $blue-link2: #0b045a;
                                                         top: 25px;
                                                         left: 20px;
                                                         width: 40px;
-                                                        height: 19px;   
+                                                        height: 19px;
                                                         @media all and (max-width: 991px) {
-                                                            background-size: 80%;  
+                                                            background-size: 80%;
                                                             top: 20px;
-                                                        }                                
+                                                        }
                                                         @media all and (max-width: 768px) {
-                                                           // background-size: 60%; 
+                                                            // background-size: 60%; 
                                                             //left: 60px;
                                                             left: 10px;
                                                         }
@@ -277,15 +276,36 @@ $blue-link2: #0b045a;
 }
 
 //Service listing page styles 
-.page-template-services{
-    .service-listing-wrapper{
-        .service-listing{
-            .services{
-                &:nth-child(2){
-                    background-color:#f9f9f9; 
+.page-template-services {
+    .service-listing-wrapper {
+        .service-listing {
+            .services {
+                overflow: hidden;
+                &:nth-child(2) {
+                    background-color: #f9f9f9;
+                    .block-container{
+                        .service-left{
+                            float: right;
+                        }
+                        .service-right{
+                            float: left;
+                        }
+                    }
                 }
-                .block-container{
-
+                .block-container {
+                    .service-content-block {
+                        .block-title {
+                            h2 {
+                                font-family: Roboto-Bd !important;
+                                font-size: 30px  ;
+                                display: inline-block;
+                                padding-bottom: 20px;
+                                margin-bottom: 20px;
+                                color: #282828;
+                                border-bottom: 1px solid #969696;
+                            }
+                        }
+                    }
                 }
             }
         }
