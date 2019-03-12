@@ -14,6 +14,7 @@ header.site-header {
     }
     &.openMenu {
         background-color: #005a8e;
+        background-image: none !important;
         -webkit-box-shadow: 0 4px 20px -1px #0000006e;
         -moz-box-shadow: 0 4px 20px -1px #0000006e;
         -ms-box-shadow: 0 4px 20px -1px #0000006e;
@@ -188,6 +189,7 @@ header.site-header {
         padding-top: 25px !important;
         padding-bottom: 10px !important;
         background-color: #005a8e;
+        background-image:none !important;
         -webkit-box-shadow: 0 4px 20px -1px #0000006e;
         -moz-box-shadow: 0 4px 20px -1px #0000006e;
         -ms-box-shadow: 0 4px 20px -1px #0000006e;
@@ -215,20 +217,13 @@ header.site-header {
 
 //styling header for inner pages
 //styling ofr solid border
-.test:not(.home) {
+body.single-news {
     header.site-header {
-        background-color: #005a8e;
-        padding: 30px 0 30px 0 !important;
+        //background-color: #005a8e;
+        background-image: linear-gradient(-45deg, #003e62, #00598e, #003e62);
         -webkit-box-shadow: 0 4px 20px -1px #0000006e;
         -moz-box-shadow: 0 4px 20px -1px #0000006e;
         -ms-box-shadow: 0 4px 20px -1px #0000006e;
         box-shadow: 0 4px 20px -1px #0000006e;
-        @media all and (max-width: 909px) {
-            padding: 20px !important;
-        }
-        &.fixed {
-            padding-top: 10px !important;
-            padding-bottom: 10px !important;
-        }
     }
 }
