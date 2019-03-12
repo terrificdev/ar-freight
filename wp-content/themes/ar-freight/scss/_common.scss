@@ -24,10 +24,15 @@ a, button {
 }
 //remove the default style of button
 button {
+  &:hover,
+  &:active,
+  &:link,
+  &:visited {
     background-color: none;
     border: none;
     cursor: pointer;
     outline:none;
+  }
 }
 //container for blocks
 .block-container {
@@ -35,6 +40,9 @@ button {
     margin: 0 auto;
     @media all and (max-width: 1330px) {
         padding: 0 20px;
+    }
+    @media all and (max-width: 767px) {
+      padding: 0 15px;
     }
 }
 //common heading style

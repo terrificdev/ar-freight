@@ -39,6 +39,9 @@
         top: 0;
         opacity: 0.7;
     }
+    &__image.no-overlay:after {
+      background-image: none;
+    }
     &__subtitle {
         color: #fff;
         font-size: 16px;

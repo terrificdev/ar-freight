@@ -1,5 +1,27 @@
 jQuery(document).ready(function ($) {
+  $('.type-of-services').click(function (e) {
+    var name = $(this).data("name");
+    $('#qoute-title h2').html(name);
+    var options = '';
+    if(name=='Relocation Services'){
+    options += '<option value="Internation Relocation">International Relocation</option>';
+    options += '<option value="Local Moves">Local Moves (Kuwait)</option>';
+    options += '<option value="Packing-Palletization">Packing, Lashing, Palletization</option>';
+    }
+    if(name=='Freight Services'){
+      options += '<option value="Air Freight Services">Air Freight Services</option>';
+      options += '<option value="Land Freight Services">Land Freight Services</option>';
+      options += '<option value="Sea Freight Services">Sea Freight Services</option>';
+    }
+    if(name=='Other Services'){
+      options += '<option value="Custom Operations">Custom Operations</option>';
+      options += '<option value="Embassy and Govt Services">Embassy and Govt Services</option>';
+      options += '<option value="cargo-Services">Cargo Pickup, Delivery & Warehousing</option>';
+      options += '<option value="Import Services">Import Services</option>';
+    } 
+    $('#type-of-service').html(options);
 
+  });
   //To Instantiate Patners slider-homepage
   $("#news-home").slick({
     dots: true,
@@ -182,6 +204,32 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1
   });
   $("#job-desc").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+   //news page lazy loading plugin
+   $('.loadMore').loadMoreResults({
+    tag: {      
+          'name': 'div',     
+          'class': 'news-list'      
+        },      
+    displayedItems: 8
+  });
+  $("#relocation-services").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+  $("#freight-services").slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+  $("#other-logistics-services").slick({
     dots: true,
     infinite: true,
     slidesToShow: 1,

@@ -34,24 +34,28 @@
 											</div>
 											<div class = "news-events-banner__searchBox">
 												<form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
-													<input type="text" name="s" class="search-text" placeholder="Search News"/>
+													<input type="text" name="s" class="search-text" placeholder="Search for news and events"/>
 													<input type="hidden" name="post_type" value="news" /> <!-- // hidden 'news' value -->
 													<input type="submit" alt="Search" class="searchBtn" value="" />
 												</form>
 											</div>
 									</div>
-									
+
 							</div>
 					</div>
+
+
+
+
                     <div class="block-container">
                         <div class = "news-content">
-                            <div class="news-slider">
-                            <section class="regular slider" id="news-home">
+                            <div class="news-slider news-list-slider">
+                            <section class="regular slider loadMore">
                                 <?php
                                 $news = new WP_Query(array(
                                     'post_type' => 'news',
                                     'post_status' => 'publish',
-                                    'posts_per_page' => 7,
+                                    'posts_per_page' => -1,
                                     'tax_query' => array(
                                         array (
                                             'taxonomy' => 'news_category',
@@ -65,19 +69,21 @@
                                     $post_id = get_the_ID();
                                     $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
                                 ?>
-                                <div class = "news-block content-block">
-                                    <div class = "news-image slider-image">
-                                        <img class = "news-featured-image" src="<?php echo $featuredImage[0]; ?>">
-                                    </div>
-                                    <div class="news-details-wrapper slider-details">
-                                        <div class = "news-title content-title">
-                                        <p><?php echo get_the_title();?></p>
+                                <div class="news-list">
+                                    <div class = "news-block content-block">
+                                        <div class = "news-image slider-image">
+                                            <img class = "news-featured-image" src="<?php echo $featuredImage[0]; ?>">
                                         </div>
-                                        <div class = "news-excerpt content-excerpt">
-                                            <?php the_excerpt();?>
-                                        </div>
-                                        <div class = "news-readmore content-readmore">
-                                        <a href="<?php echo get_permalink(get_option('page_for_posts'));?>">Read More</a>
+                                        <div class="news-details-wrapper slider-details">
+                                            <div class = "news-title content-title">
+                                            <p><?php echo get_the_title();?></p>
+                                            </div>
+                                            <div class = "news-excerpt content-excerpt">
+                                                <?php the_excerpt();?>
+                                            </div>
+                                            <div class = "news-readmore content-readmore">
+                                            <a href="<?php echo get_permalink(get_option('page_for_posts'));?>">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -88,13 +94,13 @@
                             </div>
                         </div>
                         <div class = "events-content">
-                            <div class="event-slider">
-                            <section class="regular slider" id="events-home">
+                            <div class="event-slider events-list-slider">
+                            <section class="regular slider loadMore">
                             <?php
                             $events = new WP_Query(array(
                                 'post_type' => 'news',
                                 'post_status' => 'publish',
-                                'posts_per_page' => 7,
+                                'posts_per_page' => -1,
                                 'tax_query' => array(
                                     array (
                                         'taxonomy' => 'news_category',
@@ -108,19 +114,21 @@
                                 $post_id = get_the_ID();
                                 $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
                             ?>
-                            <div class = "events-block content-block">
-                                <div class = "events-image slider-image">
-                                    <img class = "events-featured-image" src="<?php echo $featuredImage[0]; ?>">
-                                </div>
-                                <div class="events-details-wrapper slider-details">
-                                    <div class = "events-title content-title">
-                                        <p><?php echo get_the_title();?></p>
+                            <div class="news-list">
+                                <div class = "events-block content-block">
+                                    <div class = "events-image slider-image">
+                                        <img class = "events-featured-image" src="<?php echo $featuredImage[0]; ?>">
                                     </div>
-                                    <div class = "events-excerpt content-excerpt">
-                                        <?php the_excerpt();?>
-                                    </div>
-                                    <div class = "events-readmore content-readmore">
-                                    <a href="<?php echo get_permalink(get_option('page_for_posts'));?>">Read More</a>
+                                    <div class="events-details-wrapper slider-details">
+                                        <div class = "events-title content-title">
+                                            <p><?php echo get_the_title();?></p>
+                                        </div>
+                                        <div class = "events-excerpt content-excerpt">
+                                            <?php the_excerpt();?>
+                                        </div>
+                                        <div class = "events-readmore content-readmore">
+                                        <a href="<?php echo get_permalink(get_option('page_for_posts'));?>">Read More</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
