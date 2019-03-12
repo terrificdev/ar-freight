@@ -20,6 +20,7 @@ include_once( get_stylesheet_directory() .'/includes/contact.php');
 include_once( get_stylesheet_directory() .'/includes/banner.php');
 include_once( get_stylesheet_directory() .'/includes/services.php');
 include_once( get_stylesheet_directory() .'/includes/faq.php');
+include_once( get_stylesheet_directory() .'/includes/checklist.php');
 include_once( get_stylesheet_directory() .'/includes/news.php');
 include_once( get_stylesheet_directory() .'/includes/careers.php');
 include_once( get_stylesheet_directory() .'/includes/testimonials.php');
