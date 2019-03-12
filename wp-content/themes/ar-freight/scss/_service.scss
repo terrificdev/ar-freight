@@ -277,6 +277,9 @@ $blue-link2: #0b045a;
 
 //Service listing page styles 
 .page-template-services {
+    .service-wrapper {
+        margin-top: 0 !important;
+    }
     .service-listing-wrapper {
         @media all and (min-width: 769px) and (max-width: 991px) {
             margin-top: 235px;
