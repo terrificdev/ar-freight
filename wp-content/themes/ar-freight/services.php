@@ -8,7 +8,7 @@
         <?php while ( have_posts() ) : the_post(); ?>
         <?php
         $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );?>
-            <div class = "service-wrapper">
+            <div class = "services-wrapper">
                 <div class = "service-container">
                     <div class = "service-banner">
                         <div class = "service-banner__image">
