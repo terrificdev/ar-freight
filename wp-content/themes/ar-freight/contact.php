@@ -57,10 +57,30 @@
                     </div>
 									</div>
                 </div>
+
+								<div class = "contact-gallery__wrap">
+                    <div class = "contact-gallery__container">
+
+													<div class = 'contact-gallery__image' >
+														<section class="regular slider" id="contact-gallery">
+															<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('contact-gallery') ) :
+															endif; ?>
+														</section>
+													</div>
+
+                    </div>
+                    <div class = "contact-gallery__address">
+											<div class="address-block">
+												<h4 class="title">Office address</h4>
+												<p><?php echo get_theme_mod('contact_us_address') ?></p>
+											</div>
+                    </div>
+                </div>
+
                 <div class = "contact-bottom">
                     <div class = "contact-gallery">
-                        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('contact-gallery') ) :
-                        endif; ?>
+											<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('contact-gallery') ) :
+											endif; ?>
                     </div>
                     <div class = "contact-address">
                         <p><?php echo get_theme_mod('contact_us_address') ?></p>

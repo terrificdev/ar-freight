@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
       options += '<option value="Embassy and Govt Services">Embassy and Govt Services</option>';
       options += '<option value="cargo-Services">Cargo Pickup, Delivery & Warehousing</option>';
       options += '<option value="Import Services">Import Services</option>';
-    } 
+    }
     $('#type-of-service').html(options);
 
   });
@@ -154,6 +154,23 @@ jQuery(document).ready(function ($) {
     prevArrow: ".c-prev",
     nextArrow: ".c-next"
   });
+  $("#contact-gallery").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
     //Sticky Header
     $(window).scroll(function () {
       var sticky = $('.site-header'),
@@ -211,10 +228,10 @@ jQuery(document).ready(function ($) {
   });
    //news page lazy loading plugin
    $('.loadMore').loadMoreResults({
-    tag: {      
-          'name': 'div',     
-          'class': 'news-list'      
-        },      
+    tag: {
+          'name': 'div',
+          'class': 'news-list'
+        },
     displayedItems: 8
   });
   $("#relocation-services").slick({
