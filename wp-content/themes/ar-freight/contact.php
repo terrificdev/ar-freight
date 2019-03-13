@@ -49,11 +49,13 @@
 								</div>
 
 
-                <div class = "contact-form-block">
-                    <h2>Drop us a line</h2>
+                <div class = "contact-form-block block-container">
+									<div class="contact-inner-block">
+                    <h2 class="title">Drop us a line</h2>
                     <div class = "contact-form">
                         <?php echo do_shortcode('[contact-form-7 id="166" title="Contact form 1"]')?>
                     </div>
+									</div>
                 </div>
                 <div class = "contact-bottom">
                     <div class = "contact-gallery">
