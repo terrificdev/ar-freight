@@ -13,14 +13,14 @@
 #quoteModal {
     .modal-dialog {
         width: 900px;
-        margin-top: 100px;
+        margin: 100px auto 0;
         @media all and (max-width: 950px) {
             width: 100%;
             padding: 20px;
         }
-        @media all and (max-width: 767px) {
+        @media all and (max-width: 1025px) {
             padding: 15px;
-            margin-top: 20px;
+            margin: 20px auto 0;
         }
         .modal-content {
             border-radius: 0;
@@ -155,7 +155,6 @@
                                     p {
                                         text-align: right;
                                         margin: 0 0 20px;
-                                        
                                     }
                                     label {
                                         width: 100%;
@@ -172,10 +171,10 @@
                                         appearance: none;
                                         background: url(../images/chev-dwn.png) no-repeat 98% 50%;
                                     }
-                                    .wrapper{
+                                    .wrapper {
                                         display: flex;
                                         justify-content: space-between;
-                                        p{
+                                        p {
                                             flex-basis: 49%;
                                         }
                                     }
@@ -224,7 +223,6 @@
                                         text-align: left;
                                         padding-left: 55px;
                                         border: none;
-
                                     }
                                     &.invalid {
                                         div.wpcf7-validation-errors {
