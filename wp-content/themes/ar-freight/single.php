@@ -55,7 +55,7 @@ get_header(); ?>
                     </div>
                     <div class = "quote-button-block block-container">
                         <div class= "qoute-button">
-                    		<a href="<?php echo get_page_link(get_theme_mod('get_a_qoute'))?>"><button>Get A Quote</button></a>
+                    		<a href="#" data-toggle="modal" data-target="#quoteModal"><button>Get A Quote</button></a>
                 		</div>
                     </div>
                 </div>

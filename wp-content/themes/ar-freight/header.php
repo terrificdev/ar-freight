@@ -58,12 +58,12 @@
 							</nav><!-- .main-navigation -->
 						<?php endif; ?>
 						<div class= "qoute-button resp">
-                    		<a href="<?php echo get_page_link(get_theme_mod('get_a_qoute'))?>"><button>Get A Quote</button></a>
+                    		<a href="#" data-toggle="modal" data-target="#quoteModal"><button>Get A Quote</button></a>
                 		</div>
 					</div><!-- .site-header-menu -->
 				<?php endif; ?>
 				<div class= "qoute-button desktop">
-                    <a href="<?php echo get_page_link(get_theme_mod('get_a_qoute'))?>"><button>Get A Quote</button></a>
+                    <a href="#" data-toggle="modal" data-target="#quoteModal"><button>Get A Quote</button></a>
                 </div>
 			</div><!-- .site-header-main -->
 
@@ -87,5 +87,5 @@
 				</div><!-- .header-image -->
 			<?php endif; // End header image check. ?>
 		</header><!-- .site-header -->
-
+		<?php get_template_part( 'template-parts/content', 'qoute' ); ?>
 		<div id="content" class="site-content">

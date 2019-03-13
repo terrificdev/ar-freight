@@ -20,6 +20,11 @@ jQuery(document).ready(function ($) {
       options += '<option value="Import Services">Import Services</option>';
     }
     $('#type-of-service').html(options);
+    $('#quote-title h2').html(name);
+
+    //add active class
+    $(this).addClass("active");
+    $(".type-of-services").not(this).removeClass("active");
 
   });
   //To Instantiate Patners slider-homepage
