@@ -33,9 +33,10 @@
 
                     <div class="block-container">
                         <?php if( isset($_REQUEST['search']) && $_REQUEST['search'] != "" ):?>
-                            <h2>Search Result For "<?php echo $_REQUEST['search']?>"</h2>
+                            <h2 class ="search_status">Search Result For "<?php echo $_REQUEST['search']?>"</h2>
                         <?php endif;?> 
                         <?php
+                            $news_flag = 0;
                             $news = new WP_Query(array(
                                 'post_type' => 'news',
                                 'post_status' => 'publish',
@@ -50,6 +51,7 @@
                                 ),
                             ));
                             if ($news->post_count > 0): 
+                            $news_flag = 1;    
                         ?>   
                         <div class = "news-content">
                             <div class="news-slider news-list-slider">
@@ -86,6 +88,7 @@
                         </div>
                         <?php endif;?>
                         <?php
+                        $events_flag = 0;
                         $events = new WP_Query(array(
                             'post_type' => 'news',
                             'post_status' => 'publish',
@@ -100,6 +103,7 @@
                             ),
                         ));
                         if ($events->post_count > 0): 
+                        $events_flag = 1;    
                         ?>    
                         <div class = "events-content">
                             <div class="event-slider events-list-slider">
@@ -141,5 +145,12 @@
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- .wrap -->
-
+<?php 
+if($news_flag == 0 && $events_flag == 0): ?>
+<script>
+$(document).ready(function(){
+    $(".search_status").html("No Search Result Found!");
+});
+</script>
+<?php endif;?>
 <?php get_footer();
