@@ -8,18 +8,6 @@
 			<?php
 			while ( have_posts() ) : the_post();
 			$featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );?>
-
-			<!-- <img src="<?php //echo $featuredImage[0]?>"> -->
-			<?php //echo get_the_title();?>
-			<!-- <div>
-          <h3>Search</h3>
-          <form role="search" action="<?php //echo site_url('/'); ?>" method="get" id="searchform">
-          <input type="text" name="s" placeholder="Search News"/> -->
-          <!-- <input type="hidden" name="post_type" value="news" />-->
-					<!-- // hidden 'news' value -->
-          <!-- <input type="submit" alt="Search" value="Search" />
-          </form>
-      </div> -->
 			<div class = "news-events-wrapper">
 				<div class = "news-events-container">
 					<div class = "news-events-banner">
@@ -33,8 +21,8 @@
 													<?php echo get_the_title();?>
 											</div>
 											<div class = "news-events-banner__searchBox">
-												<form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
-													<input type="text" name="s" class="search-text" placeholder="Search for news and events"/>
+												<form role="search" action="<?php the_permalink(); ?>" method="get" id="searchform">
+													<input type="text" name="search" class="search-text" placeholder="Search for news and events" value="<?php $_REQUEST['search']?>"/>
 													<input type="hidden" name="post_type" value="news" /> <!-- // hidden 'news' value -->
 													<input type="submit" alt="Search" class="searchBtn" value="" />
 												</form>
@@ -44,10 +32,10 @@
 							</div>
 					</div>
 
-
-
-
                     <div class="block-container">
+                        <?php if( isset( $_REQUEST['search'] ) ):?>
+                            <h2>Search Result For "<?php echo $_REQUEST['search']?>"</h2>
+                        <?php endif;?>    
                         <div class = "news-content">
                             <div class="news-slider news-list-slider">
                             <section class="regular slider loadMore">
@@ -56,6 +44,7 @@
                                     'post_type' => 'news',
                                     'post_status' => 'publish',
                                     'posts_per_page' => -1,
+                                    's' =>  $_REQUEST['search'],   
                                     'tax_query' => array(
                                         array (
                                             'taxonomy' => 'news_category',
@@ -101,6 +90,7 @@
                                 'post_type' => 'news',
                                 'post_status' => 'publish',
                                 'posts_per_page' => -1,
+                                's' =>  $_REQUEST['search'], 
                                 'tax_query' => array(
                                     array (
                                         'taxonomy' => 'news_category',
