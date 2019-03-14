@@ -8,8 +8,8 @@
         <?php while ( have_posts() ) : the_post(); ?>
         <?php
         $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );?>
-            <div class = "faq-wrapper">
-                <div class = "faq-container">
+            <div class = "other-page-wrapper faq-wrapper">
+                <div class = "other-page-container faq-container">
                     <div class = "faq-banner">
                         <div class = "faq-banner__image">
                             <img src ="<?php echo wp_get_attachment_url(get_theme_mod('faq_banner'))?>">
@@ -46,7 +46,7 @@
 														<div class="panel faq-panel panel-default">
 															<div class="panel-heading">
 													      <h4 class="panel-title title">
-													        <a data-toggle="collapse" data-parent="#accordion" class="open" href="#faq<?php echo $count; ?>">
+													        <a data-toggle="collapse" data-parent="#accordion" class="open collapsed" href="#faq<?php echo $count; ?>">
 													        <?php echo get_the_title();?></a>
 													      </h4>
 													    </div>
@@ -64,16 +64,6 @@
 													</div>
                         </div>
                     </div>
-
-										<!-- <div class = "faq-block">
-												<div class = 'faq-title'>
-														<h2><?php echo $count.get_the_title();?></h2>
-												</div>
-												<div class = 'faq-content'>
-														<?php the_content()?>
-												</div>
-										</div> -->
-
                 </div>
             </div>
         <?php endwhile;?>

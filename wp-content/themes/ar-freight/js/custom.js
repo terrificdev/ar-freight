@@ -243,14 +243,20 @@ jQuery(document).ready(function ($) {
 
 
   // Add minus icon for collapse element which is open by default
-  $(".panel-heading").each(function(){ console.log('inside');
-    $(this)(".panel-title a").find(".open").addClass("closed").removeClass("open");
+  $(".panel-heading").each(function(){
+    $(this).click(function(){
+       //var open = closed = 0;
+       $("#accordion").children().find(".closed").addClass("open").removeClass("closed");
+       if($(this).children('.panel-title').find('a').hasClass("open collapsed")){
+         console.log("check");
+          $(this).children('.panel-title').find('a').addClass("closed collapsed").removeClass("open collapsed");
+       }
+       else{
+         console.log("check1");
+          $(this).children('.panel-title').find('a').addClass("open collapsed").removeClass("closed collapsed");
+       }
+    });
   });
 
-  // Toggle plus minus icon on show hide of collapse element
-  $(".collapse").on('show.bs.collapse', function(){
-    $(this).parent().find(".glyphicon").removeClass("glyphicon-plus").addClass("glyphicon-minus");
-  }).on('hide.bs.collapse', function(){
-    $(this).parent().find(".glyphicon").removeClass("glyphicon-minus").addClass("glyphicon-plus");
-  });
+
 });
