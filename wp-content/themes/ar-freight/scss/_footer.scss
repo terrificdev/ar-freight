@@ -125,6 +125,7 @@ footer {
           .menu-social-menu-container {
             ul {
               li {
+                float: left !important;
                 a {
                   border: none;
                   &:before {

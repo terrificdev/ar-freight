@@ -1,0 +1,248 @@
+.modal-backdrop {
+    background-color: white;
+    opacity: 0.8;
+}
+
+.modal-open {
+    .site-content,
+    .site-header {
+        filter: blur(3px);
+    }
+}
+
+#quoteModal {
+    .modal-dialog {
+        width: 900px;
+        margin: 100px auto 0;
+        @media all and (max-width: 950px) {
+            width: 100%;
+            padding: 20px;
+        }
+        @media all and (max-width: 1025px) {
+            padding: 15px;
+            margin: 20px auto 0;
+        }
+        .modal-content {
+            border-radius: 0;
+            position: relative;
+            .modal-close-btn {
+                button {
+                    color: black;
+                    font-size: 40px;
+                    opacity: 1;
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    z-index: 999;
+                    &:hover {
+                        background: none !important;
+                        color: #848484;
+                    }
+                    @media all and (max-width: 767px) {
+                        color: white;
+                    }
+                }
+            }
+            .modal-body {
+                padding: 0;
+                .get-a-quote-container {
+                    .get-a-quote-wrapper {
+                        display: flex;
+                        @media all and (max-width: 767px) {
+                            display: block;
+                        }
+                        .quote-left,
+                        .quote-right {
+                            padding: 50px;
+                            @media all and (max-width: 900px) {
+                                padding: 20px;
+                            }
+                        }
+                        .quote-left {
+                            flex-basis: 355px;
+                            background-image: url(../images/popup-bg.png);
+                            background-repeat: none;
+                            background-size: cover;
+                            color: white;
+                            @media all and (min-width: 550px) and (max-width: 767px) {
+                                padding-bottom: 0;
+                            }
+                            h2 {
+                                font-family: Roboto-Bd !important;
+                                font-size: 30px;
+                                display: inline-block;
+                                padding-bottom: 20px;
+                                margin-bottom: 20px;
+                                padding-right: 20px;
+                                color: white;
+                                border-bottom: 1px solid white;
+                            }
+                            p {
+                                font-family: Roboto-Lt;
+                                font-size: 15px;
+                                line-height: 21px;
+                                max-width: 220px;
+                            }
+                            button {
+                                background-color: #81afc9;
+                                display: block;
+                                font-family: Roboto-Lt;
+                                font-size: 16px;
+                                width: 250px;
+                                color: black;
+                                text-transform: none;
+                                padding: 22px 0;
+                                border-radius: 6px;
+                                margin-top: 25px;
+                                position: relative;
+                                z-index: 9;
+                                @media all and (max-width: 767px) {
+                                    width: auto;
+                                    padding: 15px 24px 15px 15px;
+                                    display: inline-block;
+                                    font-size: 14px;
+                                    margin-right: 5px;
+                                }
+                                @media all and (max-width: 549px) {
+                                    width: 100%;
+                                    margin-top: 2px;
+                                }
+                                &::before {
+                                    border-style: solid;
+                                    border-width: 0.15em 0.15em 0 0;
+                                    content: '';
+                                    display: inline-block;
+                                    height: 0.6em;
+                                    position: absolute;
+                                    top: 25px;
+                                    vertical-align: top;
+                                    width: 0.6em;
+                                    right: 20px;
+                                    transform: rotate(45deg);
+                                    @media all and (max-width: 767px) {
+                                        top: 16px;
+                                        right: 8px;
+                                        transform: rotate(135deg);
+                                    }
+                                }
+                                &.active {
+                                    background-color: #d5e4eb;
+                                }
+                            }
+                        }
+                        .quote-right {
+                            flex-grow: 2;
+                            background-color: white;
+                            position: relative;
+                            z-index: 99;
+                            @media all and (min-width: 550px) and (max-width: 767px) {
+                                margin-top: -7px;
+                            }
+                            #quote-title {
+                                h2 {
+                                    font-family: Roboto-Md !important;
+                                    font-size: 20px;
+                                    display: inline-block;
+                                    padding-bottom: 10px;
+                                    margin-bottom: 20px;
+                                    padding-right: 20px;
+                                    color: black;
+                                    border-bottom: 1px solid black;
+                                }
+                            }
+                            .quote-form {
+                                form {
+                                    p {
+                                        text-align: right;
+                                        margin: 0 0 20px;
+                                    }
+                                    label {
+                                        width: 100%;
+                                        margin-bottom: 0;
+                                    }
+                                    textarea {
+                                        height: 100px;
+                                    }
+                                    select {
+                                        -moz-appearance: none;
+                                        /* Firefox */
+                                        -webkit-appearance: none;
+                                        /* Safari and Chrome */
+                                        appearance: none;
+                                        background: url(../images/chev-dwn.png) no-repeat 98% 50%;
+                                    }
+                                    .wrapper {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        p {
+                                            flex-basis: 49%;
+                                        }
+                                    }
+                                    input,
+                                    textarea,
+                                    select {
+                                        width: 100%;
+                                        background-color: white;
+                                        border: 1px solid #c0bebf;
+                                        border-radius: 5px;
+                                        padding: 10px 10px;
+                                        font-size: 16px;
+                                        font-family: Roboto-Lt;
+                                        color: black;
+                                        outline: none;
+                                    }
+                                    &::-webkit-input-placeholder {
+                                        // Chrome/Opera/Safari  
+                                        font-size: 16px;
+                                        color: #7f7f7f;
+                                    }
+                                    &::-moz-placeholder {
+                                        // Firefox 19+  
+                                        font-size: 16px;
+                                        color: #7f7f7f;
+                                    }
+                                    &:-ms-input-placeholder {
+                                        // IE 10+  
+                                        font-size: 16px;
+                                        color: #7f7f7f;
+                                    }
+                                    &:-moz-placeholder {
+                                        // Firefox 18- 
+                                        font-size: 16px;
+                                        color: #7f7f7f;
+                                    }
+                                    input[type="submit"] {
+                                        background: #1674aa url(../images/arrow.png) no-repeat 130px 10px;
+                                        width: 220px;
+                                        height: 40px;
+                                        border-radius: 50px;
+                                        color: white;
+                                        text-transform: none;
+                                        font-family: Roboto-Rg;
+                                        font-size: 17px;
+                                        text-align: left;
+                                        padding-left: 55px;
+                                        border: none;
+                                    }
+                                    &.invalid {
+                                        div.wpcf7-validation-errors {
+                                            border: 1px solid #d87b7b;
+                                            border-radius: 3px;
+                                            color: #b91f1f;
+                                            padding: 4px 6px;
+                                            background-color: #ffebeb;
+                                            margin: 2em 0 1em;
+                                        }
+                                        span[role="alert"] {
+                                            font-family: Roboto-Rg;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

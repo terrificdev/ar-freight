@@ -1,0 +1,168 @@
+$primary-white: #fff;
+$primary-black: #000;
+$grey-text: #868686;
+$blue-link: #060331;
+$blue-link2: #0b045a;
+$freight-blue: #1674ab;
+
+.other-page-wrapper {
+  .other-page-container {
+    .faq-listing-wrapper, .checklist-listing-wrapper {
+      margin-bottom: 100px;
+      @media all and (max-width: 991px) {
+        padding-top: 50px;
+        margin-bottom: 70px;
+      }
+      @media all and (max-width: 478px) {
+        padding-top: 30px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+.faq-panel-group {
+  .faq-panel, .checklist-panel {
+    margin-bottom: 0;
+    border-radius: 0;
+    border-bottom: none;
+    &:last-child {
+      border-bottom: 1px solid #ddd;
+    }
+    .panel-heading {
+      padding: 15px 10px;
+      border: none;
+      .title {
+        position: relative;
+        padding-right: 20px;
+        a {
+          font-size: 16px;
+          line-height: 20px;
+          font-family: "Roboto-Md";
+          color: $primary-black;
+          &:hover {
+            color: $primary-black;
+          }
+          @media all and (max-width: 599px) {
+            font-size: 14px;
+          }
+          &:after {
+            position: absolute;
+            right: 15px;
+            top: 0;
+          }
+
+          &.open {
+            &:after {
+              content: "+";
+              font-size: 25px;
+            }
+          }
+          &.closed {
+            &:after {
+              content: "-";
+              font-size: 50px;
+            }
+          }
+          @media all and (max-width: 768px) {
+            &.open {
+              &:after {
+                font-size: 18px;
+                right: 5px;
+              }
+            }
+            &.closed {
+              &:after {
+                font-size: 45px;
+                right: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .panel-body {
+      padding-bottom: 20px;
+      p, li {
+        @include content-desc;
+        color: $grey-text;
+        margin-bottom: 10px;
+        img {
+          min-width: 350px;
+          width: 25%;
+        }
+      }
+      ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+// .checklist-listing-wrapper {
+//   margin-bottom: 100px;
+//   @media all and (max-width: 991px) {
+//     padding-top: 50px;
+//     margin-bottom: 70px;
+//   }
+//   @media all and (max-width: 478px) {
+//     padding-top: 30px;
+//     margin-bottom: 50px;
+//   }
+//   .faq-panel-group {
+//     .faq-panel {
+//       margin-bottom: 0;
+//       border-radius: 0;
+//       border-bottom: none;
+//       &:last-child {
+//         border-bottom: 1px solid #ddd;
+//       }
+//       .panel-heading {
+//         padding: 15px 10px;
+//         border: none;
+//         .title {
+//           position: relative;
+//           a {
+//             font-size: 16px;
+//             line-height: 20px;
+//             font-family: "Roboto-Md";
+//             color: $primary-black;
+//             &:hover {
+//               color: $primary-black;
+//             }
+//             @media all and (max-width: 599px) {
+//               font-size: 14px;
+//             }
+//             &:after {
+//               position: absolute;
+//               right: 10px;
+//             }
+//             &.open {
+//               &:after {
+//                 content: "+";
+//               }
+//             }
+//             &.closed {
+//               &:after {
+//                 content: "-";
+//               }
+//             }
+//           }
+//         }
+//       }
+//       .panel-body {
+//         padding-bottom: 20px;
+//         p, li {
+//           @include content-desc;
+//           color: $grey-text;
+//           margin-bottom: 10px;
+//
+//         }
+//         ul {
+//           padding-left: 20px;
+//           margin-bottom: 20px;
+//         }
+//       }
+//     }
+//   }
+// }

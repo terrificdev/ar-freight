@@ -18,8 +18,13 @@ jQuery(document).ready(function ($) {
       options += '<option value="Embassy and Govt Services">Embassy and Govt Services</option>';
       options += '<option value="cargo-Services">Cargo Pickup, Delivery & Warehousing</option>';
       options += '<option value="Import Services">Import Services</option>';
-    } 
+    }
     $('#type-of-service').html(options);
+    $('#quote-title h2').html(name);
+
+    //add active class
+    $(this).addClass("active");
+    $(".type-of-services").not(this).removeClass("active");
 
   });
   //To Instantiate Patners slider-homepage
@@ -176,27 +181,27 @@ jQuery(document).ready(function ($) {
         $("header.site-header").removeClass("openMenu");
       }
     });
- //Hover interaction for news item
- var width = $(window).width();
- if (width > 1025) {
-   //desktop interaction
-   var toggleOn = false;
-   $(".about-us__right__block").hover(
-     function () {
-       $(this).addClass('active');
-     }, function () {
-       toggleOn || $(this).removeClass('active');
-     }
-   );
- }
- else {
-   // tablet and mobile interaction
-   $(".about-us__right__block").click(function () {
-     $(".about-us__right__block").removeClass('active');
-     $(this).toggleClass('active');
+   //Hover interaction for news item
+   var width = $(window).width();
+   if (width > 1025) {
+     //desktop interaction
+     var toggleOn = false;
+     $(".about-us__right__block").hover(
+       function () {
+         $(this).addClass('active');
+       }, function () {
+         toggleOn || $(this).removeClass('active');
+       }
+     );
+   }
+   else {
+     // tablet and mobile interaction
+     $(".about-us__right__block").click(function () {
+       $(".about-us__right__block").removeClass('active');
+       $(this).toggleClass('active');
 
-   });
- }
+     });
+   }
   $("#services-home").slick({
     dots: true,
     infinite: true,
@@ -210,11 +215,11 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1
   });
    //news page lazy loading plugin
-   $('.loadMore').loadMoreResults({
-    tag: {      
-          'name': 'div',     
-          'class': 'news-list'      
-        },      
+  $('.loadMore').loadMoreResults({
+    tag: {
+          'name': 'div',
+          'class': 'news-list'
+        },
     displayedItems: 8
   });
   $("#relocation-services").slick({
@@ -235,4 +240,23 @@ jQuery(document).ready(function ($) {
     slidesToShow: 1,
     slidesToScroll: 1
   });
+
+
+  // Add minus icon for collapse element which is open by default
+  $(".panel-heading").each(function(){
+    $(this).click(function(){
+       //var open = closed = 0;
+       $("#accordion").children().find(".closed").addClass("open").removeClass("closed");
+       if($(this).children('.panel-title').find('a').hasClass("open collapsed")){
+         console.log("check");
+          $(this).children('.panel-title').find('a').addClass("closed collapsed").removeClass("open collapsed");
+       }
+       else{
+         console.log("check1");
+          $(this).children('.panel-title').find('a').addClass("open collapsed").removeClass("closed collapsed");
+       }
+    });
+  });
+
+
 });
