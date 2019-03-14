@@ -1,0 +1,169 @@
+.archives-container {
+    .tab-content-section {
+        min-height: 570px;
+        .tab {
+            float: left;
+            text-align: center;
+            button {
+                display: block;
+                text-align: left;
+                text-indent: 90px;
+                text-transform: capitalize;
+                color: black;
+                font-family: Roboto-Rg;
+                padding: 40px 16px;
+                box-shadow: 0px 0px 34px 0px #cacaca;
+                width: 300px;
+                transition: 0.3s;
+                font-size: 24px;
+                margin-bottom: 40px;
+                position: relative;
+                opacity: 0.5;
+                &::before {
+                    border-style: solid;
+                    border-width: 0.09em 0.09em 0 0;
+                    content: '';
+                    display: inline-block;
+                    height: 0.9em;
+                    position: absolute;
+                    top: 43%;
+                    vertical-align: top;
+                    width: 0.9em;
+                    right: 30px;
+                    transform: rotate(45deg);
+                    font-size: 17px;
+                    @media all and (max-width: 767px) {
+                        top: 16px;
+                        right: 8px;
+                        transform: rotate(135deg);
+                    }
+                }
+                &.form {
+                    background: #fff url(../images/list.png) no-repeat 40px 50%;
+                }
+                &.download {
+                    background: #fff url(../images/download-icon.png) no-repeat 40px 50%;
+                }
+                &.links {
+                    background: #fff url(../images/link.png) no-repeat 40px 50%;
+                }
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+        .tabcontent {
+            float: left;
+            padding: 20px 0 0 100px;
+            width: 70%;
+            border-left: none;
+            color: #747474;
+            .tab-title {
+                h2 {
+                    font-family: Roboto-Bd !important;
+                    font-size: 30px;
+                    display: inline-block;
+                    padding-bottom: 20px;
+                    margin-bottom: 30px;
+                    width: 200px;
+                    color: black;
+                    border-bottom: 1px solid #acacac;
+                }
+            }
+            .form-content,
+            .tab-desc {
+                p {
+                    font-family: Roboto-Rg;
+                    font-size: 15px;
+                    line-height: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+            .form-listing-wrapper,
+            .download-listing-wrapper,
+            .links-listing-wrapper {
+                max-width: 500px;
+            }
+            .forms-wrapper {
+                margin-bottom: 70px;
+                .form-block {
+                    margin-bottom: 20px;
+                    .form-title {
+                        h2 {
+                            font-family: Roboto-Md;
+                            text-transform: capitalize;
+                            font-size: 20px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .form-download {
+                        a {
+                            font-family: Roboto-Rg;
+                            font-size: 15px;
+                            color: #709ec2;
+                        }
+                    }
+                }
+            }
+            .downloads-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                .download-block {
+                    flex-basis: 46%;
+                    flex-grow: 2;
+                    position: relative;
+                    margin-bottom: 20px;
+                    .download-image {}
+                    .download-file {
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        a {
+                            display: flex;
+                            justify-content: flex-end;
+                            flex-direction: column;
+                            width: 100%;
+                            height: 100%;
+                            color: white;
+                            text-align: center;
+                            padding-bottom: 5px;
+                            h2 {
+                                display: block;
+                                font-size: 18px;
+                                font-family: Roboto-Md;
+                                text-transform: capitalize;
+                            }
+                            span {
+                                display: block;
+                                font-size: 12px;
+                                font-family: Roboto-Lt;
+                                opacity: 0;
+                            }
+                            &:hover{
+                                span{
+                                    opacity: 1;  
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .link-wrapper {
+                .link-block {
+                    a {
+                        font-size: 26px;
+                        font-family: Roboto-Md;
+                        color: black;
+                        display: block;
+                        text-transform: capitalize;
+                        background: url(../images/right-arrow.png) no-repeat right 62%;
+                        padding-bottom: 15px;
+                        padding-top: 25px;
+                        border-bottom: 1px solid #bfbfbf;
+                    }
+                }
+            }
+        }
+    }
+}

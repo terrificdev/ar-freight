@@ -8,8 +8,8 @@
         <?php while ( have_posts() ) : the_post(); ?>
         <?php
         $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );?>
-            <div class = "incoterms-container">
-                <div class = "incoterms-wrapper">
+            <div class = "incoterms-wrapper">
+                <div class = "incoterms-container">
                     <div class = "incoterms-banner">
                         <div class = "incoterms-banner__image">
                             <img src ="<?php echo wp_get_attachment_url(get_theme_mod('incoterms_banner'))?>">
@@ -28,14 +28,21 @@
                             </div>
                          </div>
                     </div>
-                    <div class = "incoterms-contents">
+
+                    <div class = "incoterms-contents block-container">
                         <div class = "incoterms-definition">
-                            <h2>What are incoterms</h2>
-                            <?php echo get_theme_mod('incoterms_definition')?>
+                            <h2 class="title">What are incoterms</h2>
+														<div class="definition">
+	                            <?php echo get_theme_mod('incoterms_definition')?>
+														</div>
                         </div>
                         <div class = "download-section">
-                            <a href="<?php echo get_theme_mod('incoterms_download_link')?>"><?php echo get_theme_mod('incoterms_download_text')?></a>
+													<div class="incoterm-pic">
                             <img src="<?php echo wp_get_attachment_url(get_theme_mod('incoterms_side_image'))?>">
+													</div>
+													<div class="download-link">
+                            <a href="<?php echo get_theme_mod('incoterms_download_link')?>"><?php echo get_theme_mod('incoterms_download_text')?></a>
+													</div>
                         </div>
                         <div class = "content">
                             <?php the_content();?>
