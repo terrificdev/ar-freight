@@ -216,7 +216,7 @@ function service_key_points_meta_box(){
     $service_key_points = json_decode($meta);
     ?>
     <label>
-        Company<span class="req">*</span>
+        Key points<span class="req">*</span>
     </label>
     <div id="dynamic_field">
         <input type="text" required autocomplete="off" name="service_key_points[]" value="<?php echo $service_key_points[0]?>"/>                    
