@@ -148,8 +148,8 @@
 <?php 
 if($news_flag == 0 && $events_flag == 0): ?>
 <script>
-$(document).ready(function(){
-    $(".search_status").html("No Search Result Found!");
+jQuery(document).ready(function(){
+    jQuery(".search_status").html("No Search Result Found!");
 });
 </script>
 <?php endif;?>
