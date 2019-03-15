@@ -11,11 +11,11 @@
 .incoterms-banner {
     position: relative;
     margin-bottom: 175px;
-    @media all and (min-width: 991px) {
+    @media all and (min-width: 992px) {
         margin-bottom: 220px;
     }
     &__image {
-        @media all and (min-width: 991px) {
+        @media all and (min-width: 992px) {
             -ms-transform: skewY(-10deg);
             -webkit-transform: skewY(-10deg);
             transform: skewY(-10deg);
