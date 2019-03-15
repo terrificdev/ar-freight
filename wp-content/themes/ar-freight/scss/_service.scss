@@ -186,8 +186,7 @@ $blue-link2: #0b045a;
                                                     position: relative;
                                                     @media all and (max-width: 768px) {
                                                         font-size: 13px;
-                                                    }
-                                                    // &:after {
+                                                    } // &:after {
                                                     //     content: "\27F6";
                                                     //     font-size: 27px;
                                                     //     position: absolute;
@@ -199,7 +198,7 @@ $blue-link2: #0b045a;
                                                     // }
                                                     &:after {
                                                         //content: "\27F6";
-                                                        content:"";
+                                                        content: "";
                                                         display: block;
                                                         background: url(../images/arrow.png) no-repeat 81% 45%;
                                                         background-size: 100%;
@@ -207,13 +206,13 @@ $blue-link2: #0b045a;
                                                         top: 25px;
                                                         left: 20px;
                                                         width: 40px;
-                                                        height: 19px;   
+                                                        height: 19px;
                                                         @media all and (max-width: 991px) {
-                                                            background-size: 80%;  
+                                                            background-size: 80%;
                                                             top: 20px;
-                                                        }                                
+                                                        }
                                                         @media all and (max-width: 768px) {
-                                                           // background-size: 60%; 
+                                                            // background-size: 60%; 
                                                             //left: 60px;
                                                             left: 10px;
                                                         }
@@ -269,6 +268,101 @@ $blue-link2: #0b045a;
                         .slick-arrow {
                             @include common-slickArrow;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Service listing page styles 
+.page-template-services {
+    .service-wrapper {
+        margin-top: 0 !important;
+    }
+    .service-listing-wrapper {
+        @media all and (min-width: 769px) and (max-width: 991px) {
+            margin-top: 235px;
+        }
+        .service-listing {
+            .services {
+                overflow: hidden;
+                &:nth-child(2) {
+                    background-color: #f9f9f9;
+                    margin-bottom: 60px;
+                    @media all and (max-width: 768px) {
+                        margin-bottom: 30px;
+                    }
+                    .block-container {
+                     
+                        padding-top: 60px;
+                        @media all and (max-width: 768px) {
+                            padding-top: 30px;
+                        }
+                        .service-left {
+                            float: right;
+                            padding-left: 30px;
+                            @media all and (max-width: 768px) {
+                                padding-left: 0;  
+                            }
+                        }
+                        .service-right {
+                            float: left;
+                        }
+                    }
+                }
+                .block-container {
+                   // overflow: auto;
+                    .service-content-block {
+                        @media all and (max-width: 768px) {
+                            margin: 0;
+                        }
+                        .block-title {
+                            h2 {
+                                font-family: Roboto-Bd !important;
+                                font-size: 30px;
+                                display: inline-block;
+                                padding-bottom: 20px;
+                                margin-bottom: 20px;
+                                color: #282828;
+                                border-bottom: 1px solid #969696;
+                                @media all and (max-width: 750px) {
+                                    font-size: 25px;
+                                    width: 190px;
+                                }
+                            }
+                        }
+                        .block-desc {
+                            @media all and (max-width: 768px) {
+                                margin-bottom: 0px;
+                            }
+                        }
+                    }
+                    .service-right {
+                        padding-bottom: 60px;
+                        @media all and (max-width: 768px) {
+                            padding-bottom: 30px;
+                        }
+                    }
+                }
+                .slick-arrow.slick-prev {
+                    @media all and (max-width: 1290px) {
+                        left: -85px !important;
+                    }
+                }
+                .slick-arrow.slick-next {
+                    @media all and (max-width: 1290px) {
+                        right: -60px !important;
+                    }
+                }
+                .service-link {
+                    @media all and (max-width: 900px) {
+                        padding-top: 11%;
+                    }
+                }
+                .service-slider {
+                    @media all and (min-width: 599px) and (max-width: 900px) {
+                        width: 60%;
                     }
                 }
             }

@@ -216,7 +216,7 @@ function service_key_points_meta_box(){
     $service_key_points = json_decode($meta);
     ?>
     <label>
-        Company<span class="req">*</span>
+        Key points<span class="req">*</span>
     </label>
     <div id="dynamic_field">
         <input type="text" required autocomplete="off" name="service_key_points[]" value="<?php echo $service_key_points[0]?>"/>                    
@@ -243,14 +243,39 @@ function service_subtitle_meta_box(){
 add_filter( 'gettext', 'change_post_text', 10, 2 );
 function change_post_text( $translation, $original )
 {
-    if ( 'Excerpt' == $original ) {
-        return 'Other service description';
-    }else{
-        $pos = strpos($original, 'Excerpts are optional hand-crafted summaries of your');
-        if ($pos !== false) {
-            return  'This text is shown below the services page';
+    global $wp_query;   
+    $post_type = get_query_var('post_type');
+    if($post_type == 'services'):
+        if ( 'Excerpt' == $original ) {
+            return 'Other service description';
+        }else{
+            $pos = strpos($original, 'Excerpts are optional hand-crafted summaries of your');
+            if ($pos !== false) {
+                return  'This text is shown below the services page';
+            }
         }
-    }
+    endif;
     return $translation;
 }
+
+function ar_freight_customize_service($wp_customize){
+    $wp_customize->add_section(
+        'service_section',
+        array(
+            'title' => __('Service Listing Page'),
+            'priority' => null,
+            'description'	=> __('Change service page contents'),
+        )
+    );
+    $wp_customize->add_setting('service_banner');
+    $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'service_banner',array(
+            'label'	=> __('Service Banner'),
+            'section'	=> 'service_section',
+            'settings' => 'service_banner',
+            'height' => '1000',
+            'width' => '2500'
+    )));
+}
+
+add_action( 'customize_register', 'ar_freight_customize_service' );
 ?>

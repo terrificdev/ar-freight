@@ -1,16 +1,21 @@
 //Common styling of inner page banner having similar style //
-//Service banner, About Us banner section, Careers Page //
+//Service banner, About Us banner section, Careers Page, News events page, Contact page, faq page //
 .service-banner,
 .about-banner,
 .careers-banner,
-.news-events-banner {
+.news-events-banner,
+.contact-banner,
+.faq-banner,
+.checklist-banner,
+.archives-banner,
+.incoterms-banner {
     position: relative;
     margin-bottom: 175px;
-    @media all and (min-width: 991px) {
+    @media all and (min-width: 992px) {
         margin-bottom: 220px;
     }
     &__image {
-        @media all and (min-width: 991px) {
+        @media all and (min-width: 992px) {
             -ms-transform: skewY(-10deg);
             -webkit-transform: skewY(-10deg);
             transform: skewY(-10deg);
@@ -37,6 +42,9 @@
         position: absolute;
         top: 0;
         opacity: 0.7;
+    }
+    &__image.no-overlay:after {
+      background-image: none;
     }
     &__subtitle {
         color: #fff;
