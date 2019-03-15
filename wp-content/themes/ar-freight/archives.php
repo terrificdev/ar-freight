@@ -20,7 +20,7 @@
                                     <?php echo get_the_title();?>
                                 </div>
                                 <div class = "archives-banner__subtitle">
-                                    <p><?php the_content();?></p>
+                                    <?php the_content();?>
                                 </div>
                             </div>
                             <div class = "archives-banner__content-image">
