@@ -61,3 +61,45 @@ function contactgallery_widgets_init() {
 }
 add_action( 'widgets_init', 'contactgallery_widgets_init' );
 
+function ar_freight_contact_gallery() {
+
+    //labels array added inside the function and precedes args array
+    
+    $labels = array(
+    'name' => _x( 'Image', 'post type general name' ),
+    'singular_name' => _x( 'Image', 'post type singular name' ),
+    'add_new' => _x( 'Add image', 'Banner' ),
+    'add_new_item' => __( 'Add New Image' ),
+    'edit_item' => __( 'Edit Image' ),
+    'new_item' => __( 'Latest Image' ),
+    'all_items' => __( 'All Images' ),
+    'view_item' => __( 'View Image' ),
+    'search_items' => __( 'Search image' ),
+    'not_found' => __( 'No images found' ),
+    'not_found_in_trash' => __( 'No image found in the Trash' ),
+    'parent_item_colon' => '',
+    'menu_name' => 'Contact Gallery'
+    );
+    
+    // args array
+    
+    $args = array(
+    'labels' => $labels,
+    'description' => 'Add and manage contact page gallery images',
+    'public' => true,
+    'menu_position' => 4,
+    'supports' => array( 'title','thumbnail'),
+    'has_archive' => true,
+    );
+    
+    register_post_type( 'contact_gallery', $args );
+    }
+    add_action( 'init', 'ar_freight_contact_gallery' );
+
+    function ar_freight_contact_gallery_thumbnail_html( $content ) {
+        $screen = get_current_screen();
+        if  ( 'contact_gallery' == $screen->post_type ) {
+            return $content = str_replace( __( 'Set featured image' ), __( 'Upload Slider Image' ), $content); 
+        }
+    }
+    add_filter( 'admin_post_thumbnail_html', 'ar_freight_contact_gallery_thumbnail_html' );
