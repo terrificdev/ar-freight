@@ -20,7 +20,7 @@
                                 <h2>Relocation Services</h2>
                             </div>
                             <div class = "quote-form">
-                                <?php echo do_shortcode('[contact-form-7 id="180" title="contact-form-7"]');?>
+                                <?php echo do_shortcode('[contact-form-7 id="260" title="Quoteform"]');?>
                             </div>
                         </div>
                     </div>
