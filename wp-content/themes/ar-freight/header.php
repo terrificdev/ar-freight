@@ -58,12 +58,12 @@
 							</nav><!-- .main-navigation -->
 						<?php endif; ?>
 						<div class= "qoute-button resp">
-                    		<a href="#" data-toggle="modal" data-target="#quoteModal"><button>Get A Quote</button></a>
+                    		<a href="#" data-toggle="modal" data-target="#quoteModal"><button>Get a Quote</button></a>
                 		</div>
 					</div><!-- .site-header-menu -->
 				<?php endif; ?>
 				<div class= "qoute-button desktop">
-                    <a href="#" data-toggle="modal" data-target="#quoteModal"><button>Get A Quote</button></a>
+                    <a href="#" data-toggle="modal" data-target="#quoteModal"><button>Get a Quote</button></a>
                 </div>
 			</div><!-- .site-header-main -->
 
