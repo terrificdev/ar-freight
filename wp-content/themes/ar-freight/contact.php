@@ -59,8 +59,22 @@
                 </div>
                 <div class = "contact-bottom">
                     <div class = "contact-gallery">
-                        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('contact-gallery') ) :
-                        endif; ?>
+						<?php 
+                        $contact = new WP_Query(array(
+                            'post_type' => 'contact_gallery',
+                            'post_status' => 'publish',
+                            'posts_per_page' => -1,
+                            'order' => 'ASC',
+                        ));
+                        while ($contact->have_posts()):
+                            $contact->the_post();
+                            $post_id = get_the_ID();
+                            $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+                        ?>
+							<div class ="image-block">
+								<img src="<?php echo $featuredImage[0]?>">
+							</div>
+						<?php endwhile;?>												
                     </div>
                     <div class = "contact-address">
                         <p><?php echo get_theme_mod('contact_us_address') ?></p>
