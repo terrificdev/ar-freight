@@ -13,14 +13,14 @@
 #quoteModal {
     .modal-dialog {
         width: 900px;
-        margin: 100px auto 0;
+        margin: 100px auto 50px;
         @media all and (max-width: 950px) {
             width: 100%;
             padding: 20px;
         }
         @media all and (max-width: 1025px) {
             padding: 15px;
-            margin: 20px auto 0;
+            margin: 20px auto 50px;
         }
         .modal-content {
             border-radius: 0;
@@ -153,12 +153,13 @@
                             .quote-form {
                                 form {
                                     p {
-                                        text-align: right;
-                                        margin: 0 0 20px;
+                                        margin: 0;
                                     }
                                     label {
                                         width: 100%;
                                         margin-bottom: 0;
+                                        text-align: right;
+                                        margin: 0 0 20px;
                                     }
                                     textarea {
                                         height: 100px;

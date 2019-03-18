@@ -186,18 +186,8 @@ $blue-link2: #0b045a;
                                                     position: relative;
                                                     @media all and (max-width: 768px) {
                                                         font-size: 13px;
-                                                    } // &:after {
-                                                    //     content: "\27F6";
-                                                    //     font-size: 27px;
-                                                    //     position: absolute;
-                                                    //     top: 10px;
-                                                    //     left: 20px;
-                                                    //     @media all and (max-width: 840px) {
-                                                    //         font-size: 25px;
-                                                    //     }
-                                                    // }
+                                                    }
                                                     &:after {
-                                                        //content: "\27F6";
                                                         content: "";
                                                         display: block;
                                                         background: url(../images/arrow.png) no-repeat 81% 45%;
@@ -211,9 +201,7 @@ $blue-link2: #0b045a;
                                                             background-size: 80%;
                                                             top: 20px;
                                                         }
-                                                        @media all and (max-width: 768px) {
-                                                            // background-size: 60%; 
-                                                            //left: 60px;
+                                                        @media all and (max-width: 768px) {                                                    
                                                             left: 10px;
                                                         }
                                                     }
@@ -294,7 +282,6 @@ $blue-link2: #0b045a;
                         margin-bottom: 30px;
                     }
                     .block-container {
-                     
                         padding-top: 60px;
                         @media all and (max-width: 768px) {
                             padding-top: 30px;
@@ -303,7 +290,7 @@ $blue-link2: #0b045a;
                             float: right;
                             padding-left: 30px;
                             @media all and (max-width: 768px) {
-                                padding-left: 0;  
+                                padding-left: 0;
                             }
                         }
                         .service-right {
@@ -312,7 +299,7 @@ $blue-link2: #0b045a;
                     }
                 }
                 .block-container {
-                   // overflow: auto;
+                    // overflow: auto;
                     .service-content-block {
                         @media all and (max-width: 768px) {
                             margin: 0;
@@ -333,6 +320,11 @@ $blue-link2: #0b045a;
                             }
                         }
                         .block-desc {
+                            color: #5e5e5e;
+                            font-size: 15px;
+                            text-align: left;
+                            line-height: 20px;
+                            max-width: 280px;
                             @media all and (max-width: 768px) {
                                 margin-bottom: 0px;
                             }
@@ -363,6 +355,26 @@ $blue-link2: #0b045a;
                 .service-slider {
                     @media all and (min-width: 599px) and (max-width: 900px) {
                         width: 60%;
+                    }
+                    .service-title {
+                        h2 {
+                            font-size: 36px !important;
+                            padding-top: 34% !important;
+                            @media all and (max-width: 1024px) {
+                                font-size: 25px !important;
+                            }
+                        }
+                    }
+                    .service-link {
+                        a {
+                            font-size: 18px !important;
+                            &:after{
+                                width: 60px !important;
+                                left: 15px !important;
+                                top: 30px !important;
+                                background: url(../images/arrow-service.png) no-repeat 81% 45% !important;
+                            }
+                        }
                     }
                 }
             }
