@@ -57,6 +57,7 @@ jQuery(document).ready(function ($) {
       }
     ]
   });
+ 
   $("#service-gallery").slick({
     dots: false,
     arrows: true,
@@ -218,10 +219,24 @@ jQuery(document).ready(function ($) {
   $('.loadMore').loadMoreResults({
     tag: {
           'name': 'div',
-          'class': 'news-list'
+          'class': 'lazyload'
         },
     displayedItems: 8
   });
+  //show/hide loadmore button - news and events page
+  var noOfNews =  $(".news-content").attr("data-count");
+  var noOfEvents =  $(".events-content").attr("data-count");
+  console.log(noOfNews,",",noOfEvents);
+  console.log($(".news-content .btn-load-more"));
+  console.log($(".events-content .btn-load-more"));
+  if(noOfNews <=8){
+    $(".news-content .btn-load-more").addClass('hide');
+  }
+  if(noOfEvents <= 8){
+    $(".events-content .btn-load-more").addClass('hide');
+  }
+
+
   $("#relocation-services").slick({
     dots: true,
     infinite: true,
