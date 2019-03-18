@@ -53,7 +53,7 @@
                             if ($news->post_count > 0): 
                             $news_flag = 1;    
                         ?>   
-                        <div class = "news-content">
+                        <div class = "news-content" data-count="<?php echo $news->post_count ?>">
                             <div class="news-slider news-list-slider">
                             <section class="regular slider loadMore">
                                 <?php
@@ -62,7 +62,7 @@
                                     $post_id = get_the_ID();
                                     $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
                                 ?>
-                                <div class="news-list">
+                                <div class="news-list lazyload">
                                     <div class = "news-block content-block">
                                         <div class = "news-image slider-image">
                                             <img class = "news-featured-image" src="<?php echo $featuredImage[0]; ?>">
@@ -105,7 +105,7 @@
                         if ($events->post_count > 0): 
                         $events_flag = 1;    
                         ?>    
-                        <div class = "events-content">
+                        <div class = "events-content" data-count="<?php echo $events->post_count ?>">
                             <div class="event-slider events-list-slider">
                             <section class="regular slider loadMore">
                             <?php
@@ -114,7 +114,7 @@
                                 $post_id = get_the_ID();
                                 $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
                             ?>
-                            <div class="news-list">
+                            <div class="events-list lazyload">
                                 <div class = "events-block content-block">
                                     <div class = "events-image slider-image">
                                         <img class = "events-featured-image" src="<?php echo $featuredImage[0]; ?>">

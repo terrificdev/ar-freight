@@ -54,8 +54,9 @@
                     text-indent: 35px;
                 }
                 @media all and (max-width: 600px) {
-                    width: 320px;
+                    width: 100%;
                     text-indent: 70px;
+                    background-size: 30px !important;
                 }
                 &::before {
                     border-style: solid;
@@ -164,7 +165,7 @@
                         a {
                             font-family: Roboto-Rg;
                             font-size: 15px;
-                            color: #709ec2;
+                            color: #6394bb;
                         }
                     }
                 }
@@ -221,7 +222,7 @@
                 margin-bottom: 20px;
                 .link-block {
                     a {
-                        font-size: 26px;
+                        font-size: 22px;
                         font-family: Roboto-Md;
                         color: black;
                         display: block;
@@ -230,6 +231,7 @@
                         padding-bottom: 15px;
                         padding-top: 25px;
                         border-bottom: 1px solid #bfbfbf;
+                        background-size: 5%;
                         @media all and (max-width: 768px) {
                             font-size: 20px;
                             background-size: 25px !important;
