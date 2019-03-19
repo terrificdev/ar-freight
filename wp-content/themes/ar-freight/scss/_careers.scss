@@ -146,6 +146,7 @@ $freight-blue: #1674ab;
             }
             @media all and (max-width: 991px) {
               display: block;
+              min-height: 350px;
             }
             .block-image {
               flex-basis: 40%;
@@ -193,6 +194,7 @@ $freight-blue: #1674ab;
               .apply-job {
                 .cta-link {
                   @include content-desc;
+                  font-size: 16px;
                   background: #1673aa url(../images/arrow.png) no-repeat 81% 45%;
                   background-size: 16%;
                   border-radius: 50px;
@@ -217,10 +219,14 @@ $freight-blue: #1674ab;
         top: 50% !important;
       }
       .slick-dots {
+        display: none;
+        @media all and (max-width: 768px) {
+          display: block;
+        }
         li {
           button {
             &:before {
-              @media all and (max-width: 991px) {
+              @media all and (max-width: 768px) {
                 font-size: 40px;
               }
               @media all and (max-width: 599px) {
