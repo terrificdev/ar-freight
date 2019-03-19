@@ -82,6 +82,7 @@ header.site-header {
                         font-size: 18px;
                         text-decoration: none;
                         outline: none;
+                        text-transform: capitalize;
                         @media all and (min-width: 910px) and (max-width: 1082px) {
                             padding: 0.65625em 9px;
                             font-size: 16px;
@@ -111,6 +112,97 @@ header.site-header {
                                     width: auto;
                                     transition: none;
                                 }
+                            }
+                        }
+                    }
+                    &.menu-item-has-children {
+                        // @media all and (max-width: 910px) {
+                        //     margin-left: -20px;
+                        //     margin-right: -20px;
+                        //     padding-left: 20px;
+                        //     padding-right: 20px;
+                        // }
+                        a {
+                            padding-right: 0.875em;
+                            margin-right: 0;
+                            @media all and (max-width: 910px) {
+                                padding-right: 0;
+                            }
+                            &:after {
+                                content: none;
+                            }
+                        }
+                        ul.sub-menu {
+                            border-radius: 5px;
+                            border-bottom: 1px solid #1673aa;
+                            @media all and (max-width: 910px) {
+                                margin-left: 0;
+                                border: 0;
+                              //  display: none;
+                            }
+                           
+                            &:before {
+                                border-color: #1381c1 transparent;
+                            }
+                            &:after {
+                                border-color: #3089bf transparent;
+                            }
+                            li {
+                                background-color: #3089bf;
+                                border: 1px solid #1673aa;
+                                border-bottom-width: 0;
+                                @media all and (max-width: 910px) {
+                                    padding-right: 15px;
+                                    border: 0;
+                                }
+                                a {
+                                    color: fff;
+                                    font-size: 16px;
+                                }
+                                &:first-child {
+                                    @media all and (min-width: 910px) {
+                                        border-top-left-radius: 5px;
+                                        border-top-right-radius: 5px;
+                                    }
+                                }
+                                &:last-child {
+                                    @media all and (min-width: 910px) {
+                                        border-bottom-left-radius: 5px;
+                                        border-bottom-right-radius: 5px;
+                                    }
+                                }
+                                @media all and (min-width: 910px) {
+                                    &:hover {
+                                        background-color: #1673aa;
+                                    }
+                                }
+                                &.menu-item-has-children {
+                                    &:hover {
+                                        ul.sub-menu {
+                                            left: 100%;
+                                            right: auto;
+                                            @media all and (max-width: 910px) {
+                                                margin-right: -15px;
+                                            
+                                            }
+                                            li{
+                                                @media all and (max-width: 910px) {
+                                                    //adding-right: 0;
+                                                    padding-right: 30px;
+                                                    background-color: #1673aa;
+                                                  
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        button.dropdown-toggle {
+                            right: auto;
+                            &:after {
+                                border: 0;
+                                color: #fff;
                             }
                         }
                     }
@@ -166,7 +258,7 @@ header.site-header {
                         font-size: 16px;
                         text-transform: none;
                         font-family: Roboto-Md;
-                        color: #fff;                    
+                        color: #fff;
                         @media all and (max-width: 910px) {
                             font-size: 18px;
                             padding-right: 0;
@@ -189,7 +281,7 @@ header.site-header {
         padding-top: 25px !important;
         padding-bottom: 10px !important;
         background-color: #005a8e;
-        background-image:none !important;
+        background-image: none !important;
         -webkit-box-shadow: 0 4px 20px -1px #0000006e;
         -moz-box-shadow: 0 4px 20px -1px #0000006e;
         -ms-box-shadow: 0 4px 20px -1px #0000006e;
@@ -197,8 +289,8 @@ header.site-header {
         .site-header-main {
             max-width: 1290px;
             margin: 0 auto;
-            .site-branding{
-                img{
+            .site-branding {
+                img {
                     max-width: 130px;
                 }
             }
