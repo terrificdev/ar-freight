@@ -46,7 +46,7 @@
 														<div class="panel faq-panel panel-default">
 															<div class="panel-heading">
 													      <h4 class="panel-title title">
-													        <a data-toggle="collapse" data-parent="#accordion" class="open collapsed" href="#faq<?php echo $count; ?>">
+													        <a data-toggle="collapse" data-parent="#accordion" class="closed collapsed" href="#faq<?php echo $count; ?>">
 													        <?php echo get_the_title();?></a>
 													      </h4>
 													    </div>

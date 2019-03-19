@@ -280,25 +280,17 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1
   });
 
+  // Add minus icon for collapse element which is open by default - Accordion
+  $(".panel-title a").click(function(){
+    $(".panel-title a").not(this).removeClass("open").addClass("closed");
+    $(this).toggleClass("closed open");
 
-  // Add minus icon for collapse element which is open by default
-  $(".panel-heading").each(function(){
-    $(this).click(function(){
-       //var open = closed = 0;
-       $("#accordion").children().find(".closed").addClass("open").removeClass("closed");
-       if($(this).children('.panel-title').find('a').hasClass("open collapsed")){
-         console.log("check");
-          $(this).children('.panel-title').find('a').addClass("closed collapsed").removeClass("open collapsed");
-       }
-       else{
-         console.log("check1");
-          $(this).children('.panel-title').find('a').addClass("open collapsed").removeClass("closed collapsed");
-       }
-    });
   });
-
+  
   // Get the element with id="defaultOpen" and click on it - Archives page
-  document.getElementById("defaultOpen").click();
+  if($('.archives-container')[0]){
+    document.getElementById("defaultOpen").click();
+  }
 
 });
 

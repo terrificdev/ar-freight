@@ -30,16 +30,21 @@ $freight-blue: #1674ab;
       border-bottom: 1px solid #ddd;
     }
     .panel-heading {
-      padding: 15px 10px;
+     // padding: 15px 10px;
+     padding: 0;
       border: none;
       .title {
         position: relative;
-        padding-right: 20px;
+        //padding-right: 20px;
         a {
+          display: block;
           font-size: 16px;
           line-height: 20px;
           font-family: "Roboto-Md";
           color: $primary-black;
+          padding: 15px 10px;
+          width: 100%;
+
           &:hover {
             color: $primary-black;
           }
@@ -49,32 +54,32 @@ $freight-blue: #1674ab;
           &:after {
             position: absolute;
             right: 15px;
-            top: 0;
+            top: 14px;
           }
 
-          &.open {
+          &.closed {
             &:after {
               content: "+";
               font-size: 25px;
             }
           }
-          &.closed {
+          &.open {
             &:after {
               content: "-";
               font-size: 50px;
             }
           }
           @media all and (max-width: 768px) {
-            &.open {
-              &:after {
-                font-size: 18px;
-                right: 5px;
-              }
-            }
             &.closed {
               &:after {
-                font-size: 45px;
-                right: 5px;
+                font-size: 18px;
+                
+              }
+            }
+            &.open {
+              &:after {
+                font-size: 35px;
+          
               }
             }
           }
