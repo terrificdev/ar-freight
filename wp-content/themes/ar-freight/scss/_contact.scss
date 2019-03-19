@@ -290,16 +290,23 @@ $freight-blue: #1674ab;
               }
             }
           }
-          .wpcf7-validation-errors {
+          .wpcf7-validation-errors,
+          .wpcf7-mail-sent-ok {
             clear: both;
             float: left;
             width: 100%;
-            border: 2px solid #ffdada;
-            background-color: #ffe3e3;
             font-family: Roboto-Md;
             font-size: 12px;
             margin-left: 0;
             margin-right: 0;
+          }
+          .wpcf7-validation-errors {
+            border: 2px solid #ffdada;
+            background-color: #ffe3e3;
+          }
+          .wpcf7-mail-sent-ok {
+            border: 2px solid #aaff86;
+            background-color: #eaffe1;
           }
         }
       }
