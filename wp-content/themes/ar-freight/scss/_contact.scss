@@ -182,7 +182,7 @@ $freight-blue: #1674ab;
             .label {
               &__1, &__2, &__3 {
                 float: left;
-                width: 30%;
+                width: 30.6%;
                 margin: 1% 2%;
                 @media all and (max-width: 700px) {
                   width: 100%;
@@ -192,7 +192,7 @@ $freight-blue: #1674ab;
                 label {
                   width: 100%;
                   input {
-                    width: 98%;
+                    width: 100%;
                     @include content-desc;
                     border: 1px solid #d0d0d0;
                     padding-left: 15px;
@@ -219,6 +219,9 @@ $freight-blue: #1674ab;
               &__1 {
                 margin-left: 0;
               }
+              &__3 {
+                margin-right: 0;
+              }
               &__4 {
                 clear: both;
                 padding-top: 20px;
@@ -239,7 +242,7 @@ $freight-blue: #1674ab;
                   }
                   textarea {
                     @include content-desc;
-                    width: 98%;
+                    width: 100%;
                     border: 1px solid #d0d0d0;
                     padding-left: 15px;
                     background-color: $primary-white;
@@ -304,7 +307,7 @@ $freight-blue: #1674ab;
   }
 }
 
-//service gallery section
+//contact gallery section
 .contact-gallery__wrap {
     padding-right: calc((100% - 1290px)/2);
     overflow: hidden;
@@ -520,4 +523,4 @@ $freight-blue: #1674ab;
             }
         }
     }
-} //other-service section
+}
