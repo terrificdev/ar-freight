@@ -57,9 +57,10 @@
                     </div>
 									</div>
                 </div>
-                <div class = "contact-bottom">
-                    <div class = "contact-gallery">
-						<?php 
+                <div class = "contact-bottom contact-gallery__wrap">
+                    <div class = "contact-gallery__container">
+											<section class="regular slider" id="contact-gallery">
+												<?php
                         $contact = new WP_Query(array(
                             'post_type' => 'contact_gallery',
                             'post_status' => 'publish',
@@ -71,14 +72,21 @@
                             $post_id = get_the_ID();
                             $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
                         ?>
-							<div class ="image-block">
-								<img src="<?php echo $featuredImage[0]?>">
-							</div>
-						<?php endwhile;?>												
+												<div>
+													<div class ="contact-gallery__image">
+														<img src="<?php echo $featuredImage[0]?>">
+													</div>
+												</div>
+												<?php endwhile;?>
+											</section>
                     </div>
-                    <div class = "contact-address">
-                        <p><?php echo get_theme_mod('contact_us_address') ?></p>
-                    </div>
+										<div class = "contact-gallery__address">
+											<div class = "address-block">
+													<h4>Office Address:</h4>
+	                        <p><?php echo get_theme_mod('contact_us_address') ?></p>
+	                    </div>
+										</div>
+
                 </div>
             </div>
         </div>
