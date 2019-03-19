@@ -73,13 +73,13 @@ $freight-blue: #1674ab;
             &.closed {
               &:after {
                 font-size: 18px;
-                
+
               }
             }
             &.open {
               &:after {
                 font-size: 35px;
-          
+
               }
             }
           }
@@ -95,6 +95,11 @@ $freight-blue: #1674ab;
         img {
           min-width: 350px;
           width: 25%;
+          margin-bottom: 10px;
+          @media all and (max-width: 480px) {
+            min-width: inherit;
+            width: 100%;
+          }
         }
       }
       ul {

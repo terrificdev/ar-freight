@@ -34,6 +34,9 @@
                 background-color: #fff;
                 background-repeat: no-repeat;
                 background-position: 40px 50%;
+                &:focus {
+                  outline: none;
+                }
                 @media all and (max-width: 1025px) {
                     background-size: 10% !important;
                     padding: 30px 16px;
@@ -43,7 +46,7 @@
                     display: inline-block;
                     width: 32%;
                     margin-right: 10px;
-                 
+
                     padding: 20px 10px;
                     margin-bottom: 20px;
                     font-size: 18px;
@@ -109,7 +112,7 @@
             @media all and (max-width: 990px) {
                 float: none;
                 padding: 20px 0 30px 0;
-                width: 70%;
+                width: 100%;
             }
             @media all and (max-width: 768px) {
                 width: 100%;
@@ -144,13 +147,17 @@
             .download-listing-wrapper,
             .links-listing-wrapper {
                 max-width: 550px;
+                @media all and (max-width: 990px) {
+                  max-width: 100%;
+                  width: 100%;
+                }
                 @media all and (max-width: 768px) {
                     max-width: none;
                 }
             }
-            
+
             .forms-wrapper {
-          
+
                 .form-block {
                     margin-bottom: 20px;
                     .form-title {
@@ -165,7 +172,7 @@
                         a {
                             font-family: Roboto-Rg;
                             font-size: 15px;
-                            color: #6394bb;
+                            color: #2784ce;
                         }
                     }
                 }
@@ -173,7 +180,11 @@
             .downloads-wrapper {
                 display: flex;
                 flex-wrap: wrap;
-                
+                @media all and (max-width: 990px) {
+                  padding: 0 15px;
+                  justify-content: center;
+                }
+
                 .download-block {
                     flex-grow: 0;
                     position: relative;
@@ -220,6 +231,7 @@
             }
             .link-wrapper {
                 margin-bottom: 20px;
+                
                 .link-block {
                     a {
                         font-size: 22px;
@@ -232,10 +244,16 @@
                         padding-top: 25px;
                         border-bottom: 1px solid #bfbfbf;
                         background-size: 5%;
+                        @media all and (max-width: 990px) {
+                          padding-right: 15px;
+                          font-size: 20px;
+                          background-size: 30px;
+                          background-position-x: 99%;
+                        }
                         @media all and (max-width: 768px) {
-                            font-size: 20px;
+                            font-size: 18px;
                             background-size: 25px !important;
-                            max-width: 400px;
+                            max-width: 100%;
                         }
                     }
                 }
