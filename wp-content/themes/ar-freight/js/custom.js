@@ -206,6 +206,9 @@ jQuery(document).ready(function ($) {
         $("header.site-header").removeClass("openMenu");
       }
     });
+    // resposnive - to avoid the menuitem to be expanded on pageload
+    $(".sub-menu").removeClass('toggled-on');
+
    //Hover interaction for news item
    var width = $(window).width();
    if (width > 1025) {
@@ -286,6 +289,7 @@ jQuery(document).ready(function ($) {
     $(this).toggleClass("closed open");
 
   });
+
   
   // Get the element with id="defaultOpen" and click on it - Archives page
   if($('.archives-container')[0]){
