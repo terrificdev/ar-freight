@@ -43,7 +43,7 @@
                                         <h2>Forms</h2>
                                     </div>
                                     <div class = "forms-wrapper">
-                                    <?php 
+                                    <?php
                                     $form = new WP_Query(array(
                                         'post_type' => 'forms',
                                         'post_status' => 'publish',
@@ -59,7 +59,7 @@
                                                     <h2><?php echo get_the_title();?></h2>
                                                 </div>
                                                 <div class = 'form-content'>
-                                                    <?php the_content()?>    
+                                                    <?php the_content()?>
                                                 </div>
                                                 <?php if(isset($theFILE[0]['url'])):?>
                                                 <div class = "form-download">
@@ -70,7 +70,7 @@
                                         <?php
                                         endwhile;
                                         wp_reset_query(); ?>
-                                    </div>               
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                                         <p><?php echo get_theme_mod('archives_downloads')?></p>
                                     </div>
                                     <div class = "downloads-wrapper">
-                                    <?php 
+                                    <?php
                                     $downloads = new WP_Query(array(
                                         'post_type' => 'downloads',
                                         'post_status' => 'publish',
@@ -99,21 +99,21 @@
                                         $theFILE=  get_post_meta($post->ID,'download_custom_attachment',true);?>
                                             <div class = "download-block">
                                                 <div class = 'download-image'>
-                                                    <img src="<?php echo $featuredImage[0]?>">   
-                                                </div>                                                
+                                                    <img src="<?php echo $featuredImage[0]?>">
+                                                </div>
                                                 <?php if(isset($theFILE[0]['url'])):?>
-                                                    <div class = "download-file">                                                      
+                                                    <div class = "download-file">
                                                         <a href="<?php echo $theFILE[0]['url']?>">
                                                             <h2><?php echo get_the_title();?></h2>
-                                                            <span>Download</span>  
+                                                            <span>Download</span>
                                                         </a>
                                                     </div>
                                                 <?php endif;?>
                                             </div>
                                         <?php
                                         endwhile;
-                                        wp_reset_query(); ?> 
-                                    </div>                  
+                                        wp_reset_query(); ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -125,20 +125,20 @@
                                         <h2>Helpful Links</h2>
                                     </div>
                                     <div class = "link-wrapper">
-                                        <?php 
+                                        <?php
                                         $linkText = get_option('link-text');
                                         $linkUrl = get_option('link-url');?>
                                         <?php for ($i=0;$i<count($linkText);$i++):?>
                                             <div class = "link-block">
-                                                <a href="<?php echo $linkUrl[$i]?>"><?php echo $linkText[$i] ?></a>    
+                                                <a target="_blank" href="<?php echo $linkUrl[$i]?>"><?php echo $linkText[$i] ?></a>
                                             </div>
-                                        <?php endfor; ?>  
-                                    </div>                 
+                                        <?php endfor; ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div style="clear:both"></div>
-                     </div>  <!-- .tab-content-section -->                   
+                     </div>  <!-- .tab-content-section -->
                 </div>
             </div>
         <?php endwhile;?>
