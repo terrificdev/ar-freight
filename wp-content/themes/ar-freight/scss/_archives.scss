@@ -231,29 +231,30 @@
             }
             .link-wrapper {
                 margin-bottom: 20px;
-                
+
                 .link-block {
                     a {
-                        font-size: 22px;
+                        font-size: 18px;
                         font-family: Roboto-Md;
                         color: black;
                         display: block;
                         text-transform: capitalize;
-                        background: url(../images/right-arrow.png) no-repeat right 62%;
+                        background: url(../images/right-arrow.png) no-repeat right 60%;
                         padding-bottom: 15px;
                         padding-top: 25px;
                         border-bottom: 1px solid #bfbfbf;
                         background-size: 5%;
+                        background-size: 30px;
                         @media all and (max-width: 990px) {
                           padding-right: 15px;
-                          font-size: 20px;
-                          background-size: 30px;
+                          font-size: 16px;
+                          background-size: 3%;
                           background-position-x: 99%;
                         }
                         @media all and (max-width: 768px) {
-                            font-size: 18px;
-                            background-size: 25px !important;
+                            font-size: 16px;
                             max-width: 100%;
+                            background-size: 4%;
                         }
                     }
                 }
