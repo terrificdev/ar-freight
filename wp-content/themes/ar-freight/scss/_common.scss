@@ -16,7 +16,8 @@ a, button {
     &:hover,
     &:active,
     &:link,
-    &:visited {
+    &:visited,
+    &:focus {
         text-decoration: none;
         cursor: pointer;
         outline:none !important;
@@ -27,7 +28,8 @@ button {
   &:hover,
   &:active,
   &:link,
-  &:visited {
+  &:visited,
+  &:focus {
     background-color: none;
     border: none;
     cursor: pointer;

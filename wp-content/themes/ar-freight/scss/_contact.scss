@@ -277,6 +277,9 @@ $freight-blue: #1674ab;
                 background-size: 30px;
                 padding: 10px 60px 10px 25px;
                 border-radius: 25px;
+                &:focus {
+                  outline: none !important;
+                }
                 @media all and (max-width: 700px) {
                   float: right;
                 }
