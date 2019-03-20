@@ -221,6 +221,11 @@
                                         font-size: 16px;
                                         color: #7f7f7f;
                                     }
+                                    @supports (-ms-ime-align: auto) {
+                                        select {
+                                            padding: 5px 10px;
+                                        }
+                                      }
                                     input[type="submit"] {
                                         background: #1674aa url(../images/arrow.png) no-repeat 130px 10px;
                                         width: 220px;
