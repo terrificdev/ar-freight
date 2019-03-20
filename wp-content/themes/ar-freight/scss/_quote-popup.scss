@@ -175,6 +175,14 @@
                                     .wrapper {
                                         display: flex;
                                         justify-content: space-between;
+                                        label {
+                                          &:nth-child(1) {
+                                            margin-right: 5
+                                          }
+                                          &:nth-child(2) {
+                                            margin-left: 5px;
+                                          }
+                                        }
                                         p {
                                             flex-basis: 49%;
                                         }
@@ -193,22 +201,22 @@
                                         outline: none;
                                     }
                                     &::-webkit-input-placeholder {
-                                        // Chrome/Opera/Safari  
+                                        // Chrome/Opera/Safari
                                         font-size: 16px;
                                         color: #7f7f7f;
                                     }
                                     &::-moz-placeholder {
-                                        // Firefox 19+  
+                                        // Firefox 19+
                                         font-size: 16px;
                                         color: #7f7f7f;
                                     }
                                     &:-ms-input-placeholder {
-                                        // IE 10+  
+                                        // IE 10+
                                         font-size: 16px;
                                         color: #7f7f7f;
                                     }
                                     &:-moz-placeholder {
-                                        // Firefox 18- 
+                                        // Firefox 18-
                                         font-size: 16px;
                                         color: #7f7f7f;
                                     }
