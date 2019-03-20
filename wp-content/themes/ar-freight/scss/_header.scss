@@ -120,7 +120,7 @@ header.site-header {
                             }
                         }
                     }
-                    &.menu-item-has-children {
+                    &.menu-item-has-children {                       
                         a {
                             padding-right: 0.875em;
                             margin-right: 0;
@@ -131,7 +131,7 @@ header.site-header {
                                 content: none;
                             }
                         }
-                        ul.sub-menu {
+                        ul.sub-menu {                          
                             border-radius: 5px;
                             border-bottom: 1px solid #1673aa;
                             @media all and (max-width: 910px) {
@@ -148,13 +148,15 @@ header.site-header {
                                 background-color: #3089bf;
                                 border: 1px solid #1673aa;
                                 border-bottom-width: 0;
+                                width: 270px;
                                 @media all and (max-width: 910px) {
                                     padding-right: 15px;
                                     border: 0;
                                 }
                                 a {
-                                    color: fff;
+                                    color: #fff;
                                     font-size: 16px;
+                                    width: auto;
                                     @media all and (min-width: 910px) and (max-width: 1082px) {
                                         font-size: 14px;
                                     }
