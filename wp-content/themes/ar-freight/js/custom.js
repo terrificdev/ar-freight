@@ -3,17 +3,17 @@ jQuery(document).ready(function ($) {
     var name = $(this).data("name");
     $('#qoute-title h2').html(name);
     var options = '';
-    if(name=='Relocation Services'){
-    options += '<option value="Internation Relocation">International Relocation</option>';
-    options += '<option value="Local Moves">Local Moves (Kuwait)</option>';
-    options += '<option value="Packing-Palletization">Packing, Lashing, Palletization</option>';
+    if (name == 'Relocation Services') {
+      options += '<option value="Internation Relocation">International Relocation</option>';
+      options += '<option value="Local Moves">Local Moves (Kuwait)</option>';
+      options += '<option value="Packing-Palletization">Packing, Lashing, Palletization</option>';
     }
-    if(name=='Freight Services'){
+    if (name == 'Freight Services') {
       options += '<option value="Air Freight Services">Air Freight Services</option>';
       options += '<option value="Land Freight Services">Land Freight Services</option>';
       options += '<option value="Sea Freight Services">Sea Freight Services</option>';
     }
-    if(name=='Other Services'){
+    if (name == 'Other Services') {
       options += '<option value="Custom Operations">Custom Operations</option>';
       options += '<option value="Embassy and Govt Services">Embassy and Govt Services</option>';
       options += '<option value="cargo-Services">Cargo Pickup, Delivery & Warehousing</option>';
@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
     $(".type-of-services").not(this).removeClass("active");
 
   });
-  //To Instantiate Patners slider-homepage
+  //To Instantiate slider-homepage
   $("#news-home").slick({
     dots: true,
     infinite: true,
@@ -57,7 +57,7 @@ jQuery(document).ready(function ($) {
       }
     ]
   });
- 
+
   $("#service-gallery").slick({
     dots: false,
     arrows: true,
@@ -147,10 +147,6 @@ jQuery(document).ready(function ($) {
     ]
   });
 
-   //stop modal from closing after submit 
-   $('#quoteModal').on('hidden.bs.modal', function() {
-    return false;
-   });
 
   $("#banner-home").slick({
     dots: true,
@@ -184,53 +180,59 @@ jQuery(document).ready(function ($) {
       }
     ]
   });
-    //Sticky Header
-    $(window).scroll(function () {
-      var sticky = $('.site-header'),
-        scroll = $(window).scrollTop();
+  //Sticky Header
+  $(window).scroll(function () {
+    var sticky = $('.site-header'),
+      scroll = $(window).scrollTop();
 
-      if (scroll >= 120) {
-        sticky.addClass('fixed');
+    if (scroll >= 120) {
+      sticky.addClass('fixed');
+    }
+    else {
+      sticky.removeClass('fixed');
+    }
+  });
+  //add class to header to add background color for resp header menu
+  $("body").on("click", "#menu-toggle", function (e) {
+    var status = $(this).hasClass("toggled-on");
+    if (status) {
+      $("header.site-header").addClass("openMenu");
+    }
+    else {
+      $("header.site-header").removeClass("openMenu");
+    }
+  });
+  // resposnive - to avoid the menuitem to be expanded on pageload
+  $(".sub-menu").removeClass('toggled-on');
+  $(".dropdown-toggle").removeClass('toggled-on');
+
+  //stop modal from closing after submit 
+  $('#quoteModal').on('hidden.bs.modal', function () {
+    return false;
+  });
+
+
+  //Hover interaction for news item
+  var width = $(window).width();
+  if (width > 1025) {
+    //desktop interaction
+    var toggleOn = false;
+    $(".about-us__right__block").hover(
+      function () {
+        $(this).addClass('active');
+      }, function () {
+        toggleOn || $(this).removeClass('active');
       }
-      else {
-        sticky.removeClass('fixed');
-      }
+    );
+  }
+  else {
+    // tablet and mobile interaction
+    $(".about-us__right__block").click(function () {
+      $(".about-us__right__block").removeClass('active');
+      $(this).toggleClass('active');
+
     });
-    //add class to header to add background color for resp header menu
-    $("body").on("click", "#menu-toggle", function (e) {
-      var status = $(this).hasClass("toggled-on");
-      if (status) {
-        $("header.site-header").addClass("openMenu");
-      }
-      else {
-        $("header.site-header").removeClass("openMenu");
-      }
-    });
-    // resposnive - to avoid the menuitem to be expanded on pageload
-    $(".sub-menu").removeClass('toggled-on');
-    $(".dropdown-toggle").removeClass('toggled-on');
-
-   //Hover interaction for news item
-   var width = $(window).width();
-   if (width > 1025) {
-     //desktop interaction
-     var toggleOn = false;
-     $(".about-us__right__block").hover(
-       function () {
-         $(this).addClass('active');
-       }, function () {
-         toggleOn || $(this).removeClass('active');
-       }
-     );
-   }
-   else {
-     // tablet and mobile interaction
-     $(".about-us__right__block").click(function () {
-       $(".about-us__right__block").removeClass('active');
-       $(this).toggleClass('active');
-
-     });
-   }
+  }
   $("#services-home").slick({
     dots: true,
     infinite: true,
@@ -243,24 +245,21 @@ jQuery(document).ready(function ($) {
     slidesToShow: 1,
     slidesToScroll: 1
   });
-   //news page lazy loading plugin
+  //news page lazy loading plugin
   $('.loadMore').loadMoreResults({
     tag: {
-          'name': 'div',
-          'class': 'lazyload'
-        },
+      'name': 'div',
+      'class': 'lazyload'
+    },
     displayedItems: 8
   });
   //show/hide loadmore button - news and events page
-  var noOfNews =  $(".news-content").attr("data-count");
-  var noOfEvents =  $(".events-content").attr("data-count");
-  console.log(noOfNews,",",noOfEvents);
-  console.log($(".news-content .btn-load-more"));
-  console.log($(".events-content .btn-load-more"));
-  if(noOfNews <=8){
+  var noOfNews = $(".news-content").attr("data-count");
+  var noOfEvents = $(".events-content").attr("data-count");
+  if (noOfNews <= 8) {
     $(".news-content .btn-load-more").addClass('hide');
   }
-  if(noOfEvents <= 8){
+  if (noOfEvents <= 8) {
     $(".events-content .btn-load-more").addClass('hide');
   }
 
@@ -285,15 +284,15 @@ jQuery(document).ready(function ($) {
   });
 
   // Add minus icon for collapse element which is open by default - Accordion
-  $(".panel-title a").click(function(){
+  $(".panel-title a").click(function () {
     $(".panel-title a").not(this).removeClass("open").addClass("closed");
     $(this).toggleClass("closed open");
 
   });
 
-  
+
   // Get the element with id="defaultOpen" and click on it - Archives page
-  if($('.archives-container')[0]){
+  if ($('.archives-container')[0]) {
     document.getElementById("defaultOpen").click();
   }
 
