@@ -146,12 +146,12 @@ jQuery(document).ready(function ($) {
       },
     ]
   });
-  $("#services-home").slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
+
+   //stop modal from closing after submit 
+   $('#quoteModal').on('hidden.bs.modal', function() {
+    return false;
+   });
+
   $("#banner-home").slick({
     dots: true,
     infinite: true,
