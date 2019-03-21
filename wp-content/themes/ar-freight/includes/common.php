@@ -52,3 +52,8 @@ function add_theme_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
+
+add_filter( 'the_content_more_link', 'ar_freight_read_more_link' );
+function ar_freight_read_more_link() {
+return '<a class="more-link" href="' . get_permalink() . '"></a>';
+}
