@@ -9,7 +9,7 @@ header.site-header {
     left: 0;
     right: 0;
     z-index: 999;
-    @media all and (max-width: 910px) {
+    @media all and (max-width: 909px) {
         padding: 35px 0 20px 0 !important;
     }
     &.openMenu {
@@ -91,7 +91,7 @@ header.site-header {
                             padding: 0.65625em 9px;
                             font-size: 16px;
                         }
-                        @media all and (max-width: 910px) {
+                        @media all and (max-width: 909px) {
                             text-align: right;
                             font-family: Roboto-Md;
                         }
@@ -124,7 +124,7 @@ header.site-header {
                         a {
                             padding-right: 0.875em;
                             margin-right: 0;
-                            @media all and (max-width: 910px) {
+                            @media all and (max-width: 909px) {
                                 padding-right: 0;
                             }
                             &:after {
@@ -134,7 +134,7 @@ header.site-header {
                         ul.sub-menu {                          
                             border-radius: 5px;
                             border-bottom: 1px solid #1673aa;
-                            @media all and (max-width: 910px) {
+                            @media all and (max-width: 909px) {
                                 margin-left: 0;
                                 border: 0;
                             }
@@ -148,19 +148,25 @@ header.site-header {
                                 background-color: #3089bf;
                                 border: 1px solid #1673aa;
                                 border-bottom-width: 0;
-                                width: 270px;
-                                @media all and (max-width: 910px) {
+                              
+                                @media all and (min-width: 910px) {
+                                    width: 270px;
+                                }
+                                @media all and (max-width: 909px) {
                                     padding-right: 15px;
                                     border: 0;
                                 }
                                 a {
                                     color: #fff;
                                     font-size: 16px;
-                                    width: auto;
+                               
+                                    @media all and (min-width: 910px) {
+                                        width: auto;
+                                    }
                                     @media all and (min-width: 910px) and (max-width: 1082px) {
                                         font-size: 14px;
                                     }
-                                    @media all and (max-width: 910px) {
+                                    @media all and (max-width: 909px) {
                                         font-family: Roboto-Rg;
                                     }
                                 }
@@ -183,16 +189,16 @@ header.site-header {
                                 }
                                 &.menu-item-has-children {
                                     ul.sub-menu {
-                                        @media all and (max-width: 910px) {
+                                        @media all and (max-width: 909px) {
                                             margin-right: -15px;
                                         }
                                         li {
-                                            @media all and (max-width: 910px) {
+                                            @media all and (max-width: 909px) {
                                                 background-color: #1673aa;
                                                 padding-right: 30px;
                                             }
                                             a {
-                                                @media all and (max-width: 910px) {
+                                                @media all and (max-width: 909px) {
                                                     font-family: Roboto-Rg;
                                                 }
                                             }
@@ -210,6 +216,8 @@ header.site-header {
                         button.dropdown-toggle {
                             right: auto;
                             top: 3px;
+                            width: 100%;
+                            text-align: left;
                             &:after {
                                 border: 0;
                                 color: #fff;
@@ -237,7 +245,7 @@ header.site-header {
         .qoute-button {
             &.desktop {
                 margin-top: -8px;
-                @media all and (max-width: 910px) {
+                @media all and (max-width: 909px) {
                     display: none;
                 }
                 a {
@@ -253,13 +261,16 @@ header.site-header {
                             background-size: 16%;
                             font-size: 14px;
                         }
+                        @media all and (max-width: 930px) {
+                            padding: 10px 60px 10px 20px;
+                        }
                     }
                 }
             }
             &.resp {
                 display: none;
                 text-align: right;
-                @media all and (max-width: 910px) {
+                @media all and (max-width: 909px) {
                     display: block;
                 }
                 a {
@@ -269,7 +280,7 @@ header.site-header {
                         text-transform: none;
                         font-family: Roboto-Md;
                         color: #fff;
-                        @media all and (max-width: 910px) {
+                        @media all and (max-width: 909px) {
                             font-size: 18px;
                             padding-right: 0;
                         }
