@@ -44,7 +44,7 @@ get_header(); ?>
             endif;
             ?>
         </div>
-        <div class = "social-share">
+        <div class = "social-share block-container">
           <?php echo do_shortcode("[wp_social_sharing social_options='facebook,twitter' twitter_username='alrashedfreight' facebook_text='Share on Facebook' twitter_text='Share on Twitter' icon_order='f,t,l,p,x,r' show_icons='1' before_button_text='' text_position='' social_image='']")?>
         </div>
 
