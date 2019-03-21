@@ -1,3 +1,5 @@
+(function () {
+
 jQuery(document).ready(function ($) {
   $('.type-of-services').click(function (e) {
     var name = $(this).data("name");
@@ -147,7 +149,6 @@ jQuery(document).ready(function ($) {
     ]
   });
 
-
   $("#banner-home").slick({
     dots: true,
     infinite: true,
@@ -180,6 +181,20 @@ jQuery(document).ready(function ($) {
       }
     ]
   });
+  function slickInstantiate(sliderId) {
+    $(sliderId).slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  }
+  slickInstantiate("#job-desc");
+  slickInstantiate("#services-home");
+  slickInstantiate("#other-logistics-services");
+  slickInstantiate("#freight-services");
+  slickInstantiate("#relocation-services");
+
   //Sticky Header
   $(window).scroll(function () {
     var sticky = $('.site-header'),
@@ -192,6 +207,7 @@ jQuery(document).ready(function ($) {
       sticky.removeClass('fixed');
     }
   });
+  
   //add class to header to add background color for resp header menu
   $("body").on("click", "#menu-toggle", function (e) {
     var status = $(this).hasClass("toggled-on");
@@ -201,7 +217,8 @@ jQuery(document).ready(function ($) {
     else {
       $("header.site-header").removeClass("openMenu");
     }
-  });
+  })
+
   // resposnive - to avoid the menuitem to be expanded on pageload
   $(".sub-menu").removeClass('toggled-on');
   $(".dropdown-toggle").removeClass('toggled-on');
@@ -210,7 +227,6 @@ jQuery(document).ready(function ($) {
   $('#quoteModal').on('hidden.bs.modal', function () {
     return false;
   });
-
 
   //Hover interaction for news item
   var width = $(window).width();
@@ -233,18 +249,7 @@ jQuery(document).ready(function ($) {
 
     });
   }
-  $("#services-home").slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
-  $("#job-desc").slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
+
   //news page lazy loading plugin
   $('.loadMore').loadMoreResults({
     tag: {
@@ -262,34 +267,12 @@ jQuery(document).ready(function ($) {
   if (noOfEvents <= 8) {
     $(".events-content .btn-load-more").addClass('hide');
   }
-
-
-  $("#relocation-services").slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
-  $("#freight-services").slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
-  $("#other-logistics-services").slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
-
   // Add minus icon for collapse element which is open by default - Accordion
   $(".panel-title a").click(function () {
     $(".panel-title a").not(this).removeClass("open").addClass("closed");
     $(this).toggleClass("closed open");
 
   });
-
 
   // Get the element with id="defaultOpen" and click on it - Archives page
   if ($('.archives-container')[0]) {
@@ -298,6 +281,7 @@ jQuery(document).ready(function ($) {
 
 });
 
+}());
 //Archives page vertical tabs
 function openTab(evt, cityName) {
   var i, tabcontent, tablinks;
