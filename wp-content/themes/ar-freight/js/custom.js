@@ -208,6 +208,7 @@ jQuery(document).ready(function ($) {
     });
     // resposnive - to avoid the menuitem to be expanded on pageload
     $(".sub-menu").removeClass('toggled-on');
+    $(".dropdown-toggle").removeClass('toggled-on');
 
    //Hover interaction for news item
    var width = $(window).width();

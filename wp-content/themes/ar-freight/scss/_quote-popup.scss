@@ -54,6 +54,9 @@
                         .quote-left,
                         .quote-right {
                             padding: 50px;
+                            @media all and (max-width: 1050px) {                                
+                                padding : 50px 30px;
+                            }
                             @media all and (max-width: 900px) {
                                 padding: 20px;
                             }
@@ -64,6 +67,9 @@
                             background-repeat: none;
                             background-size: cover;
                             color: white;
+                            @media all and (max-width: 1050px) {
+                                flex-basis: 500px;
+                            }
                             @media all and (min-width: 550px) and (max-width: 767px) {
                                 padding-bottom: 0;
                             }
