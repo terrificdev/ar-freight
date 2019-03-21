@@ -45,7 +45,7 @@ get_header(); ?>
             ?>
         </div>
         <div class = "social-share">
-          <?php do_shortcode("[wp_social_sharing social_options='facebook,twitter' twitter_username='arjun077' facebook_text='Share on Facebook' twitter_text='Share on Twitter' icon_order='f,t,l,p,x,r' show_icons='1' before_button_text='' text_position='' social_image='']")?>
+          <?php echo do_shortcode("[wp_social_sharing social_options='facebook,twitter' twitter_username='alrashedfreight' facebook_text='Share on Facebook' twitter_text='Share on Twitter' icon_order='f,t,l,p,x,r' show_icons='1' before_button_text='' text_position='' social_image='']")?>
         </div>
 
 				<div class = "more-posts block-container">
