@@ -63,7 +63,7 @@
                                                 </div>
                                                 <?php if(isset($theFILE[0]['url'])):?>
                                                 <div class = "form-download">
-                                                    <a href="<?php echo $theFILE[0]['url']?>">Download Form</a>
+                                                    <a href="<?php echo $theFILE[0]['url']?>" download="">Download Form</a>
                                                 </div>
                                                 <?php endif;?>
                                             </div>
@@ -103,7 +103,7 @@
                                                 </div>
                                                 <?php if(isset($theFILE[0]['url'])):?>
                                                     <div class = "download-file">
-                                                        <a href="<?php echo $theFILE[0]['url']?>">
+                                                        <a href="<?php echo $theFILE[0]['url']?>" download="">
                                                             <h2><?php echo get_the_title();?></h2>
                                                             <span>Download</span>
                                                         </a>

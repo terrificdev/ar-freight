@@ -41,7 +41,7 @@
                             <img src="<?php echo wp_get_attachment_url(get_theme_mod('incoterms_side_image'))?>">
 													</div>
 													<div class="download-link">
-                            <a href="<?php echo get_theme_mod('incoterms_download_link')?>"><?php echo get_theme_mod('incoterms_download_text')?></a>
+                            <a href="<?php echo get_theme_mod('incoterms_download_link')?>" download=""><?php echo get_theme_mod('incoterms_download_text')?></a>
 													</div>
                         </div>
                         <div class = "content">

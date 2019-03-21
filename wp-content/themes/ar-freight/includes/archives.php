@@ -354,11 +354,14 @@ function ar_freight_customize_archives($wp_customize){
             'type'	=> 'text',
     ));
     $wp_customize->add_setting('incoterms_download_link');
-    $wp_customize->add_control('incoterms_download_link',array(
-            'label'	=> __('Download File Link'),
-            'section'	=> 'incoterms_section',
-            'settings' => 'incoterms_download_link',
-            'type'	=> 'text',
-    ));
+    $wp_customize->add_control( 
+        new WP_Customize_Upload_Control( 
+        $wp_customize, 
+        'incoterms_download_link',array(
+            'label'      => __('Upload Downloadable File'),
+            'section'    => 'incoterms_section',
+            'settings'   => 'incoterms_download_link',
+        )) 
+    );
 }
 add_action( 'customize_register', 'ar_freight_customize_archives' );
