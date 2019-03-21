@@ -54,8 +54,8 @@
                         .quote-left,
                         .quote-right {
                             padding: 50px;
-                            @media all and (max-width: 1050px) {                                
-                                padding : 50px 30px;
+                            @media all and (max-width: 1050px) {
+                                padding: 50px 30px;
                             }
                             @media all and (max-width: 900px) {
                                 padding: 20px;
@@ -183,12 +183,12 @@
                                         display: flex;
                                         justify-content: space-between;
                                         label {
-                                          &:nth-child(1) {
-                                            margin-right: 5
-                                          }
-                                          &:nth-child(2) {
-                                            margin-left: 5px;
-                                          }
+                                            &:nth-child(1) {
+                                                margin-right: 5
+                                            }
+                                            &:nth-child(2) {
+                                                margin-left: 5px;
+                                            }
                                         }
                                         p {
                                             flex-basis: 49%;
@@ -227,11 +227,9 @@
                                         font-size: 16px;
                                         color: #7f7f7f;
                                     }
-                                    @supports (-ms-ime-align: auto) {
-                                        select {
-                                            padding: 5px 10px;
-                                        }
-                                      }
+                                    select {
+                                        padding: 6px 10px;
+                                    }
                                     input[type="submit"] {
                                         background: #1674aa url(../images/arrow.png) no-repeat 130px 10px;
                                         width: 220px;
@@ -244,20 +242,19 @@
                                         text-align: left;
                                         padding-left: 55px;
                                         border: none;
+                                    } // &.invalid {
+                                    div.wpcf7-validation-errors,
+                                    div.wpcf7-mail-sent-ng {
+                                        border: 1px solid #d87b7b;
+                                        border-radius: 3px;
+                                        color: #b91f1f;
+                                        padding: 4px 6px;
+                                        background-color: #ffebeb;
+                                        margin: 2em 0 1em;
                                     }
-                                    &.invalid {
-                                        div.wpcf7-validation-errors {
-                                            border: 1px solid #d87b7b;
-                                            border-radius: 3px;
-                                            color: #b91f1f;
-                                            padding: 4px 6px;
-                                            background-color: #ffebeb;
-                                            margin: 2em 0 1em;
-                                        }
-                                        span[role="alert"] {
-                                            font-family: Roboto-Rg;
-                                        }
-                                    }
+                                    span[role="alert"] {
+                                        font-family: Roboto-Rg;
+                                    } //}
                                 }
                             }
                         }
