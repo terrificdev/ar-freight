@@ -330,7 +330,7 @@ header.site-header {
 
 //styling header for inner pages
 //styling ofr solid border
-body.single-news {
+body.single-news,body.page-template-default,body.error404 {
     header.site-header {
         //background-color: #005a8e;
         background-image: linear-gradient(-45deg, #003e62, #00598e, #003e62);
