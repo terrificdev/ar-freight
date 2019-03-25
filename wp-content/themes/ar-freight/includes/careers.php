@@ -96,7 +96,7 @@ add_action( 'add_meta_boxes', 'add_ar_freight_careers_meta_box' );
 function ar_freight_careers_meta_box(){
     global $post;
     $jobDesc = get_post_meta($post->ID, 'job-description', true);
-    $jobEmail = get_post_meta($post->ID, 'job-location', true);?>
+    $jobLocation = get_post_meta($post->ID, 'job-location', true);?>
     <label>Job Description</label>
     <p>
         <textarea name="job-description" id="job-description" class="job-description regular-text" ><?php echo $jobDesc ; ?></textarea>
