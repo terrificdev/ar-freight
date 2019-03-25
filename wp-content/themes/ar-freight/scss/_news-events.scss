@@ -155,6 +155,9 @@ $freight-blue: #1674ab;
                                 -webkit-box-orient: vertical;
                                 overflow: hidden;
                                 text-overflow: ellipsis;
+                                a{
+                                    display: none;
+                                }
                             }
                         }
                         .content-readmore {

@@ -14,12 +14,20 @@
     .modal-dialog {
         width: 900px;
         margin: 100px auto 50px;
+        @media all and (min-width: 766px) and (max-width: 1025px) {
+            margin-top: -30px;
+            margin-bottom: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
         @media all and (max-width: 950px) {
             width: 100%;
             padding: 20px;
         }
-        @media all and (max-width: 1025px) {
-            padding: 15px;
+        @media all and (max-width: 766px) {
+            padding: 15px;  
             margin: 20px auto 50px;
         }
         .modal-content {
@@ -71,7 +79,7 @@
                                 flex-basis: 500px;
                             }
                             @media all and (min-width: 550px) and (max-width: 767px) {
-                                padding-bottom: 0;
+                              //  padding-bottom: 0;
                             }
                             h2 {
                                 font-family: Roboto-Bd !important;
@@ -130,6 +138,9 @@
                                         right: 8px;
                                         transform: rotate(135deg);
                                     }
+                                    @media all and (max-width: 549px) {
+                                        right: 15px;
+                                    }
                                 }
                                 &.active {
                                     background-color: #d5e4eb;
@@ -143,7 +154,7 @@
                             z-index: 99;
                             flex-basis: 100%;
                             @media all and (min-width: 550px) and (max-width: 767px) {
-                                margin-top: -7px;
+                               // margin-top: -7px;
                             }
                             #quote-title {
                                 h2 {
