@@ -256,6 +256,9 @@ header.site-header {
                         font-size: 16px;
                         text-transform: none;
                         font-family: Roboto-Lt;
+                        @media all and (max-width: 1100px) {
+                            padding: 15px 103px 15px 30px;
+                        }
                         @media all and (max-width: 991px) {
                             padding: 10px 90px 10px 20px;
                             background-size: 16%;
