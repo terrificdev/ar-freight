@@ -39,12 +39,16 @@
                     width: 94%;
                 }
             }
-            p {
+            p,ul li {
                 @include content-desc;
                 font-family: Roboto-Lt;
                 text-align: justify;
                 line-height: 25px;
             }
+            ul{
+                margin-left: 20px;
+            }
+           
             p.title {
                 padding-top: 10px;
                 @media all and (max-width: 880px) {
