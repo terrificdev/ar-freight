@@ -39,7 +39,10 @@
                     width: 94%;
                 }
             }
-            p,ul li {
+            div.spacer{
+                margin-top: 30px;
+            }
+            p,ul li,div {
                 @include content-desc;
                 font-family: Roboto-Lt;
                 text-align: justify;
@@ -54,6 +57,9 @@
                 @media all and (max-width: 880px) {
                     display: none;
                 }
+            }
+            strong{
+                font-family: Roboto-Md;
             }
         }
     } //service-details key points section
@@ -93,6 +99,7 @@
                 p {
                     margin-left: 25px;
                     margin-bottom: 20px;
+                    max-width: 80%;
                 }
             }
         }
