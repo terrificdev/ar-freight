@@ -13,7 +13,7 @@ get_header(); ?>
 				<div class="common-content">
 					<img class="404-image" src="<?php echo wp_get_attachment_url(get_theme_mod('404-image')) ?>"/>
 					<h1>Error 404.</h1>
-					<h3>Page not found !</h3>
+					<h3>Cargo Not Found !</h3>
 					</div>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
