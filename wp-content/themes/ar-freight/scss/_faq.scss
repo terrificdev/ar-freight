@@ -100,6 +100,11 @@ $freight-blue: #1674ab;
             min-width: inherit;
             width: 100%;
           }
+        }        
+      }
+      p {
+        strong {
+          font-weight: 700 !important;
         }
       }
       ul {
