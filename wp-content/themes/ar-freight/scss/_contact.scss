@@ -459,7 +459,7 @@ $freight-blue: #1674ab;
           -webkit-box-shadow: 6px 6px 10px 0px rgba(184, 184, 184, 0.3);
           -moz-box-shadow: 6px 6px 10px 0px rgba(184, 184, 184, 0.3);
           box-shadow: 6px 6px 10px 0px rgba(184, 184, 184, 0.3);
-          padding:100px 50px 50px;
+          padding: 30px 40px 20px;
           float: right;
           width: 80%;
           @media all and (max-width: 1350px) {
@@ -482,12 +482,13 @@ $freight-blue: #1674ab;
           }
           h4 {
             font-family: Roboto-Md;
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 20px;
           }
           p {
             @include content-desc;
             color: $grey-text;
+            line-height: 22px;
           }
         }
     }
