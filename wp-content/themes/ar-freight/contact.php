@@ -84,8 +84,10 @@
 											<div class = "address-block">
 													<h4>Office Address:</h4>
 	                        <p><?php echo get_theme_mod('contact_us_address') ?></p>
-							<h4>Warehouse Address:</h4>
-	                        <p><?php echo get_theme_mod('warehouse_address') ?></p>
+							<?php if (get_theme_mod('warehouse_address') != ""):?>
+								<h4>Warehouse Address:</h4>
+								<p><?php echo get_theme_mod('warehouse_address') ?></p>
+							<?php endif; ?>
 	                    </div>
 										</div>
 
