@@ -45,6 +45,13 @@ function ar_freight_customize_contact($wp_customize){
             'settings' => 'contact_us_address',
             'type'	=> 'textarea',
     ));
+    $wp_customize->add_setting('warehouse_address');
+    $wp_customize->add_control('warehouse_address', array(
+        'label' => __('Warehouse Address'),
+        'section' => 'contact_us_section',
+        'settings' => 'warehouse_address',
+        'type' => 'textarea'
+    ));
 }
 
 add_action( 'customize_register', 'ar_freight_customize_contact' );
