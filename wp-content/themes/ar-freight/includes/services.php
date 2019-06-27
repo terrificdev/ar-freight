@@ -53,14 +53,16 @@ function add_ar_freight_services_meta_box() {
 		'normal', // $context
 		'high' // $priority
     );
-    add_meta_box(
-		'add_ar_freight_service_overview_image_meta_box', // $id
-		'Service Overview Image', // $title
-		'service_overview_image_meta_box', // $callback
-		'services', // $screen
-		'side', // $context
-		'high' // $priority
-    );
+    
+    // uncomment following lines to include service overview image
+    // add_meta_box(
+	// 	'add_ar_freight_service_overview_image_meta_box', // $id
+	// 	'Service Overview Image', // $title
+	// 	'service_overview_image_meta_box', // $callback
+	// 	'services', // $screen
+	// 	'side', // $context
+	// 	'high' // $priority
+    // );
     
     add_meta_box(
 		'add_ar_freight_service_key_points_meta_box', // $id

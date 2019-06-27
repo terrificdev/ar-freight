@@ -38,7 +38,8 @@ get_header(); ?>
                 <div class = "service-overview block-container">
                     <h3 class="title">Overview</h3>
                     <div class="service-overview-content">
-                        <img src = "<?php echo get_post_meta(get_the_ID(), 'service_overview_image', true)?>">
+                        <!-- uncomment following lines to include service overview image -->
+                        <!-- <img src = "<?php echo get_post_meta(get_the_ID(), 'service_overview_image', true)?>"> -->
                         <p class="title">Overview</p>
                         <?php the_content();?>						
                     </div>
