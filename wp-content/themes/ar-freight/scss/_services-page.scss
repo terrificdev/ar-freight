@@ -44,7 +44,6 @@
             }
             p,ul li,div {
                 @include content-desc;
-                font-family: Roboto-Lt;
                 text-align: justify;
                 line-height: 25px;
             }
