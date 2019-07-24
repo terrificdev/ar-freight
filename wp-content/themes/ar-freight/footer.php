@@ -13,7 +13,12 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class = "footer-container block-container">
 				<div class = "footer-map">
-					<iframe src="<?php echo get_theme_mod('footer-map'); ?>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<div class="footer-map-office">
+						<iframe src="<?php echo get_theme_mod('footer-map-office'); ?>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+					<div class="footer-map-warehouse">
+					 	<iframe src="<?php echo get_theme_mod('footer-map-warehouse'); ?>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
 				</div>
 				<div class = "footer-top">
 					<div class = "footer-column-1">

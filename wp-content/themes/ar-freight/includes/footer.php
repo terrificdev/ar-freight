@@ -16,13 +16,21 @@ function aviation_customize_footer($wp_customize){
             'description'	=> __('Change footer contents'),
         )
     );
-    $wp_customize->add_setting('footer-map');
-    $wp_customize->add_control('footer-map',array(
-            'label'	=> __('Map'),
+    $wp_customize->add_setting('footer-map-office');
+    $wp_customize->add_control('footer-map-office',array(
+            'label'	=> __('Map (Office)'),
             'section'	=> 'footer_section',
             'description' => __('Enter the embed source url'),
-            'settings' => 'footer-map',
+            'settings' => 'footer-map-office',
             'type'	=> 'textarea',
+    ));
+    $wp_customize->add_setting('footer-map-warehouse');
+    $wp_customize->add_control('footer-map-warehouse',array(
+        'label'	=> __('Map (Warehouse)'),
+        'section' => 'footer_section',
+        'description' => __('Enter the embed source url'),
+        'settings' => 'footer-map-warehouse',
+        'type'	=> 'textarea',
     ));
     $wp_customize->add_setting('footer-logo');
     $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'footer-logo',array(
