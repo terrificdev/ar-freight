@@ -12,7 +12,12 @@ footer {
       padding-top: 30px;
       padding-bottom: 30px;
     }
-    .footer-map {
+    .footer-map { 
+      @media (min-width: 767px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
       iframe {
         width: 100%;
         margin-bottom: 60px;
