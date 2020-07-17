@@ -12,14 +12,16 @@
     position: relative;
     margin-bottom: 175px;
     @media all and (min-width: 992px) {
-        margin-bottom: 220px;
+        margin-bottom: 60px;
     }
     &__image {
         @media all and (min-width: 992px) {
-            -ms-transform: skewY(-10deg);
-            -webkit-transform: skewY(-10deg);
-            transform: skewY(-10deg);
-            margin-top: -182px;
+            // -ms-transform: skewY(-10deg);
+            // -webkit-transform: skewY(-10deg);
+            // transform: skewY(-10deg);
+            // margin-top: -182px;
+            margin-top: -20px;
+            clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%)
         }
         img {
             width: 100%;
@@ -92,7 +94,7 @@
     }
     &__head-block {
         position: absolute;
-        top: 55%;
+        top: 29%;
         z-index: 990;
         right: 0;
         left: 0;

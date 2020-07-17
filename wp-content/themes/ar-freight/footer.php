@@ -72,10 +72,10 @@
 						</nav><!-- .social-navigation -->
 					<?php endif; ?>
 					</div>
-					<div class = "visitors-count">
-						<?php echo do_shortcode('[ads-wpsitecount image text="on" imgmaxw="100" width=100 whunit="px" height=0 count=0 ]');?>
+					<!-- <div class = "visitors-count">
+						<?php /*echo do_shortcode('[ads-wpsitecount image text="on" imgmaxw="100" width=100 whunit="px" height=0 count=0 ]');*/?>
 						<span class="visitor-date">Visitors till date</span>
-					</div>
+					</div> -->
 					<div class = "copyright">
 						<?php echo get_theme_mod('copyright-block') ;?>
 					</div>
