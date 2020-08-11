@@ -24,12 +24,14 @@
 					<div class = "footer-column-1">
 						<img class="footer-logo" src="<?php echo wp_get_attachment_url(get_theme_mod('footer-logo')) ?>"/>
 						<!-- <p><?php echo get_theme_mod('footer-description') ;?></p> -->
-						<div class="contactNumber-block">
-							<div class = "tel number"><span>Telephone Nos:</span><?php echo get_theme_mod('telephone-block') ;?></div>
-							<div class = "fax number"><span>Fax No:</span><?php echo get_theme_mod('fax-block') ;?></div>
-						</div>
 					</div>
 					<div class = "footer-column-2">
+					<div class="contactNumber-block">
+							<div class = "tel number"><span>Telephone Nos.</span><?php echo get_theme_mod('telephone-block') ;?></div>
+							<div class = "fax number"><span>Fax</span><?php echo get_theme_mod('fax-block') ;?></div>
+						</div>
+					</div>
+					<div class = "footer-column-3">
 						<?php if ( has_nav_menu( 'footer-menu' ) ) : ?>
 							<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu 1', 'twentysixteen' ); ?>">
 								<?php
@@ -42,7 +44,7 @@
 							</nav><!-- .footer-menu 1-->
 						<?php endif; ?>
 					</div>
-					<div class = "footer-column-3">
+					<div class = "footer-column-4">
 						<?php if ( has_nav_menu( 'footer-menu-2' ) ) : ?>
 							<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu 2', 'twentysixteen' ); ?>">
 								<?php
@@ -55,7 +57,7 @@
 							</nav><!-- .footer-menu 2-->
 						<?php endif; ?>
 					</div>
-					<div class = "footer-column-4">
+					<div class = "footer-column-5">
 						<div>
 							<div class="add-label">Office</div>
 							<div class = "address"><?php echo get_theme_mod('address-block') ;?></div>
