@@ -49,9 +49,16 @@ function aviation_customize_footer($wp_customize){
     ));
     $wp_customize->add_setting('address-block');
     $wp_customize->add_control('address-block',array(
-            'label'	=> __('Address Block'),
+            'label'	=> __('Office Address Block'),
             'section'	=> 'footer_section',
             'settings' => 'address-block',
+            'type'	=> 'textarea',
+    ));
+    $wp_customize->add_setting('warehouse-address-block');
+    $wp_customize->add_control('warehouse-address-block',array(
+            'label'	=> __('Warehouse Address Block'),
+            'section'	=> 'footer_section',
+            'settings' => 'warehouse-address-block',
             'type'	=> 'textarea',
     ));
     $wp_customize->add_setting('telephone-block');
@@ -60,6 +67,14 @@ function aviation_customize_footer($wp_customize){
             'description' => __('Enter your contact number'),
             'section'	=> 'footer_section',
             'settings' => 'telephone-block',
+            'type'	=> 'text',
+    ));
+    $wp_customize->add_setting('fax-block');
+    $wp_customize->add_control('fax-block',array(
+            'label'	=> __('Fax'),
+            'description' => __('Enter your Fax number'),
+            'section'	=> 'footer_section',
+            'settings' => 'fax-block',
             'type'	=> 'text',
     ));
     $wp_customize->add_setting('copyright-block');

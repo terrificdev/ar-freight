@@ -8,6 +8,7 @@ footer {
   .footer-container {
     padding-top: 50px;
     padding-bottom: 50px;
+    width: 100%;
     @media all and (max-width: 767px) {
       padding-top: 30px;
       padding-bottom: 30px;
@@ -50,21 +51,37 @@ footer {
             }
           }
         }
-        .address {
-          width: 200px;
-          line-height: 30px;
+        .contactNumber-block{
+          background-color: rgba(0,0,0,0.3);
+          border:1px solid rgba(256,256,256,0.5);;
+          max-width: 280px;
+          margin: 40px 30px 40px 0;
+          padding: 15px 10px;
+          font-family: Roboto-Rg; 
+          @media all and (max-width: 599px) {
+            margin: 40px 0 40px 0;  
+          }         
+          span{
+            display: block;
+            font-family: Roboto-Bd;
+          }
+          .fax{
+            margin-top: 5px;
+          }
         }
-        .tel {
-          a{
-            color: white;
-          }
-          span {
-            margin-right: 10px;
-          }
+       
+        .add-label{
+          text-transform: uppercase;
+          font-family: Roboto-Bd;
+          margin-bottom: 10px;       
+        }   
+        .address {
+          // width: 200px;
+          line-height: 30px;       
         }
       }
       .footer-column-1 {
-        flex-basis: 40%;
+        flex-basis: 30%;
         @media all and (max-width: 991px) {
           flex-basis: 35%;
         }
@@ -110,6 +127,20 @@ footer {
       }
       .footer-column-4 {
         flex-basis: 300px;
+        display: flex;
+        justify-content: flex-end;
+        @media all and (max-width: 599px) {
+          justify-content:flex-start; 
+        }
+        >div{    
+          &:first-of-type{  
+            flex-basis: 200px;
+            margin-right: 30px;
+          }
+          &:last-of-type{    
+            flex-basis: 130px;
+          }
+        }
         @media all and (max-width: 767px) {
           width: 33.33%;
           float: left;

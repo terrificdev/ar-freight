@@ -23,7 +23,11 @@
 				<div class = "footer-top">
 					<div class = "footer-column-1">
 						<img class="footer-logo" src="<?php echo wp_get_attachment_url(get_theme_mod('footer-logo')) ?>"/>
-						<p><?php echo get_theme_mod('footer-description') ;?></p>
+						<!-- <p><?php echo get_theme_mod('footer-description') ;?></p> -->
+						<div class="contactNumber-block">
+							<div class = "tel number"><span>Telephone Nos:</span><?php echo get_theme_mod('telephone-block') ;?></div>
+							<div class = "fax number"><span>Fax No:</span><?php echo get_theme_mod('fax-block') ;?></div>
+						</div>
 					</div>
 					<div class = "footer-column-2">
 						<?php if ( has_nav_menu( 'footer-menu' ) ) : ?>
@@ -52,8 +56,14 @@
 						<?php endif; ?>
 					</div>
 					<div class = "footer-column-4">
-						<div class = "address"><?php echo get_theme_mod('address-block') ;?></div>
-						<div class = "tel"><span>Tel:</span><?php echo get_theme_mod('telephone-block') ;?></div>
+						<div>
+							<div class="add-label">Office</div>
+							<div class = "address"><?php echo get_theme_mod('address-block') ;?></div>
+						</div>
+						<div>
+							<div class="add-label">Warehouse</div>
+							<div class = "address"><?php echo get_theme_mod('warehouse-address-block') ;?></div>
+						</div>
 					</div>
 				</div>
 				<div class = "footer-bottom">
