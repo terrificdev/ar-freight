@@ -38,6 +38,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
 
 		<header id="masthead" class="site-header" role="banner">
+			<div class="top-banner">
+				<div class="top-banner_content">
+					<span>E-Mail: info@alrashedfreight.com </span><span>Contact : +965 24349582, 84, 86</span>
+				</div>
+			</div>
 			<div class="site-header-main">
 				<div class="site-branding">
 					<?php twentysixteen_the_custom_logo(); ?>

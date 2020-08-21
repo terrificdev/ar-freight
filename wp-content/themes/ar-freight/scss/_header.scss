@@ -3,14 +3,14 @@ header.site-header {
     .site-description {
         display: none;
     }
-    padding: 40px 0 20px 0 !important;
+    padding: 0 0 20px 0 !important;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
     @media all and (max-width: 909px) {
-        padding: 35px 0 20px 0 !important;
+        padding: 0 0 20px 0 !important;
     }
     &.openMenu {
         background-color: #005a8e;
@@ -19,6 +19,54 @@ header.site-header {
         -moz-box-shadow: 0 4px 20px -1px #0000006e;
         -ms-box-shadow: 0 4px 20px -1px #0000006e;
         box-shadow: 0 4px 20px -1px #0000006e;
+    }
+    .top-banner{
+        background: #1673aa;
+        margin-bottom: 40px;
+        padding: 10px 0;
+        color: white;
+        @media all and (max-width: 909px) {
+            margin-bottom: 35px;
+        }
+        @media all and (max-width: 768px) {
+            padding: 5px 0;  
+        }
+        &_content{
+            max-width: 1290px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            @media all and (max-width: 768px) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        span{
+            font-family: Roboto-Md;
+            font-size: 16px;
+            letter-spacing:1px ;
+            @media all and (max-width: 768px) {
+                font-size: 11px;
+            }
+            &:first-of-type{
+                display: inline-block;               
+                margin-right: 10px;
+                &:after{
+                    content: "";
+                    display: inline-block;
+                    border-right: 1px solid white;
+                    width: 1px;
+                    height: 17px;
+                    vertical-align: middle;
+                    padding-right: 10px;
+                    @media all and (max-width: 768px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
     }
     .site-header-main {
         max-width: 1290px;
@@ -310,6 +358,9 @@ header.site-header {
         -moz-box-shadow: 0 4px 20px -1px #0000006e;
         -ms-box-shadow: 0 4px 20px -1px #0000006e;
         box-shadow: 0 4px 20px -1px #0000006e;
+        .top-banner{
+            display: none;
+        }
         .site-header-main {
             max-width: 1290px;
             margin: 0 auto;
