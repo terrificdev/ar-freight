@@ -40,7 +40,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<header id="masthead" class="site-header" role="banner">
 			<div class="top-banner">
 				<div class="top-banner_content">
-					<span>E-Mail: info@alrashedfreight.com </span><span>Contact : +965 24349582, 84, 86</span>
+					<span>E-Mail: <?php echo get_theme_mod('header-contact-mail') ;?></span><span>Contact : <?php echo get_theme_mod('header-contact-number') ;?></span>
 				</div>
 			</div>
 			<div class="site-header-main">
