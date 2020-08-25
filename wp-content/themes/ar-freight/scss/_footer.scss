@@ -34,12 +34,14 @@ footer {
     .footer-top {
       display: flex;
       justify-content: space-between;
+      min-height: 320px;
 
       @media all and (max-width: 767px) {
         display: block;
         margin-bottom: 30px;
         clear: both;
         overflow: hidden;
+        min-height: none;
       }
 
       div[class^="footer-column-"] {
