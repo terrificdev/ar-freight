@@ -63,15 +63,26 @@
         }
     } //service-details key points section
     .service-key-points {
-        background: url(../images/service-key-points-bg.png) no-repeat center;
+        background: url(../images/service-key-points-bg.jpg) no-repeat center;
         background-size: cover;
         padding-top: 70px;
         padding-bottom: 50px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "";
+            top:0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(-45deg, #585858, #000000);
+            opacity: 0.6;
+        }
         .key-points-block {
             display: flex;
             justify-content: space-around;
             padding-left: 31px;
             flex-wrap: wrap;
+            position: relative;
             @media all and (max-width: 900px) {}
             .key-points {
                 position: relative;
@@ -103,6 +114,7 @@
             }
         }
         .quote-button-block {
+            position: relative;
             margin-top: 30px;
             @media all and (max-width: 900px) {
                 margin-top: 10px;
@@ -158,9 +170,19 @@
             background-size: cover;
             clear: both;
             margin-bottom: 50px;
+            position: relative;
             @media all and (min-width: 991px) {
                 margin-bottom:120px;
                 width: 80%;
+            }
+            &::before{
+                position: absolute;
+                content: "";
+                top:0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(-45deg, #585858, #000000);
+                opacity: 0.4;
             }
             .slick-slider {
                 top: 44px;
