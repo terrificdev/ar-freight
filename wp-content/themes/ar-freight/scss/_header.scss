@@ -80,7 +80,7 @@ header.site-header {
             margin-bottom: 0;
             a {
                 img {
-                    max-width: none;
+                    max-width: 173px;
                     @media all and (max-width: 991px) {
                         max-width: 140px;
                     }
@@ -367,7 +367,7 @@ header.site-header {
             margin: 0 auto;
             .site-branding {
                 img {
-                    max-width: 130px;
+                    max-width: 150px;
                 }
             }
         }
