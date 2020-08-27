@@ -107,12 +107,13 @@ footer {
 
       .footer-column-1 {
         flex-basis: 13%;
-
         @media all and (max-width: 767px) {
           //  flex-basis: 35%;
           margin-bottom: 20px;
-        }
-
+          img{
+            max-width:150px ;
+          }  
+        }       
         p {
           width: 65%;
           margin-top: 15px;
