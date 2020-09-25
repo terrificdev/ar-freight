@@ -551,3 +551,9 @@ $freight-blue: #1674ab;
     }
   }
 }
+// News section in homepage disabled temporarily
+body.home{
+    .news-events-wrapper {
+        display: none;
+    }
+}
