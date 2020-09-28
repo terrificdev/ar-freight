@@ -25,3 +25,4 @@ include_once( get_stylesheet_directory() .'/includes/archives.php');
 include_once( get_stylesheet_directory() .'/includes/news.php');
 include_once( get_stylesheet_directory() .'/includes/careers.php');
 include_once( get_stylesheet_directory() .'/includes/testimonials.php');
+include_once( get_stylesheet_directory() .'/includes/certificates.php');

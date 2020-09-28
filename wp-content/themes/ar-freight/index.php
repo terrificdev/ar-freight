@@ -14,6 +14,7 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'associates' );
 			get_template_part( 'template-parts/content', 'news' );
 			get_template_part( 'template-parts/content', 'testimonial' );
+			get_template_part( 'template-parts/content', 'certificates' );
 			?>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
