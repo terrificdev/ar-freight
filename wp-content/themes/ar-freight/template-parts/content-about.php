@@ -36,9 +36,14 @@
                             <h2><?php echo get_theme_mod('block_'.$i.'_title')?></h2>
                         </div>
                         <div class = "about-us__right_des">
-                                <p><?php echo get_theme_mod('block_'.$i.'_desc')?></p>
+                            <p><?php echo get_theme_mod('block_'.$i.'_desc')?></p>
+                            <?php if(get_theme_mod('block_'.$i.'_lmlink') != ""):?>
+                            <div class = "about-us-learn-more">
+                                <a href="<?php echo get_page_link(get_theme_mod('block_'.$i.'_lmlink'))?>">Learn more</a>
                             </div>
-                            </div>
+                            <?php endif;?>
+                        </div>
+                        </div>
                         <?php endif;?>
                     </div>
                     <?php endfor;?>

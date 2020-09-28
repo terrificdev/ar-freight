@@ -192,6 +192,13 @@ $wp_customize->add_control('block_'.$i.'_desc',array(
     'section'=>'homepage_block_'.$i.'_section',
     'settings'=>'block_'.$i.'_desc',
 ));
+$wp_customize->add_setting('block_'.$i.'_lmlink');
+$wp_customize->add_control('block_'.$i.'_lmlink',array(
+    'label'=>'Block '.$i.' Learn More Link',
+    'type'=>'dropdown-pages',
+    'section'=>'homepage_block_'.$i.'_section',
+    'settings'=>'block_'.$i.'_lmlink',
+));
 endfor;
 
 //homepage banner section

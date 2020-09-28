@@ -38,7 +38,7 @@ $args = array(
 'description' => 'Add new certificate',
 'public' => true,
 'menu_position' => 4,
-'menu_icon' => 'dashicons-format-quote',
+'menu_icon' => 'dashicons-images-alt2',
 'supports' => array( 'title', 'thumbnail'),
 'has_archive' => true,
 );
