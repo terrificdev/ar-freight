@@ -70,6 +70,21 @@ function ar_freight_customize_about($wp_customize){
             'height' => '1000',
             'width' => '2500'
     )));
+    $wp_customize->add_setting('about_us_core_values');
+    $wp_customize->add_control('about_us_core_values',array(
+            'label'	=> __('About Us Core Values'),
+            'section'	=> 'about_us_section',
+            'settings' => 'about_us_core_values',
+            'type'	=> 'textarea',
+    ));
+    $wp_customize->add_setting('about_us_core_values_image');
+    $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'about_us_core_values_image',array(
+            'label'	=> __('About Us Core Values Image'),
+            'section'	=> 'about_us_section',
+            'settings' => 'about_us_core_values_image',
+            'height' => '1000',
+            'width' => '2500'
+    )));
 }
 
 add_action( 'customize_register', 'ar_freight_customize_about' );

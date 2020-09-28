@@ -66,6 +66,18 @@
                         </div>
                     </div>
                 </div>
+                <div class = "about-core-value-content block-container">
+                    <div class = "about-core-value-content-left">
+                        <div class = "about-core-value-body">
+                            <h3 class="title">Core Values</h3>
+                            <img src=<?php echo wp_get_attachment_url(get_theme_mod('about_us_core_values_image')); ?>>
+                            <p><?php echo get_theme_mod('about_us_core_values')?></p>
+                        </div>
+                    </div>
+                    <div class = "about-core-value-content-right" style="background-image: url(<?php echo wp_get_attachment_url(get_theme_mod('about_us_core_values_image')); ?>)">
+                        <img src=<?php echo wp_get_attachment_url(get_theme_mod('about_us_core_values_image')); ?>>
+                    </div>
+                </div>
                 <div class="about-team block-container">
 									<div class="member-content">
                     <h3 class="title">Our Management Team</h3>
