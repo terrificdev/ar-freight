@@ -35,7 +35,7 @@
                     <div class = "about-content-left">
                         <div class = "about-body">
                             <img src=<?php echo wp_get_attachment_url(get_theme_mod('about_us_body_image')); ?>>
-                          <p><?php echo get_theme_mod('about_us_subtitle')?></p>
+                          <?php echo get_theme_mod('about_us_subtitle')?>
                         </div>
                     </div>
                     <div class = "about-content-right">
