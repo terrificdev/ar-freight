@@ -1,6 +1,6 @@
 <div class = "certificates">
     <div class = "block-container">
-        <div class = "certificates__blocks center_slick">
+        <div class = "certificates__blocks certificate_gallery">
 
             <?php 
             $certificate = new WP_Query(array(

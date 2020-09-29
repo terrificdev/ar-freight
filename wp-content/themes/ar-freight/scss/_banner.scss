@@ -43,7 +43,7 @@
                                     top: 40%;
                                 }
                                 @media all and (max-width: 1300px) {
-                                    top: 150px;
+                                    top: 200px;
                                 }
                                 @media all and (max-width: 1024px) {
                                     top: 230px;
@@ -58,7 +58,7 @@
                                     top: 130px;
                                 }
                                 .banner-sub-text {
-                                    margin-bottom: 30px;
+                                    margin-bottom: 60px;
                                     @media all and (max-width: 1024px) {
                                         margin-bottom: 20px;
                                     }
@@ -82,23 +82,29 @@
                                 .banner-highlighted-text {
                                     h2 {
                                         color: #fff;
-                                        font-size: 60px;
+                                        font-size: 50px;
                                         font-family: Roboto-Bd;
-                                        width: 590px;
-                                        line-height: 80px;
+                                        width: 900px;
+                                        line-height: 55px;
                                         letter-spacing: 1px;
                                         @media all and (max-width: 1024px) {
-                                            font-size: 40px;
-                                            line-height: 60px;
+                                            font-size: 35px;
+                                            line-height: 40px;
+                                            width: 700px;
+                                        }
+                                        @media (max-width: 700px) and (min-width: 500px) {
+                                            font-size: 24px;
+                                            line-height: 27px;
                                             width: 490px;
                                         }
                                          @media all and (max-width: 500px) {
                                             width: 100%;
-                                            font-size: 32px;
-                                            line-height: 40px;
+                                            font-size: 25px;
+                                            line-height: 25px;
                                          }
                                          @media all and (max-width: 350px) {
-                                            font-size: 28px;
+                                            font-size: 25px;
+                                            line-height: 30px;
                                          }
                                     }
                                 }

@@ -1,0 +1,33 @@
+.certificates {  
+    .certificates__blocks {
+        padding: 30px 0;
+        @media all and (max-width: 767px) {                                                    
+            padding: 0;
+        }
+        .slick-arrow {
+            @include common-slickArrow;
+            &.slick-prev{
+                left: -16px;
+            } 
+            
+            &.slick-next {
+                right: -16px;
+            }
+        }
+
+        .slick-track {
+            .slick-slide {
+                .certificates__block {
+                    .certificates__profile__dp {
+                        width: 100%;
+                        img {
+                            width: 80%;
+                            margin: 0 auto;
+                            padding: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

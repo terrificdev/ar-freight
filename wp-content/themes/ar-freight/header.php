@@ -40,7 +40,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<header id="masthead" class="site-header" role="banner">
 			<div class="top-banner">
 				<div class="top-banner_content">
-					<span>E-Mail: <?php echo get_theme_mod('header-contact-mail') ;?></span><span>Contact : <?php echo get_theme_mod('header-contact-number') ;?></span>
+					<span><img class="email-img"src="<?php echo get_template_directory_uri(); ?>ar-freight/images/mail-16.jpg" /> <?php echo get_theme_mod('header-contact-mail') ;?></span><span><img class="email-img" src="../images/phone-16.png"/><?php echo get_theme_mod('header-contact-number') ;?></span>
 				</div>
 			</div>
 			<div class="site-header-main">

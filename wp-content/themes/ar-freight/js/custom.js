@@ -194,6 +194,38 @@
         }
       ]
     });
+    $(".certificate_gallery").slick({
+      dots: false,
+      arrows: true,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 2,
+            dots: true,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 700,
+          settings: {
+            slidesToShow: 1,
+            dots: true,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
     function slickInstantiate(sliderId) {
       $(sliderId).slick({
         dots: true,

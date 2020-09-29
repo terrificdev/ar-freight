@@ -15,6 +15,7 @@
         .about-content,
         .about-vission-content,
         .about-mission-content,
+        .about-core-value-content,
         .about-team {
             display: flex;
             flex-wrap: wrap;
@@ -87,9 +88,10 @@
                 }
             }
         }
-        /*common styling for vision and mission*/
+        /*common styling for vision, mission and core value*/
         .about-vission-content,
-        .about-mission-content {
+        .about-mission-content,
+        .about-core-value-content {
             -webkit-box-shadow:  0px 2px 25px 5px rgba(184, 184, 184, 0.4);
             -moz-box-shadow:  0px 2px 25px 5px rgba(184, 184, 184, 0.4);
             box-shadow: 2px 2px 25px 5px rgba(184, 184, 184, 0.4);
@@ -104,9 +106,10 @@
                     width: 185px;
                 }
             }
-            /*common styling for vision and mission - text area*/
+            /*common styling for vision, mission and core value - text area*/
             .about-vission-content-left,
-            .about-mission-content-right {
+            .about-mission-content-right,
+            .about-core-value-content-left {
                 flex-basis: 64%;
                 margin-top: 20px;
                 align-self: center;
@@ -124,9 +127,10 @@
                     }
                 }
             }
-            /*common styling for vision and mission - image*/
+            /*common styling for vision, mission and core value - image*/
             .about-vission-content-right,
-            .about-mission-content-left {
+            .about-mission-content-left,
+            .about-core-value-content-right {
                 flex-basis: 36%;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -139,13 +143,15 @@
                 }
             }
         }
-        /*styling for vision block*/
-        .about-vission-content {
+        /*styling for vision block and Core value block*/
+        .about-vission-content,
+        .about-core-value-content {
             padding: 0 0 0 30px !important;
             @media all and (max-width: 768px) {
                 padding: 0 0 0 20px !important;
             }
-            .about-vission-content-left {
+            .about-vission-content-left,
+            .about-core-value-content-left {
                 padding-right: 20px;
             }
         }
