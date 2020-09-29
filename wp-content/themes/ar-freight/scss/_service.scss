@@ -17,9 +17,10 @@ $blue-link2: #0b045a;
         .service-left {
             width: 40%;
             float: left;
-            padding-top: 5%;
+            padding-top: 13%;
             @media all and (max-width: 768px) {
                 width: 100%;
+                padding-top: 5%;
             }
             .service-content-block {
                 @media all and (max-width: 768px) {
@@ -35,9 +36,15 @@ $blue-link2: #0b045a;
                         @media all and (max-width: 991px) {
                             margin-bottom: 30px;
                         }
+                        @media all and (max-width: 768px) {
+                            width: 100%; 
+                            text-align: center; 
+                        }
                     }
                 }
                 .block-desc {
+                    //description hidden 
+                    display: none;
                     @include content-desc;
                     width: 70%;
                     margin-bottom: 40px;
