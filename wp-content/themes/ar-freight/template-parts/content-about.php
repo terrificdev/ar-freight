@@ -39,7 +39,7 @@
                             <p><?php echo get_theme_mod('block_'.$i.'_desc')?></p>
                             <?php if(get_theme_mod('block_'.$i.'_lmlink') != ""):?>
                             <div class = "about-us-learn-more">
-                                <a href="<?php echo get_page_link(get_theme_mod('block_'.$i.'_lmlink'))?>">Learn more</a>
+                                <a href="<?php echo get_theme_mod('block_'.$i.'_lmlink')?>">Learn more</a>
                             </div>
                             <?php endif;?>
                         </div>
