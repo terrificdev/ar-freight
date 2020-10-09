@@ -119,7 +119,9 @@ $freight-blue: #1674ab;
 .incoterms-wrapper {
   .incoterms-contents {
     .incoterms-definition {
+      //Title Removed as per Requirement so making as Display None
       .title {
+        display: none;
         @include content-second-title;
         margin-bottom: 15px;
       }
