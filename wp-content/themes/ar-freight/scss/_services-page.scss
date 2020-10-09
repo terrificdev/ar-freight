@@ -50,8 +50,9 @@
             ul{
                 margin-left: 20px;
             }
-           
+           //Title removed from service pages as per requirement
             p.title {
+                display: none;
                 padding-top: 10px;
                 @media all and (max-width: 880px) {
                     display: none;

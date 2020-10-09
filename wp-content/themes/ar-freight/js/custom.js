@@ -197,6 +197,7 @@
     $(".certificate_gallery").slick({
       dots: false,
       arrows: true,
+      autoplay: true,
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
