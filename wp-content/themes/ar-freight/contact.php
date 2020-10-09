@@ -58,6 +58,10 @@
 									</div>
                 </div>
                 <div class = "contact-bottom contact-gallery__wrap">
+				<!-- Adding Gallery Title as like section page-->
+				<div class = "contact-gallery__title mobile-view">
+                        <h3 class="title">Gallery</h3>
+                    </div>
                     <div class = "contact-gallery__container">
 											<section class="regular slider" id="contact-gallery">
 												<?php
@@ -79,18 +83,23 @@
 												</div>
 												<?php endwhile;?>
 											</section>
+					</div>
+					<!-- Adding Gallery Title as like section page-->
+					<div class = "contact-gallery__title desktop-view">
+                    <h3 class="title">Gallery</h3>
                     </div>
-										<div class = "contact-gallery__address">
+					<!-- Hiding Address as per requirement -->
+										<!-- <div class = "contact-gallery__address">
 											<div class = "address-block">
 													<h4>Office Address:</h4>
-	                        <p><?php echo get_theme_mod('contact_us_address') ?></p>
-							<?php if (get_theme_mod('warehouse_address') != ""):?>
+	                        <p><//?php echo get_theme_mod('contact_us_address') ?></p>
+							<//?php if (get_theme_mod('warehouse_address') != ""):?>
 								<h4>Warehouse Address:</h4>
-								<p><?php echo get_theme_mod('warehouse_address') ?></p>
-							<?php endif; ?>
+								<p><//?php echo get_theme_mod('warehouse_address') ?></p>
+							<//?php endif; ?>
 	                    </div>
-										</div>
-
+										</div> -->
+					<!-- end-->
                 </div>
             </div>
         </div>

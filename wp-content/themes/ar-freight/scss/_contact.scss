@@ -325,9 +325,45 @@ $freight-blue: #1674ab;
         display: flex;
         padding-top: 120px;
     }
+//Gallery UI added
+    .mobile-view {
+      display: block;
+      @media all and (min-width: 991px) {
+          display:none;
+      }
+    }
+    .desktop-view {
+      display: none;
+      @media all and (min-width: 991px) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+    }
+//Gallery Title UI Added
+    .contact-gallery__title {
+      //text-align: center;
+      width: 100%;
+      padding: 0 20px;
+      @media all and (min-width: 991px) {
+          width: 15%;
+          padding: 0;
+      }
+
+      .title {
+        font-family: Roboto-Bd !important;
+        font-size: 25px !important;
+        display: inline-block;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        color: #282828;
+        border-bottom: 1px solid #a0a0a0;
+    }
+  }
     .contact-gallery__container {
         margin-bottom:200px;
-        width: 70%;
+        //width: 70%;
+        width: 80%;//new width added for gallery title
         background: url(../images/service-bg.jpg) no-repeat bottom;
         height: 380px;
         background-size: cover;
