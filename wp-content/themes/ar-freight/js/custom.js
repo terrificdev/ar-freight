@@ -205,14 +205,14 @@
         {
           breakpoint: 991,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
             slidesToScroll: 1
           }
         },
         {
           breakpoint: 800,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
             dots: true,
             slidesToScroll: 1
           }
@@ -220,7 +220,7 @@
         {
           breakpoint: 700,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             dots: true,
             slidesToScroll: 1
           }

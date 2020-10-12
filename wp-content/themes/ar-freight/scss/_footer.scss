@@ -8,17 +8,17 @@ footer {
 
   .footer-container {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     width: 100%;
     position: relative;
 
-    @media all and (max-width: 767px) {
+    @media all and (max-width: 780px) {
       padding-top: 30px;
       padding-bottom: 30px;
     }
 
     .footer-map {
-      @media (min-width: 767px) {
+      @media (min-width: 780px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
@@ -34,9 +34,9 @@ footer {
     .footer-top {
       display: flex;
       justify-content: space-between;
-      min-height: 320px;
+      min-height: 240px;
 
-      @media all and (max-width: 767px) {
+      @media all and (max-width: 780px) {
         display: block;
         margin-bottom: 30px;
         clear: both;
@@ -46,8 +46,11 @@ footer {
 
       div[class^="footer-column-"] {
         color: $primary-white;
-        font-size: 14px;
+        font-size: 18px;
         font-family: Roboto-Rg !important;
+        @media all and (max-width: 1200px) {
+          font-size: 16px;
+        }
 
         .footer-navigation {
           ul {
@@ -59,7 +62,12 @@ footer {
 
               a {
                 color: $primary-white;
-                font-size: 14px;
+                //font-size: 14px;
+                font-size: 18px;
+                font-family: Roboto-Lt;
+                @media all and (max-width: 1200px) {
+                  font-size: 16px;
+                }
               }
             }
           }
@@ -75,14 +83,15 @@ footer {
           }
 
           p {
+            font-size: 13px;
             background-color: rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(256, 256, 256, 0.5);
             color: rgba(256, 256, 256, 0.8);
             border-radius: 10px;
             margin: 0 0 10px;
             padding: 6px 15px;
-            max-width: 210px;
-            letter-spacing: 1.5px;
+            max-width: 190px;
+            letter-spacing: 1px;
             @media all and (max-width: 599px) {
             max-width: 100%;
             }
@@ -94,7 +103,6 @@ footer {
         }
 
         .add-label {
-          text-transform: uppercase;
           font-family: Roboto-Bd;
           margin-bottom: 10px;
         }
@@ -102,12 +110,16 @@ footer {
         .address {
           // width: 200px;
           line-height: 25px;
+          font-family: Roboto-Lt;
         }
       }
 
       .footer-column-1 {
-        flex-basis: 13%;
-        @media all and (max-width: 767px) {
+        flex-basis: 17%;
+        @media all and (max-width: 1100px) {
+          flex-basis: 15%;
+          }
+        @media all and (max-width: 780px) {
           //  flex-basis: 35%;
           margin-bottom: 20px;
           img{
@@ -126,20 +138,20 @@ footer {
             width: 90%;
           }
 
-          @media all and (max-width: 767px) {
+          @media all and (max-width: 780px) {
             width: 100%;
           }
         }
       }
 
       .footer-column-2 {
-        flex-basis: 20%;
+        flex-basis: 15%;
 
-        @media all and (max-width: 991px) {
-          flex-basis: 23%;
+        @media all and (max-width: 1300px) {
+        flex-basis: 190px;
         }
 
-        @media all and (max-width: 767px) {
+        @media all and (max-width: 780px) {
           width: 33.33%;
           float: left;
         }
@@ -151,13 +163,15 @@ footer {
       }
 
       .footer-column-3 {
-        flex-basis: 20%;
-
+        flex-basis: 15%;
+        @media all and (max-width: 1200px) {
+          flex-basis: 13%;
+          }
         @media all and (max-width: 991px) {
-          flex-basis: 23%;
+          //flex-basis: 23%;
         }
 
-        @media all and (max-width: 767px) {
+        @media all and (max-width: 780px) {
           width: 33.33%;
           float: left;
         }
@@ -166,12 +180,15 @@ footer {
           width: 50%;
           margin-top: 15px;
         }
+        @media all and (max-width: 500px) {
+          padding-right: 15px;
+        }
       }
 
       .footer-column-4 {
-        flex-basis: 20%;
+        flex-basis: 15%;
 
-        @media all and (max-width: 767px) {
+        @media all and (max-width: 780px) {
           width: 33.33%;
           float: left;
         }
@@ -183,27 +200,28 @@ footer {
       }
 
       .footer-column-5 {
-        flex-basis: auto;
-
-        >div {
-          &:last-of-type {
-            margin-top: 15px;
-          }
+        flex-basis: 15%; 
+        @media all and (max-width: 780px) {
+          clear: both;
+          width: 50%;
+          float: left;
+          padding-top: 20px;
         }
-
-        @media all and (max-width: 767px) {
-          width: 33.33%;
+        @media all and (max-width: 500px) {
+          padding-right: 15px;
+        }
+ 
+      }
+      .footer-column-6 {
+        flex-basis: auto;
+     
+        @media all and (max-width: 780px) {
+          width: 50%;
           float: left;
           padding-top: 20px;
         }
 
-        @media all and (max-width: 599px) {
-          clear: both;
-          display: flex;
-          float: none;
-          width: 100%;
-          justify-content: space-between;
-        }
+       
       }
     }
 
@@ -211,23 +229,36 @@ footer {
       clear: both;
       overflow: hidden;
       position: absolute;
-      bottom: 50px;
-      right: 0;
+      bottom: 40px;
+      left: 0;
 
       @media all and (max-width: 1330px) {
-        padding-right: 20px;
+        padding-left: 20px;
+      }
+      @media all and (max-width: 1100px) {
+        bottom: 20px;
       }
 
-      @media all and (max-width: 767px) {
+      @media all and (max-width: 780px) {
         position: static;
       }
 
       .social-menu {
         float: left;
+        @media all and (max-width: 780px) {
+          float: none;
+        }
 
         .social-navigation {
+          @media all and (max-width: 780px) {
+            margin-bottom: 0;
+          }
           .menu-social-menu-container {
             ul {
+              @media all and (max-width: 780px) {
+                display: flex;
+                justify-content: center;
+              }
               li {
                 float: left !important;
 
@@ -265,7 +296,7 @@ footer {
             font-size: 16px;
             font-family: Roboto-Lt;
 
-            @media all and (max-width: 767px) {
+            @media all and (max-width: 780px) {
               font-size: 14px;
             }
           }
@@ -277,7 +308,7 @@ footer {
           margin-top: 2px;
           font-family: Roboto-Rg;
 
-          @media all and (max-width: 767px) {
+          @media all and (max-width: 780px) {
             font-size: 9px;
           }
         }
@@ -296,7 +327,7 @@ footer {
         padding-left: 18px;
         background-position-y: 5px;
 
-        @media all and (max-width: 767px) {
+        @media all and (max-width: 780px) {
           max-width: 170px;
           margin: 0 auto;
         }

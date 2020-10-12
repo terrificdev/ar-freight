@@ -10,7 +10,11 @@
  */
 ?>
 	</div><!-- .site-content -->
+		<?php 
+			get_template_part( 'template-parts/content', 'certificates' );
+		?>
 		<footer id="colophon" class="site-footer" role="contentinfo">
+	
 			<div class = "footer-container block-container">
 				<div class = "footer-map">
 					<div class="footer-map-office">
@@ -62,6 +66,9 @@
 							<div class="add-label">Office</div>
 							<div class = "address"><?php echo get_theme_mod('address-block') ;?></div>
 						</div>
+						 
+					</div>
+					<div class = "footer-column-6">					 
 						<div>
 							<div class="add-label">Warehouse</div>
 							<div class = "address"><?php echo get_theme_mod('warehouse-address-block') ;?></div>

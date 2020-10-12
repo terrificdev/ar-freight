@@ -8,6 +8,7 @@
             @include common-slickArrow;
             &.slick-prev{
                 left: -16px;
+                z-index: 7;
             } 
             
             &.slick-next {
