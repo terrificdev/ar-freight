@@ -144,12 +144,16 @@
     }
     &__head-block {
         top:0 !important;
-        height: 70vh;
+        height: 60vh;
         display: flex;  
         align-items: center;       
     }
     &__title-block {
         width: 100%;
+        margin-top: 150px;
+        @media all and (max-width: 991px) {
+            margin-top: 60px;
+        }
     }
 }
 
