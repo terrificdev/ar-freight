@@ -92,6 +92,7 @@ $freight-blue: #1674ab;
         @include content-desc;
         color: $grey-text;
         margin-bottom: 10px;
+        font-size: 16px;
         img {
           min-width: 350px;
           width: 25%;
@@ -201,14 +202,18 @@ $freight-blue: #1674ab;
       @media all and (max-width: 767px) {
         margin-bottom: 50px;
       }
-      p {
+      p ,ul {
         @include content-desc;
         color: $grey-text;
         margin-bottom: 30px;
+        font-size: 16px;
         @media all and (max-width: 767px) {
           margin-bottom: 20px;
         }
-        strong {
+        li{
+          color: $primary-black;  
+        }
+        strong{
           font-family: Roboto-Md;
           color: $primary-black;
         }
