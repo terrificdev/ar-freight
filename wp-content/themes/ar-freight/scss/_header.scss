@@ -21,15 +21,17 @@ header.site-header {
         box-shadow: 0 4px 20px -1px #0000006e;
     }
     .top-banner{
-        background: #1673aa;
+        //background: #1673aa;
+        background: linear-gradient(90deg, rgba(22,115,170,1) 0%, rgba(22,115,170,1) 70%, rgb(14,79,118) 70%);
         margin-bottom: 40px;
-        padding: 10px 0;
+        //padding: 10px 0;
         color: white;
         @media all and (max-width: 909px) {
             margin-bottom: 35px;
         }
         @media all and (max-width: 768px) {
             padding: 5px 0;  
+            background: #1673aa;
         }
         &_content{
             max-width: 1290px;
@@ -48,15 +50,20 @@ header.site-header {
             }
         }
         span{
-            font-family: Roboto-Rg;
+            background: #0e4f76;
+            font-family: Roboto-Bd;
             font-size: 12px;
+            padding: 10px 0;
             letter-spacing:1px ;
             @media all and (max-width: 768px) {
+                background: none;
                 font-size: 11px;
+                padding: 0;
             }
             &:first-of-type{
                 display: inline-block;               
                 margin-right: 10px;
+                padding-left: 15px;
                 &:after{
                     content: "";
                     display: inline-block;
