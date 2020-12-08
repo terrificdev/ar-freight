@@ -216,6 +216,8 @@
                 display: flex;
                 justify-content: space-between;
                 padding-left: 31px;
+                //removing the services from banner
+                display: none;
                 .service-block {
                     color: white;
                     font-size: 14px;

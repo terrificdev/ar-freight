@@ -7,15 +7,17 @@
       var options = '';
       if (name == 'Relocation Services') {
         options += '<option value="">Select Service</option>';
-        options += '<option value="Internation Relocation">International Relocation</option>';
-        options += '<option value="Local Moves">Local Moves (Kuwait)</option>';
-        options += '<option value="Packing-Palletization">Packing, Lashing, Palletization</option>';
+        options += '<option value="Residential Removels">Residential Removals</option>';
+        options += '<option value="Commercial Removals">Commercial Removals</option>';
+        options += '<option value="Vehicle Transports">Vehicle Transports</option>';
+        options += '<option value="Pet Relocation">Pet Relocation</option>';
       }
       if (name == 'Freight Services') {
         options += '<option value="">Select Service</option>';
-        options += '<option value="Air Freight Services">Air Freight Services</option>';
-        options += '<option value="Land Freight Services">Land Freight Services</option>';
-        options += '<option value="Sea Freight Services">Sea Freight Services</option>';
+        options += '<option value="Air Freight Services">Air Freight</option>';
+        options += '<option value="Sea Freight Services">Sea Freight</option>';
+        options += '<option value="Overland Transport">Overland Transport</option>';
+        options += '<option value="Warehousing">Warehousing</option>';
       }
       if (name == 'Other Services') {
         options += '<option value="">Select Service</option>';
@@ -47,6 +49,7 @@
       dots: true,
       infinite: true,
       slidesToShow: 4,
+      autoplay: true,
       slidesToScroll: 1,
       responsive: [
         {
@@ -78,6 +81,7 @@
       arrows: true,
       infinite: true,
       slidesToShow: 2,
+      autoplay: true,
       slidesToScroll: 1,
       responsive: [
         {
@@ -143,6 +147,7 @@
       centerPadding: '0',
       infinite: true,
       speed: 500,
+      autoplay: true,
       slidesToShow: 3,
       responsive: [
         {
@@ -166,6 +171,7 @@
       dots: true,
       infinite: true,
       slidesToShow: 1,
+      autoplay: true,
       slidesToScroll: 1,
       prevArrow: ".c-prev",
       nextArrow: ".c-next"
@@ -174,6 +180,7 @@
       dots: true,
       arrows: true,
       infinite: true,
+      autoplay: true,
       slidesToShow: 2,
       slidesToScroll: 1,
       responsive: [
@@ -232,6 +239,7 @@
         dots: true,
         infinite: true,
         slidesToShow: 1,
+        autoplay: true,
         slidesToScroll: 1
       });
     }

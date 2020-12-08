@@ -173,12 +173,12 @@
                             height: 91.2px;
                             margin-bottom: 5%;
                             line-height: 22px;
-                            -webkit-line-clamp: 4;
+                            //-webkit-line-clamp: 4;
                             -webkit-box-orient: vertical;
                             overflow: hidden;
-                            text-overflow: ellipsis;
+                            //text-overflow: ellipsis;
                             color: $primary-black;
-                            font-size: 14px;
+                            font-size: 12px;
                             font-family: Roboto-Rg;
                             @media all and (max-width: 1024px) {
                                 margin-bottom: 0; 
@@ -217,7 +217,7 @@
                             }
                         }
                         .about-us__right_learn-more {
-                            margin-bottom: 20px;
+                            margin-bottom: 10px;
                             &:after {
                                 display: none;
                             }

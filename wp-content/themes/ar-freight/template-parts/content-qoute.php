@@ -13,7 +13,8 @@
                             <p>Select the main category below and fill in the details</p>
                             <button class = "type-of-services active" data-name="Relocation Services">Relocation Services</button>
                             <button class = "type-of-services" data-name="Freight Services">Freight Services</button>
-                            <button class = "type-of-services" data-name="Other Services">Other Services</button>
+                            <!--Removing OtherServices Button-->
+                            <!--button class = "type-of-services" data-name="Other Services">Other Services</button-->
                         </div>
                         <div class = "quote-right">
                             <div id="quote-title">
