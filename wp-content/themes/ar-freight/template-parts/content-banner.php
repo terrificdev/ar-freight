@@ -47,7 +47,7 @@
             </div>
             <?php if(get_theme_mod('banner_telephone')!=""):?>
             <div class = "website-contact">
-                <span>Dial in:</span> <?php echo get_theme_mod('banner_telephone');?>
+                <span><img class="phone-img" src="<?php  echo get_stylesheet_directory_uri(); ?>/images/phone-16.png" /></span> <?php echo get_theme_mod('banner_telephone');?>
             </div>
             <?php endif;?>
         </div>

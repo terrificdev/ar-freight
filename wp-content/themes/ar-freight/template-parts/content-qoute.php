@@ -9,7 +9,7 @@
                 <div class = "get-a-quote-container">
                     <div class = "get-a-quote-wrapper">
                         <div class = "quote-left">
-                            <h2>Get a quote</h2>
+                            <h2>Get a Quote</h2>
                             <p>Select the main category below and fill in the details</p>
                             <button class = "type-of-services active" data-name="Relocation Services">Relocation Services</button>
                             <button class = "type-of-services" data-name="Freight Services">Freight Services</button>
