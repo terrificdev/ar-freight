@@ -158,7 +158,7 @@
     }
 }
 
-//Additional Chnages for banner headings and Subheadings in Resources pages
+//Additional Changes for banner headings and Subheadings in Resources pages
 .faq-banner,
 .checklist-banner,
 .archives-banner,
@@ -173,5 +173,22 @@
         display: none;
         width: 100%;
         text-align: center;
+    }
+}
+//Additional Changes for banner headings and Subheadings in about US, Services, Contact page
+.service-banner,
+.about-banner,
+.careers-banner,
+.contact-banner {
+    &__title-block {
+        position: relative;
+        .overlay {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333333;
+            opacity: 0.15;
+        }
     }
 }
