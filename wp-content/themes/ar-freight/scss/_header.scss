@@ -141,7 +141,7 @@ header.site-header {
                 }
                 li {
                     a {
-                        color: white;
+                        color: #1673aa;
                         font-family: Roboto-Lt;
                         font-size: 18px;
                         text-decoration: none;
@@ -162,7 +162,7 @@ header.site-header {
                                 width: 0;
                                 height: 2px;
                                 margin-top: 3px;
-                                background: #fff;
+                                background: #1673aa;
                                 transition: width .3s;
                             }
                             &:hover::after {

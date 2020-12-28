@@ -50,13 +50,14 @@
     &__image.no-overlay:after {
       background-image: none;
     }
+    //For About-us Page Font-size Increased
     &__subtitle {
         color: #fff;
-        font-size: 16px;
+        font-size: 20px;
         font-family: Roboto-Rg;
         max-width: 700px;
         @media all and (max-width: 840px) {
-            font-size: 15px;
+            font-size: 16px;
         }
         @media all and (max-width: 991px) {
             margin: 0 auto;
