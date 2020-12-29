@@ -22,7 +22,6 @@
                             <div class = "about-banner__subtitle">
                                 <?php the_content()?>
                             </div>
-                            <div class="overlay"></div>
                         </div>
                         <div class = "about-banner__content-image">
                             <img src = "<?php echo $featuredImage[0]; ?>">

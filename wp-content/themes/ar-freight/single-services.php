@@ -29,7 +29,6 @@ get_header(); ?>
                         <div class = "service-banner__title-block">
                             <h2 class = "service-banner__title"><?php echo get_the_title();?></h2>
                             <p class = "service-banner__subtitle"><?php echo get_post_meta(get_the_ID(), 'service_subtitle', true)?></p>
-                            <div class="overlay"></div>
                         </div>
                         <div class = "service-banner__content-image">
                             <img src = "<?php echo $featuredImage[0]; ?>">

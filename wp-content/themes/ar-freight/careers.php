@@ -22,7 +22,6 @@
                             <div class = "careers-banner__subtitle">
                                 <p><?php echo get_theme_mod('careers_subtitle')?></p>
                             </div>
-                            <div class="overlay"></div>
                         </div>
                         <div class = "careers-banner__content-image">
                             <img src = "<?php echo $featuredImage[0]; ?>">
