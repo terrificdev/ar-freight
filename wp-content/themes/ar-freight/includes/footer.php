@@ -4,6 +4,7 @@
 function register_footer_menu() {
     register_nav_menu('footer-menu',__( 'Footer Menu 1' ));
     register_nav_menu('footer-menu-2',__( 'Footer Menu 2' ));
+    register_nav_menu('footer-links',__( 'Footer Links' ));
   }
   add_action( 'init', 'register_footer_menu' );
 

@@ -28,14 +28,30 @@
 					<div class = "footer-column-1">
 						<img class="footer-logo" src="<?php echo wp_get_attachment_url(get_theme_mod('footer-logo')) ?>"/>
 						<!-- <p><?php echo get_theme_mod('footer-description') ;?></p> -->
-					</div>
-					<div class = "footer-column-2">
-					<div class="contactNumber-block">
-							<div class = "tel number"><span>Telephone Nos.</span><?php echo get_theme_mod('telephone-block') ;?></div>
-							<div class = "fax number"><span>Fax</span><?php echo get_theme_mod('fax-block') ;?></div>
+						<div class = "social-menu">
+							<?php if ( has_nav_menu( 'social' ) ) : ?>
+								<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'ar-freight' ); ?>">
+									<?php
+										wp_nav_menu( array(
+											'theme_location' => 'social',
+											'menu_class'     => 'social-links-menu',
+											'depth'          => 1,
+											'link_before'    => '<span class="screen-reader-text">',
+											'link_after'     => '</span>',
+										) );
+									?>
+								</nav><!-- .social-navigation -->
+							<?php endif; ?>
+						</div>
+						<div class = "copyright">
+							<?php echo get_theme_mod('copyright-block') ;?>
 						</div>
 					</div>
-					<div class = "footer-column-3">
+					<div class = "footer-column-2">
+						<?php $menu = wp_get_nav_menu_object("footer-menu"); ?>
+						<div class="menu-name">
+							<?php echo $menu->name;?>
+						</div>
 						<?php if ( has_nav_menu( 'footer-menu' ) ) : ?>
 							<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu 1', 'twentysixteen' ); ?>">
 								<?php
@@ -48,7 +64,11 @@
 							</nav><!-- .footer-menu 1-->
 						<?php endif; ?>
 					</div>
-					<div class = "footer-column-4">
+					<div class = "footer-column-3">
+						<?php $menu = wp_get_nav_menu_object("footer-menu-2"); ?>
+						<div class="menu-name">
+							<?php echo $menu->name;?>
+						</div>
 						<?php if ( has_nav_menu( 'footer-menu-2' ) ) : ?>
 							<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu 2', 'twentysixteen' ); ?>">
 								<?php
@@ -61,43 +81,51 @@
 							</nav><!-- .footer-menu 2-->
 						<?php endif; ?>
 					</div>
+					<div class = "footer-column-4">
+						<div class="phone-block">
+							<div class = "tel number"><span>Phone</span><?php echo get_theme_mod('telephone-block') ;?></div>
+						</div>
+					</div>
 					<div class = "footer-column-5">
+						<div class="fax-block">
+							<div class = "fax number"><span>Fax</span><?php echo get_theme_mod('fax-block') ;?></div>
+						</div>
+					</div>
+				</div>
+				<div class = "footer-bottom">
+					<div class = "footer-column-1">	
+						<?php $menu = wp_get_nav_menu_object("footer-links"); ?>
+						<div class="menu-name">
+							<?php echo $menu->name;?>
+						</div>
+						<?php if ( has_nav_menu( 'footer-links' ) ) : ?>
+							<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Links', 'twentysixteen' ); ?>">
+								<?php
+									wp_nav_menu( array(
+										'theme_location' => 'footer-links',
+										'menu_class'     => 'footer-links',
+										'depth'          => 1,
+									) );
+								?>
+							</nav><!-- .footer-links-->
+						<?php endif; ?>
+					</div>
+					<div class = "footer-column-2">					 
 						<div>
 							<div class="add-label">Office</div>
 							<div class = "address"><?php echo get_theme_mod('address-block') ;?></div>
 						</div>
-						 
 					</div>
-					<div class = "footer-column-6">					 
+					<div class = "footer-column-3">					 
 						<div>
 							<div class="add-label">Warehouse</div>
 							<div class = "address"><?php echo get_theme_mod('warehouse-address-block') ;?></div>
 						</div>
 					</div>
-				</div>
-				<div class = "footer-bottom">
-	 	       <div class = "social-menu">
-					 <?php if ( has_nav_menu( 'social' ) ) : ?>
-						<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'ar-freight' ); ?>">
-							<?php
-								wp_nav_menu( array(
-									'theme_location' => 'social',
-									'menu_class'     => 'social-links-menu',
-									'depth'          => 1,
-									'link_before'    => '<span class="screen-reader-text">',
-									'link_after'     => '</span>',
-								) );
-							?>
-						</nav><!-- .social-navigation -->
-					<?php endif; ?>
-					</div>
 					<!-- <div class = "visitors-count">
 						<?php /*echo do_shortcode('[ads-wpsitecount image text="on" imgmaxw="100" width=100 whunit="px" height=0 count=0 ]');*/?>
 						<span class="visitor-date">Visitors till date</span>
 					</div> -->
-					<div class = "copyright">
-						<?php echo get_theme_mod('copyright-block') ;?>
-					</div>
 				</div>
 			</div>
 		</footer><!-- .site-footer -->

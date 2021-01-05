@@ -92,6 +92,7 @@ get_header(); ?>
                         $services = new WP_Query(array(
                             'post_type' => 'services',
                             'post_status' => 'publish',
+                            'post__not_in' => array(get_the_ID()),
                             'posts_per_page' => 2,
                             'orderby'   => 'rand',
                             'tax_query' => array(
