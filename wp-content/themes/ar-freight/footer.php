@@ -48,9 +48,9 @@
 						</div>
 					</div>
 					<div class = "footer-column-2">
-						<?php $menu = wp_get_nav_menu_object("footer-menu"); ?>
+						<?php $menuName = wp_get_nav_menu_name("footer-menu"); ?>
 						<div class="menu-name">
-							<?php echo $menu->name;?>
+							<?php echo $menuName;?>
 						</div>
 						<?php if ( has_nav_menu( 'footer-menu' ) ) : ?>
 							<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu 1', 'twentysixteen' ); ?>">
@@ -65,9 +65,9 @@
 						<?php endif; ?>
 					</div>
 					<div class = "footer-column-3">
-						<?php $menu = wp_get_nav_menu_object("footer-menu-2"); ?>
+						<?php $menuName = wp_get_nav_menu_name("footer-menu-2"); ?>
 						<div class="menu-name">
-							<?php echo $menu->name;?>
+							<?php echo $menuName;?>
 						</div>
 						<?php if ( has_nav_menu( 'footer-menu-2' ) ) : ?>
 							<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu 2', 'twentysixteen' ); ?>">
@@ -94,9 +94,9 @@
 				</div>
 				<div class = "footer-bottom">
 					<div class = "footer-column-1">	
-						<?php $menu = wp_get_nav_menu_object("footer-links"); ?>
+						<?php $menuName = wp_get_nav_menu_name("footer-links"); ?>
 						<div class="menu-name">
-							<?php echo $menu->name;?>
+							<?php echo $menuName;?>
 						</div>
 						<?php if ( has_nav_menu( 'footer-links' ) ) : ?>
 							<nav class="footer-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Links', 'twentysixteen' ); ?>">
