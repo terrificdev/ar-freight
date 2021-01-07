@@ -14,7 +14,7 @@
 			get_template_part( 'template-parts/content', 'certificates' );
 		?>
 		<footer id="colophon" class="site-footer" role="contentinfo">
-	
+			<div class="border-bot">
 			<div class = "footer-container block-container">
 				<div class = "footer-map">
 					<div class="footer-map-office">
@@ -83,15 +83,18 @@
 					</div>
 					<div class = "footer-column-4">
 						<div class="phone-block">
-							<div class = "tel number"><span>Phone</span><?php echo get_theme_mod('telephone-block') ;?></div>
+							<div class = "tel number"><span><img class="footer-icon"src="<?php  echo get_stylesheet_directory_uri(); ?>/images/telephone.png"/>Phone</span><?php echo get_theme_mod('telephone-block') ;?></div>
 						</div>
 					</div>
 					<div class = "footer-column-5">
 						<div class="fax-block">
-							<div class = "fax number"><span>Fax</span><?php echo get_theme_mod('fax-block') ;?></div>
+							<div class = "fax number"><span><img class="footer-icon"src="<?php  echo get_stylesheet_directory_uri(); ?>/images/fax.png"/>Fax</span><?php echo get_theme_mod('fax-block') ;?></div>
 						</div>
 					</div>
 				</div>
+			</div>
+			</div>
+			<div class = "footer-container block-container">
 				<div class = "footer-bottom">
 					<div class = "footer-column-1">	
 						<?php $menuName = wp_get_nav_menu_name("footer-links"); ?>
