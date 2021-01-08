@@ -14,18 +14,23 @@
                     <div class = "careers-banner__image"> -->
                         <img src=<?php echo wp_get_attachment_url(get_theme_mod('careers_banner')); ?>>
                     </div>
-                    <div class = "careers-banner__content">
-                        <div class = "careers-banner__title">
-                            <?php echo get_theme_mod('careers_body_title')?>
-                        </div>
-                        <div class = "careers-banner__subtitle">
-                            <p><?php echo get_theme_mod('careers_subtitle')?></p>
+                    <div class = "careers-banner__content block-container">
+                        <div class="careers-banner__title-block">
+                            <div class = "careers-banner__title">
+                                <?php echo get_theme_mod('careers_body_title')?>
+                            </div>
+                            <div class = "careers-banner__subtitle">
+                                <p><?php echo get_theme_mod('careers_subtitle')?></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class = "careers-form">
-                    <div class = "careers-banner__title">
+                <div class = "careers-form block-container">
+                    <div class="heading-wrap">
+                    <div class = "careers-heading">
                         <?php echo get_the_title();?>
+                    </div>
+                    <div class="center-line"></div>
                     </div>
                     <?php echo do_shortcode(get_theme_mod('careers_form_code'))?>
                 </div>

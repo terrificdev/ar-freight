@@ -86,6 +86,7 @@
             width: 100%;
             font-size: 22px;
             line-height: 30px;
+            padding-left: 0;
         }
     }
     &__title-block {
@@ -185,11 +186,25 @@
         background: rgba(0,0,0,0.15);
     }
 }
-//Changes for About Us 
+//Changes for About Us and Career Pages
 .about-banner {
     &__title {
         width: 300px;
         margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        background: rgba(0,0,0,0.15);
+        padding: 0 20px;
+    }
+}
+.careers-banner { 
+    &__title {
+        width: 400px;
+        margin-bottom: 20px;
+        @media all and (max-width: 400px) {
+            width: 100%;
+        }
     }
 
     &__subtitle {
