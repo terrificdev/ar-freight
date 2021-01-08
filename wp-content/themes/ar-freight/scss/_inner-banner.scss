@@ -185,3 +185,15 @@
         background: rgba(0,0,0,0.15);
     }
 }
+//Changes for About Us 
+.about-banner {
+    &__title {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        background: rgba(0,0,0,0.15);
+        padding: 0 20px;
+    }
+}
