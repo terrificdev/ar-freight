@@ -31,23 +31,30 @@ function ar_freight_customize_careers($wp_customize){
             'settings' => 'careers_body_title',
             'type'	=> 'text',
     ));
-    for($i=1;$i<5;$i++):
-    $wp_customize->add_setting('careers_block_image_'.$i.'');
-    $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'careers_block_image_'.$i.'',array(
-            'label'	=> __('Careers Block Image '.$i.''),
+    $wp_customize->add_setting('careers_form_code');
+    $wp_customize->add_control('careers_form_code',array(
+            'label'	=> __('Careers Form Code'),
             'section'	=> 'careers_section',
-            'settings' => 'careers_block_image_'.$i.'',
-            'height' => '1000',
-            'width' => '2500'
-    )));
-    endfor;
-    $wp_customize->add_setting('careers_resume_mail');
-    $wp_customize->add_control('careers_resume_mail',array(
-            'label'	=> __('Resume mail address'),
-            'section'	=> 'careers_section',
-            'settings' => 'careers_resume_mail',
-            'type'	=> 'mail',
+            'settings' => 'careers_form_code',
+            'type'	=> 'text',
     ));
+    // for($i=1;$i<5;$i++):
+    // $wp_customize->add_setting('careers_block_image_'.$i.'');
+    // $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'careers_block_image_'.$i.'',array(
+    //         'label'	=> __('Careers Block Image '.$i.''),
+    //         'section'	=> 'careers_section',
+    //         'settings' => 'careers_block_image_'.$i.'',
+    //         'height' => '1000',
+    //         'width' => '2500'
+    // )));
+    // endfor;
+    // $wp_customize->add_setting('careers_resume_mail');
+    // $wp_customize->add_control('careers_resume_mail',array(
+    //         'label'	=> __('Resume mail address'),
+    //         'section'	=> 'careers_section',
+    //         'settings' => 'careers_resume_mail',
+    //         'type'	=> 'mail',
+    // ));
 }
 
 add_action( 'customize_register', 'ar_freight_customize_careers' );
