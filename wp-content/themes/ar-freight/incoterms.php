@@ -36,14 +36,14 @@
 	                            <?php echo get_theme_mod('incoterms_definition')?>
 														</div>
                         </div>
-                        <div class = "download-section">
+                        <!-- <div class = "download-section">
 													<div class="incoterm-pic">
                             <img src="<?php echo wp_get_attachment_url(get_theme_mod('incoterms_side_image'))?>">
 													</div>
 													<div class="download-link">
                             <a href="<?php echo get_theme_mod('incoterms_download_link')?>" download=""><?php echo get_theme_mod('incoterms_download_text')?></a>
 													</div>
-                        </div>
+                        </div> -->
                         <div class = "content">
                             <?php the_content();?>
                         </div>

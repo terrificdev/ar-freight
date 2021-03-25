@@ -1,14 +1,16 @@
 header.site-header {
-    .site-title,
-    .site-description {
-        display: none;
-    }
     padding: 0 0 20px 0 !important;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
+    background-color: white;
+    box-shadow: 0 4px 20px -1px #0000006e;
+    .site-title,
+    .site-description {
+        display: none;
+    }
     @media all and (max-width: 909px) {
         padding: 0 0 20px 0 !important;
     }
