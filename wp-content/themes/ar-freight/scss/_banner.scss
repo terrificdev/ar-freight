@@ -70,6 +70,9 @@
                                         font-family: Roboto-Lt;
                                         text-transform: uppercase;
                                         letter-spacing: 3px;
+                                        width: 500px;
+                                        background: rgba(0, 0, 0, 0.15);
+                                        padding: 5px 5px 5px 15px;
                                         @media all and (max-width: 1024px) {
                                             font-size: 12px;
                                         }
@@ -89,6 +92,8 @@
                                         width: 900px;
                                         line-height: 55px;
                                         letter-spacing: 1px;
+                                        background: rgba(0, 0, 0, 0.15);
+                                        padding: 5px 5px 5px 15px;
                                         @media all and (max-width: 1024px) {
                                             font-size: 35px;
                                             line-height: 40px;

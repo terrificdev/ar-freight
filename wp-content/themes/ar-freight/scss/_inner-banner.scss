@@ -165,6 +165,7 @@
 .faq-banner,
 .checklist-banner,
 .archives-banner,
+.careers-banner,
 .incoterms-banner {
     &__title {
         //padding-top: 60px;
@@ -181,7 +182,6 @@
 //Additional Changes for banner headings and Subheadings in about US, Services, Contact page
 .service-banner,
 .about-banner,
-.careers-banner,
 .contact-banner {
     &__title {
         background: rgba(0,0,0,0.15);
@@ -201,7 +201,7 @@
 }
 .careers-banner { 
     &__title {
-        width: 400px;
+        
         margin-bottom: 20px;
         @media all and (max-width: 400px) {
             width: 100%;
@@ -209,7 +209,8 @@
     }
 
     &__subtitle {
-        background: rgba(0,0,0,0.15);
+        display: block;        
         padding: 0 20px;
+        max-width: none;
     }
 }
