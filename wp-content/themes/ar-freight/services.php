@@ -7,7 +7,8 @@
 		<main id="main" class="site-main" role="main">
         <?php while ( have_posts() ) : the_post(); ?>
         <?php
-        $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );?>
+        $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+        $hideTextBackground = get_post_meta(get_the_ID(), 'text_background', TRUE);?>
             <div class = "service-wrapper">
                 <div class = "service-container">
                     <div class = "service-banner">
@@ -15,7 +16,7 @@
                             <img src ="<?php echo wp_get_attachment_url(get_theme_mod('service_banner'))?>">
                         </div>
                         <div class = "service-banner__head-block block-container">
-                            <div class = "service-banner__title-block">
+                            <div class = "service-banner__title-block <?php echo ($hideTextBackground == '1') ? 'hide-bg' : '' ?>">
                                 <div class = "service-banner__title">
                                     <?php echo get_the_title();?>
                                 </div>

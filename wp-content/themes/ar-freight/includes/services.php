@@ -96,6 +96,8 @@ function ar_freight_service_display_meta_box(){
     global $post;
     $show_in_homepage = get_post_meta($post->ID, 'service_display', true);?>
     <input type="checkbox" name="service_display" <?php if($show_in_homepage == '1') echo 'checked'; ?>>Show in homepage<br>
+    <?php $hideTextBackground = get_post_meta($post->ID, 'text_background', true);?>
+    <input type="checkbox" name="text_background" <?php if($hideTextBackground == '1') echo 'checked'; ?>>Hide banner text layout<br>
     <?php
 }
 
@@ -105,6 +107,10 @@ function save_ar_freight_services_fields_meta( $post_id ) {
     update_post_meta($post->ID, "service_display", '1');
     else
     update_post_meta($post->ID, "service_display", '0');
+    if(!empty($_POST["text_background"]))
+    update_post_meta($post->ID, "text_background", '1');
+    else
+    update_post_meta($post->ID, "text_background", '0');
     update_post_meta($post->ID, "service_gallery", $_POST["service_gallery"]);
     update_post_meta($post->ID, "service_overview_image", $_POST["service_overview_image"]);
     $service_key_points = json_encode($_POST["service_key_points"]);
