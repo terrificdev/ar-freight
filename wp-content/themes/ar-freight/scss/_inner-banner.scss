@@ -71,14 +71,15 @@
         color: #fff;
         font-size: 47px;
         font-family: Roboto-Bd;
-        width: 550px;
+        display: inline-block;
+        padding: 5px 30px;
         line-height: 70px;
         letter-spacing: 1px;
         padding-left: 20px;
         @media all and (max-width: 991px) {
             font-size: 30px;
             line-height: 50px;
-            width: 400px;
+           // width: 400px;
             margin: 0 auto;
             text-align: center;
         }
@@ -95,6 +96,11 @@
         @media all and (max-width: 991px) {
             float: none;
             margin: 40px 0;
+        }
+        &.hide-bg{
+            .service-banner__title{
+                background: transparent;
+            } 
         }
     }
     &__head-block {
@@ -181,7 +187,6 @@
 }
 //Additional Changes for banner headings and Subheadings in about US, Services, Contact page
 .service-banner,
-.about-banner,
 .contact-banner {
     &__title {
         background: rgba(0,0,0,0.15);
@@ -195,7 +200,7 @@
     }
 
     &__subtitle {
-        background: rgba(0,0,0,0.15);
+        
         padding: 0 20px;
     }
 }

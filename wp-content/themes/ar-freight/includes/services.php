@@ -97,7 +97,7 @@ function ar_freight_service_display_meta_box(){
     $show_in_homepage = get_post_meta($post->ID, 'service_display', true);?>
     <input type="checkbox" name="service_display" <?php if($show_in_homepage == '1') echo 'checked'; ?>>Show in homepage<br>
     <?php $hideTextBackground = get_post_meta($post->ID, 'text_background', true);?>
-    <input type="checkbox" name="text_background" <?php if($hideTextBackground == '1') echo 'checked'; ?>>Hide banner text layout<br>
+    <input type="checkbox" name="text_background" <?php if($hideTextBackground == '1') echo 'checked'; ?>>Hide banner text background<br>
     <?php
 }
 

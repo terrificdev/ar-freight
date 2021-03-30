@@ -70,9 +70,9 @@
                                         font-family: Roboto-Lt;
                                         text-transform: uppercase;
                                         letter-spacing: 3px;
-                                        width: 500px;
+                                        display: inline-block;
                                         background: rgba(0, 0, 0, 0.15);
-                                        padding: 5px 5px 5px 15px;
+                                        padding: 5px 30px;
                                         @media all and (max-width: 1024px) {
                                             font-size: 12px;
                                         }
@@ -80,29 +80,28 @@
                                             font-size: 11px;
                                             line-height: 16px;
                                         }
-
-
                                     }
                                 }
                                 .banner-highlighted-text {
                                     h2 {
                                         color: #fff;
                                         font-size: 50px;
-                                        font-family: Roboto-Bd;
-                                        width: 900px;
+                                        font-family: Roboto-Bd;                                       
                                         line-height: 55px;
                                         letter-spacing: 1px;
                                         background: rgba(0, 0, 0, 0.15);
-                                        padding: 5px 5px 5px 15px;
+                                        display: inline-block;
+                                        padding: 5px 30px;
+                                        max-width: 900px;
                                         @media all and (max-width: 1024px) {
                                             font-size: 35px;
                                             line-height: 40px;
-                                            width: 700px;
+                                            max-width: 700px;
                                         }
                                         @media (max-width: 700px) and (min-width: 500px) {
                                             font-size: 24px;
                                             line-height: 27px;
-                                            width: 490px;
+                                            max-width: 490px;
                                         }
                                          @media all and (max-width: 500px) {
                                             width: 100%;

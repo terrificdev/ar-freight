@@ -16,6 +16,7 @@ get_header(); ?>
             $images = explode(',', $galleryImageIds);
             $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
             $categories = get_the_terms( $id, 'services_category' );
+            $hideTextBackground = get_post_meta(get_the_ID(), 'text_background', TRUE);
             foreach ($categories as $category):
                 $css_slug = $category->slug;
                 break;
@@ -26,7 +27,7 @@ get_header(); ?>
                         <img src = "<?php echo get_post_meta(get_the_ID(), 'service_banner_image', true)?>">
                     </div>
                     <div class = "service-banner__head-block block-container">
-                        <div class = "service-banner__title-block">
+                        <div class = "service-banner__title-block <?php echo ($hideTextBackground == '1') ? 'hide-bg' : '' ?>">
                             <h2 class = "service-banner__title"><?php echo get_the_title();?></h2>
                             <p class = "service-banner__subtitle"><?php echo get_post_meta(get_the_ID(), 'service_subtitle', true)?></p>
                         </div>
